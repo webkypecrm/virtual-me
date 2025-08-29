@@ -4,24 +4,23 @@ import ImageWithBasePath from "../../../core/common/imageWithBasePath";
 import { all_routes } from "../../router/all_routes";
 
 const ComingSoon = () => {
+  const [seconds, setSeconds] = useState(60);
 
-      const [seconds, setSeconds] = useState(60);
-    
-      useEffect(() => {
-        const intervalId = setInterval(() => {
-          if (seconds > 0) {
-            setSeconds((prevSeconds) => prevSeconds - 1);
-          }
-        }, 1000);
-        return () => clearInterval(intervalId);
-      }, [seconds]);
-    
-      const formatTime = (time: number) => {
-        // Add leading zero for single-digit numbers
-        return time < 10 ? `0${time}` : time;
-      };
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds((prevSeconds) => prevSeconds - 1);
+      }
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, [seconds]);
 
-      const route = all_routes
+  const formatTime = (time: number) => {
+    // Add leading zero for single-digit numbers
+    return time < 10 ? `0${time}` : time;
+  };
+
+  const route = all_routes;
 
   return (
     <>
@@ -59,8 +58,12 @@ const ComingSoon = () => {
             className="img-fluid bg-06"
           />
           <div className="error-logo">
-            <Link to={route.homeone}>
-              <ImageWithBasePath src="assets/img/logo.svg" className="img-fluid" alt="Logo" />
+            <Link to={route.homefour}>
+              <ImageWithBasePath
+                src="assets/img/logo-virtual.png"
+                className="img-fluid"
+                alt="Logo"
+              />
             </Link>
           </div>
           <div className="coming-soon-topic">

@@ -30,10 +30,10 @@ const Login = () => {
   const route = all_routes;
   const navigate = useNavigate();
   const handleSubmit = (event: React.FormEvent) => {
-      event.preventDefault(); 
-      const Path = route.homeone; 
-      navigate(Path);
-    };
+    event.preventDefault();
+    const Path = route.homefour;
+    navigate(Path);
+  };
   return (
     <>
       {/* Main Wrapper */}
@@ -126,7 +126,7 @@ const Login = () => {
                         className="img-fluid"
                         alt="Logo"
                       />
-                      <Link to={route.homeone} className="link-1">
+                      <Link to={route.homefour} className="link-1">
                         Back to Home
                       </Link>
                     </div>

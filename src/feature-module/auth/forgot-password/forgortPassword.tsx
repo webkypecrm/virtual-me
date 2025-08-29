@@ -5,22 +5,21 @@ import ImageWithBasePath from "../../../core/common/imageWithBasePath";
 import Slider from "react-slick";
 
 const ForgortPassword = () => {
-
-    const route = all_routes;
-    const navigate = useNavigate();
-    const handleSubmit = (event: React.FormEvent) => {
-        event.preventDefault(); 
-        const Path = route.setpassowrd; 
-        navigate(Path);
-      };
-    const loginSLider = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        adaptiveHeight: true,
-        // autoplay: true, // Uncomment if needed
-      };
+  const route = all_routes;
+  const navigate = useNavigate();
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    const Path = route.setpassowrd;
+    navigate(Path);
+  };
+  const loginSLider = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    // autoplay: true, // Uncomment if needed
+  };
 
   return (
     <>
@@ -114,7 +113,7 @@ const ForgortPassword = () => {
                         className="img-fluid"
                         alt="Logo"
                       />
-                      <Link to={route.homeone} className="link-1">
+                      <Link to={route.homefour} className="link-1">
                         Back to Home
                       </Link>
                     </div>

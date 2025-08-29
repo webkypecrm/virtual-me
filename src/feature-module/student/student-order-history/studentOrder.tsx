@@ -88,18 +88,12 @@ const StudentOrder = () => {
                       </Link>
                       <ul className="dropdown-menu dropdown-menu-end p-3">
                         <li>
-                          <Link
-                            to="#"
-                            className="dropdown-item rounded-1"
-                          >
+                          <Link to="#" className="dropdown-item rounded-1">
                             Completed
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            to="#"
-                            className="dropdown-item rounded-1"
-                          >
+                          <Link to="#" className="dropdown-item rounded-1">
                             Pending
                           </Link>
                         </li>
@@ -389,7 +383,7 @@ const StudentOrder = () => {
                   <div className="col-md-6">
                     <div className="mb-2 invoice-logo-white">
                       <ImageWithBasePath
-                        src="assets/img/logo.svg"
+                        src="assets/img/logo-virtual.png"
                         className="img-fluid"
                         alt="logo"
                       />

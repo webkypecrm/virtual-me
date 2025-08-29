@@ -1,4 +1,4 @@
-import {  Input } from "antd";
+import { Input } from "antd";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import ImageWithBasePath from "../../../core/common/imageWithBasePath";
@@ -19,11 +19,11 @@ const Otp = () => {
   const route = all_routes;
   const navigate = useNavigate();
   const handleSubmit = (event: React.FormEvent) => {
-      event.preventDefault(); 
-      const Path = route.instructorDashboard; 
-      navigate(Path);
-    };
-  
+    event.preventDefault();
+    const Path = route.instructorDashboard;
+    navigate(Path);
+  };
+
   const [seconds, setSeconds] = useState(60);
 
   useEffect(() => {
@@ -132,7 +132,7 @@ const Otp = () => {
                         className="img-fluid"
                         alt="Logo"
                       />
-                      <Link to={route.homeone} className="link-1">
+                      <Link to={route.homefour} className="link-1">
                         Back to Home
                       </Link>
                     </div>
@@ -173,7 +173,9 @@ const Otp = () => {
                       <div className="timer-cover d-flex align-items-center justify-content-center">
                         <div className="badge badge-soft-danger rounded-pill d-flex align-items-center">
                           <i className="isax isax-clock me-1" />
-                          <span id="otp_timer">09:{formatTime(seconds)}</span>{" "}
+                          <span id="otp_timer">
+                            09:{formatTime(seconds)}
+                          </span>{" "}
                           <span className="ms-1">s</span>
                         </div>
                       </div>

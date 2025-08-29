@@ -18,10 +18,10 @@ const LockScreen = () => {
   const route = all_routes;
   const navigate = useNavigate();
   const handleSubmit = (event: React.FormEvent) => {
-      event.preventDefault(); 
-      const Path = route.instructorDashboard; 
-      navigate(Path);
-    };
+    event.preventDefault();
+    const Path = route.instructorDashboard;
+    navigate(Path);
+  };
   return (
     <>
       {/* Main Wrapper */}
@@ -71,7 +71,7 @@ const LockScreen = () => {
                 </div>
               </div>
               <div className="d-grid">
-                <Link to={route.homeone} className="btn btn-secondary btn-lg">
+                <Link to={route.homefour} className="btn btn-secondary btn-lg">
                   Sign In
                   <i className="isax isax-arrow-right-3 ms-1" />
                 </Link>

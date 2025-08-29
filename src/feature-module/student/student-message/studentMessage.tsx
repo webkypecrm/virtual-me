@@ -7,7 +7,7 @@ import ImageWithBasePath from "../../../core/common/imageWithBasePath";
 
 const StudentMessage = () => {
   const route = all_routes;
-  const [showSearch,setShowSearch] = useState<any>(false);
+  const [showSearch, setShowSearch] = useState<any>(false);
   return (
     <>
       <Breadcrumb title="Messages" />
@@ -27,7 +27,10 @@ const StudentMessage = () => {
               <div className="col-lg-6">
                 <div className="d-flex align-items-center">
                   <span className="avatar avatar-xxl avatar-rounded me-3 border border-white border-2 position-relative">
-                    <ImageWithBasePath src="assets/img/user/user-02.jpg" alt="" />
+                    <ImageWithBasePath
+                      src="assets/img/user/user-02.jpg"
+                      alt=""
+                    />
                     <span className="verify-tick">
                       <i className="isax isax-verify5" />
                     </span>
@@ -295,7 +298,7 @@ const StudentMessage = () => {
                               data-bs-placement="bottom"
                               aria-label="Search"
                               data-bs-original-title="Search"
-                              onClick={()=>setShowSearch(!showSearch)}
+                              onClick={() => setShowSearch(!showSearch)}
                             >
                               <i className="isax isax-search-normal-14" />
                             </Link>
@@ -308,61 +311,46 @@ const StudentMessage = () => {
                             </Link>
                             <ul className="dropdown-menu dropdown-menu-end p-3">
                               <li>
-                                <Link to={route.homeone} className="dropdown-item">
+                                <Link
+                                  to={route.homefour}
+                                  className="dropdown-item"
+                                >
                                   <i className="isax isax-close-circle me-2" />
                                   Close Chat
                                 </Link>
                               </li>
                               <li>
-                                <Link
-                                  to="#"
-                                  className="dropdown-item"
-                                >
+                                <Link to="#" className="dropdown-item">
                                   <i className="fa-solid fa-volume-xmark me-2" />
                                   Mute Notification
                                 </Link>
                               </li>
                               <li>
-                                <Link
-                                  to="#"
-                                  className="dropdown-item"
-                                >
+                                <Link to="#" className="dropdown-item">
                                   <i className="isax isax-clock me-2" />
                                   Disappearing Message
                                 </Link>
                               </li>
                               <li>
-                                <Link
-                                  to="#"
-                                  className="dropdown-item"
-                                >
+                                <Link to="#" className="dropdown-item">
                                   <i className="isax isax-refresh me-2" />
                                   Clear Message
                                 </Link>
                               </li>
                               <li>
-                                <Link
-                                  to="#"
-                                  className="dropdown-item"
-                                >
+                                <Link to="#" className="dropdown-item">
                                   <i className="isax isax-trash me-2" />
                                   Delete Chat
                                 </Link>
                               </li>
                               <li>
-                                <Link
-                                  to="#"
-                                  className="dropdown-item"
-                                >
+                                <Link to="#" className="dropdown-item">
                                   <i className="fa-regular fa-thumbs-down me-2" />
                                   Report
                                 </Link>
                               </li>
                               <li>
-                                <Link
-                                  to="#"
-                                  className="dropdown-item"
-                                >
+                                <Link to="#" className="dropdown-item">
                                   <i className="fa-solid fa-ban me-2" />
                                   Block
                                 </Link>
@@ -371,7 +359,11 @@ const StudentMessage = () => {
                           </div>
                         </div>
                         {/* Chat Search */}
-                        <div className={`chat-search search-wrap contact-search ${showSearch ? 'visible-chat':''}`}>
+                        <div
+                          className={`chat-search search-wrap contact-search ${
+                            showSearch ? "visible-chat" : ""
+                          }`}
+                        >
                           <form>
                             <div className="input-group">
                               <input
@@ -608,38 +600,23 @@ const StudentMessage = () => {
                               <i className="text-gray-5 fa-solid fa-ellipsis-vertical" />
                             </Link>
                             <div className="dropdown-menu dropdown-menu-end p-3">
-                              <Link
-                                to="#"
-                                className="dropdown-item"
-                              >
+                              <Link to="#" className="dropdown-item">
                                 <i className="isax isax-camera me-2" />
                                 Camera
                               </Link>
-                              <Link
-                                to="#"
-                                className="dropdown-item"
-                              >
+                              <Link to="#" className="dropdown-item">
                                 <i className="isax isax-gallery me-2" />
                                 Gallery
                               </Link>
-                              <Link
-                                to="#"
-                                className="dropdown-item"
-                              >
+                              <Link to="#" className="dropdown-item">
                                 <i className="isax isax-audio-square me-2" />
                                 Audio
                               </Link>
-                              <Link
-                                to="#"
-                                className="dropdown-item"
-                              >
+                              <Link to="#" className="dropdown-item">
                                 <i className="isax isax-location me-2" />
                                 Location
                               </Link>
-                              <Link
-                                to="#"
-                                className="dropdown-item"
-                              >
+                              <Link to="#" className="dropdown-item">
                                 <i className="isax isax-user-cirlce-add me-2" />
                                 Contact
                               </Link>

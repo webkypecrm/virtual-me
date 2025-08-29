@@ -7,7 +7,6 @@ import Table from "../../../core/common/dataTable/index";
 import { StatementData } from "../../../core/common/data/json/statementData";
 
 const InstructorStatement = () => {
-
   const data = StatementData;
   const columns = [
     {
@@ -45,7 +44,15 @@ const InstructorStatement = () => {
       title: "Status",
       dataIndex: "Status",
       render: (text: string) => (
-        <span className={`badge badge-sm ${text === 'Completed' ? 'bg-success' : text === 'Pending' ? 'bg-info' : ''}  d-inline-flex align-items-center`}>
+        <span
+          className={`badge badge-sm ${
+            text === "Completed"
+              ? "bg-success"
+              : text === "Pending"
+              ? "bg-info"
+              : ""
+          }  d-inline-flex align-items-center`}
+        >
           <i className="fa-solid fa-circle fs-5 me-1" />
           {text}
         </span>
@@ -158,8 +165,7 @@ const InstructorStatement = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-md-4">
-                    </div>
+                    <div className="col-md-4"></div>
                   </div>
                 </div>
                 <Table dataSource={data} columns={columns} Search={true} />
@@ -188,7 +194,7 @@ const InstructorStatement = () => {
                   <div className="col-md-6">
                     <div className="mb-2 invoice-logo-white">
                       <ImageWithBasePath
-                        src="assets/img/logo.svg"
+                        src="assets/img/logo-virtual.png"
                         className="img-fluid"
                         alt="logo"
                       />

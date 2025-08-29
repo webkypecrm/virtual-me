@@ -1,11 +1,11 @@
 import { Navigate, Route } from "react-router";
 import { all_routes } from "./all_routes";
-import HomeOne from "../HomePages/home-one/homeone";
-import HomeTwo from "../HomePages/home-two/homeTwo";
-import HomeThree from "../HomePages/home-three/homeThree";
+// import homefour from "../HomePages/home-one/homefour";
+// import HomeTwo from "../HomePages/home-two/homeTwo";
+// import HomeThree from "../HomePages/home-three/homeThree";
 import HomeFour from "../HomePages/home-four/homeFour";
-import HomeFive from "../HomePages/home-five/homeFive";
-import HomeSix from "../HomePages/home-six/homeSix";
+// import HomeFive from "../HomePages/home-five/homeFive";
+// import HomeSix from "../HomePages/home-six/homeSix";
 import CourseGrid from "../Courses/courses-grid/courseGrid";
 import CourseList from "../Courses/course-list/courseList";
 import CourseCategory from "../Courses/course-category/courseCategory";
@@ -102,39 +102,39 @@ export const publicRoutes = [
   {
     path: "/",
     name: "Root",
-    element: <Navigate to="/index" />,
+    element: <Navigate to="/index-4" />,
     route: Route,
   },
-  {
-    path: routes.homeone,
-    element: <HomeOne />,
-    route: Route,
-  },
-  {
-    path: routes.hometwo,
-    element: <HomeTwo />,
-    route: Route,
-  },
-  {
-    path: routes.homethree,
-    element: <HomeThree />,
-    route: Route,
-  },
+  // {
+  //   path: routes.homefour,
+  //   element: <homefour />,
+  //   route: Route,
+  // },
+  // {
+  //   path: routes.hometwo,
+  //   element: <HomeTwo />,
+  //   route: Route,
+  // },
+  // {
+  //   path: routes.homethree,
+  //   element: <HomeThree />,
+  //   route: Route,
+  // },
   {
     path: routes.homefour,
     element: <HomeFour />,
     route: Route,
   },
-  {
-    path: routes.homefive,
-    element: <HomeFive />,
-    route: Route,
-  },
-  {
-    path: routes.homesix,
-    element: <HomeSix />,
-    route: Route,
-  },
+  // {
+  //   path: routes.homefive,
+  //   element: <HomeFive />,
+  //   route: Route,
+  // },
+  // {
+  //   path: routes.homesix,
+  //   element: <HomeSix />,
+  //   route: Route,
+  // },
   {
     path: routes.courseGrid,
     element: <CourseGrid />,

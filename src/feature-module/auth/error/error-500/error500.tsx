@@ -3,8 +3,7 @@ import { all_routes } from "../../../router/all_routes";
 import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
 
 const Error500 = () => {
-
-    const route = all_routes
+  const route = all_routes;
 
   return (
     <>
@@ -17,34 +16,34 @@ const Error500 = () => {
               alt="img"
               className="img-fluid bg-01"
             />
-             <ImageWithBasePath
+            <ImageWithBasePath
               src="assets/img/error/img-02.svg"
               alt="img"
               className="img-fluid bg-02"
             />
-             <ImageWithBasePath
+            <ImageWithBasePath
               src="assets/img/error/img-03.svg"
               alt="img"
               className="img-fluid bg-03"
             />
-             <ImageWithBasePath
+            <ImageWithBasePath
               src="assets/img/error/img-04.svg"
               alt="img"
               className="img-fluid bg-04"
             />
-             <ImageWithBasePath
+            <ImageWithBasePath
               src="assets/img/error/img-05.svg"
               alt="img"
               className="img-fluid bg-05"
             />
-             <ImageWithBasePath
+            <ImageWithBasePath
               src="assets/img/error/img-06.svg"
               alt="img"
               className="img-fluid bg-06"
             />
             <div className="error-logo">
-              <Link to={route.homeone}>
-                 <ImageWithBasePath
+              <Link to={route.homefour}>
+                <ImageWithBasePath
                   src="assets/img/logo.svg"
                   className="img-fluid"
                   alt="Logo"
@@ -52,7 +51,7 @@ const Error500 = () => {
               </Link>
             </div>
             <div className="error-box-img">
-               <ImageWithBasePath
+              <ImageWithBasePath
                 src="assets/img/error/error-02.svg"
                 alt="Img"
                 className="img-fluid"
@@ -67,7 +66,7 @@ const Error500 = () => {
               later stage
             </p>
             <Link
-              to={route.homeone}
+              to={route.homefour}
               className="btn back-to-home-btn d-inline-flex align-items-center"
             >
               <i className="isax isax-arrow-left-2 me-1" /> Back to Home

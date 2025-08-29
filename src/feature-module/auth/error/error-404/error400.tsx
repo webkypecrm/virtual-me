@@ -3,8 +3,7 @@ import { all_routes } from "../../../router/all_routes";
 import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
 
 const Error404 = () => {
-
-    const route = all_routes;
+  const route = all_routes;
 
   return (
     <>
@@ -43,7 +42,7 @@ const Error404 = () => {
               className="img-fluid bg-06"
             />
             <div className="error-logo">
-              <Link to={route.homeone}>
+              <Link to={route.homefour}>
                 <ImageWithBasePath
                   src="assets/img/logo.svg"
                   className="img-fluid"
@@ -66,7 +65,7 @@ const Error404 = () => {
               This page you requested counld not found. May the force be with
               you!
             </p>
-            <Link to={route.homeone} className="btn back-to-home-btn">
+            <Link to={route.homefour} className="btn back-to-home-btn">
               <i className="isax isax-arrow-left-2 me-1" /> Back to Home
             </Link>
           </div>

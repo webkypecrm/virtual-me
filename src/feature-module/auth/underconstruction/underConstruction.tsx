@@ -41,7 +41,7 @@ const UnderConstruction = () => {
               className="img-fluid bg-06"
             />
             <div className="error-logo">
-              <Link to={route.homeone}>
+              <Link to={route.homefour}>
                 <ImageWithBasePath
                   src="assets/img/logo.svg"
                   className="img-fluid"
@@ -64,7 +64,7 @@ const UnderConstruction = () => {
               We are working on fixing the problem. We back soon
             </p>
             <Link
-              to={route.homeone}
+              to={route.homefour}
               className="btn back-to-home-btn  d-inline-flex align-items-center"
             >
               <i className="isax isax-arrow-left-2 me-1" /> Back to Home

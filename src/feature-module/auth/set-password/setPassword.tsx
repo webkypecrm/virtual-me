@@ -256,7 +256,7 @@ const SetPassword = () => {
                         className="img-fluid"
                         alt="Logo"
                       />
-                      <Link to={route.homeone} className="link-1">
+                      <Link to={route.homefour} className="link-1">
                         Back to Home
                       </Link>
                     </div>
