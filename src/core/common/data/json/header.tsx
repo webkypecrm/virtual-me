@@ -418,6 +418,7 @@ export const header = [
   {
     tittle: "Content",
     showAsTab: false,
+    route: all_routes.courseGrid,
     separateRoute: false,
     base: "content",
     // menu: [

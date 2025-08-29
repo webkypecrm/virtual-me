@@ -1,32 +1,32 @@
-import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
-import { Link } from "react-router-dom";
-import { all_routes } from "../../../router/all_routes";
-import Slider from "react-slick";
+// import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
+// import { Link } from "react-router-dom";
+//import { all_routes } from "../../../router/all_routes";
+//import Slider from "react-slick";
 
 const Testimonials = () => {
-  const route = all_routes;
+  //const route = all_routes;
 
-  const testimonialsSlider = {
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          infinite: true,
-          dots: false
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
-  };
+  // const testimonialsSlider = {
+  //   infinite: true,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 3,
+  //   responsive: [
+  //     {
+  //       breakpoint: 992,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         infinite: true,
+  //         dots: false
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 1
+  //       }
+  //     }
+  //   ]
+  // };
 
   return (
     <>
@@ -40,7 +40,10 @@ const Testimonials = () => {
             <h2>Top Class &amp; Professional Instructors</h2>
             <p>Words from Those Who’ve Experienced Real Growth.</p>
           </div>
-          <Slider {...testimonialsSlider} className="testimonials-slider lazy mt-4">
+          {/* <Slider
+            {...testimonialsSlider}
+            className="testimonials-slider lazy mt-4"
+          >
             <div>
               <div className="testimonials-item rounded-3 bg-white">
                 <div className="position-relative d-inline-flex mb-2">
@@ -164,7 +167,7 @@ const Testimonials = () => {
                 </div>
               </div>
             </div>
-          </Slider>
+          </Slider> */}
         </div>
       </section>
       {/* testimonials */}

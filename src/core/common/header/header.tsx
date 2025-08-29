@@ -403,7 +403,7 @@ const Header = () => {
                         }`}
                       >
                         <Link
-                          to="#"
+                          to={mainMenus.route}
                           onClick={() => toggleSidebar(mainMenus.tittle)}
                         >
                           {mainMenus.tittle}{" "}
