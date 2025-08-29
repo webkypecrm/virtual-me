@@ -122,9 +122,11 @@ const Login = () => {
                   <div className="w-100">
                     <div className="d-flex align-items-center justify-content-between login-header">
                       <ImageWithBasePath
-                        src="assets/img/logo.svg"
+                        src="assets/img/logo-virtual.png"
                         className="img-fluid"
                         alt="Logo"
+                        height={200}
+                        width={200}
                       />
                       <Link to={route.homefour} className="link-1">
                         Back to Home

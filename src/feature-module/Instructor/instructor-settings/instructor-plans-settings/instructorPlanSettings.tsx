@@ -5,9 +5,7 @@ import InstructorSettingsLink from "../settings-link/instructorSettingsLink";
 import { Link } from "react-router-dom";
 import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
 import CustomSelect from "../../../../core/common/commonSelect";
-import {
-  Payment_Method,
-} from "../../../../core/common/selectOption/json/selectOption";
+import { Payment_Method } from "../../../../core/common/selectOption/json/selectOption";
 import { DatePicker } from "antd";
 
 const InstructorPlanSettings = () => {
@@ -90,8 +88,10 @@ const InstructorPlanSettings = () => {
                             <div className="d-flex align-items-center mb-3">
                               <div className="border p-2 rounded flex-shrink-0 me-2">
                                 <ImageWithBasePath
-                                  src="./assets/img/icons/visa-logo.svg"
+                                  src="./assets/img/icons/visa-logo-virtual.png"
                                   alt="img"
+                                  height={200}
+                                  width={200}
                                 />
                               </div>
                               <div>
@@ -184,26 +184,17 @@ const InstructorPlanSettings = () => {
                   </Link>
                   <ul className="dropdown-menu dropdown-menu-end p-3">
                     <li>
-                      <Link
-                        to="#"
-                        className="dropdown-item rounded-1"
-                      >
+                      <Link to="#" className="dropdown-item rounded-1">
                         Paid
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="#"
-                        className="dropdown-item rounded-1"
-                      >
+                      <Link to="#" className="dropdown-item rounded-1">
                         Pending
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="#"
-                        className="dropdown-item rounded-1"
-                      >
+                      <Link to="#" className="dropdown-item rounded-1">
                         Cancelled
                       </Link>
                     </li>
@@ -729,7 +720,7 @@ const InstructorPlanSettings = () => {
                     <div className="col-md-6">
                       <div className="mb-2 invoice-logo-white">
                         <ImageWithBasePath
-                          src="assets/img/logo.svg"
+                          src="assets/img/logo-virtual.png"
                           className="img-fluid"
                           alt="logo"
                         />
@@ -997,7 +988,7 @@ const InstructorPlanSettings = () => {
                   <i className="isax isax-close-circle5" />
                 </button>
               </div>
-              <form >
+              <form>
                 <div className="modal-body pb-0">
                   <div className="row">
                     <div className="col-md-12">

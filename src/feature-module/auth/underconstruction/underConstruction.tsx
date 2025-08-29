@@ -43,7 +43,7 @@ const UnderConstruction = () => {
             <div className="error-logo">
               <Link to={route.homefour}>
                 <ImageWithBasePath
-                  src="assets/img/logo.svg"
+                  src="assets/img/logo-virtual.png"
                   className="img-fluid"
                   alt="Logo"
                 />

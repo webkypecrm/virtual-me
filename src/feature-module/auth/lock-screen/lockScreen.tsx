@@ -30,9 +30,11 @@ const LockScreen = () => {
           <div className="lock-wrapper">
             <div className="d-flex align-items-center justify-content-center lock-header">
               <ImageWithBasePath
-                src="assets/img/logo.svg"
+                src="assets/img/logo-virtual.png"
                 className="img-fluid"
                 alt="Logo"
+                height={200}
+                width={200}
               />
             </div>
             <div className="topic">

@@ -386,6 +386,8 @@ const StudentOrder = () => {
                         src="assets/img/logo-virtual.png"
                         className="img-fluid"
                         alt="logo"
+                        height={200}
+                        width={200}
                       />
                     </div>
                     <p className="mb-2">

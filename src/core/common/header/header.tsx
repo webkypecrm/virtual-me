@@ -306,6 +306,8 @@ const Header = () => {
                     src="assets/img/logo-virtual.png"
                     className="img-fluid"
                     alt="Logo"
+                    height={200}
+                    width={200}
                   />
                 </Link>
                 <Link
