@@ -48,7 +48,7 @@ const Otp = () => {
           <div className="row">
             {/* Login Banner */}
             <div className="col-md-6 login-bg d-none d-lg-flex">
-              <Slider {...loginSLider} className="login-carousel">
+              {/* <Slider {...loginSLider} className="login-carousel">
                 <div>
                   <div className="login-carousel-section mb-3">
                     <div className="login-banner">
@@ -118,7 +118,7 @@ const Otp = () => {
                     </div>
                   </div>
                 </div>
-              </Slider>
+              </Slider> */}
             </div>
             {/* /Login Banner */}
             <div className="col-md-6 login-wrap-bg">
