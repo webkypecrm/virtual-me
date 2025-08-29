@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import ImageWithBasePath from "../../../core/common/imageWithBasePath";
-import Slider from "react-slick";
+//import Slider from "react-slick";
 import { all_routes } from "../../router/all_routes";
 
 const hasNumber = (value: string): boolean => {
@@ -64,14 +64,14 @@ const Register: React.FC = () => {
     }
   };
 
-  const loginSLider = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    adaptiveHeight: true,
-    // autoplay: true, // Uncomment if needed
-  };
+  // const loginSLider = {
+  //   dots: true,
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   adaptiveHeight: true,
+  //   // autoplay: true, // Uncomment if needed
+  // };
 
   const messages = () => {
     switch (validationError) {

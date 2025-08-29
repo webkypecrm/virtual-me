@@ -1,20 +1,20 @@
 import { Input } from "antd";
 import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
+//import Slider from "react-slick";
 import ImageWithBasePath from "../../../core/common/imageWithBasePath";
 import { Link, useNavigate } from "react-router-dom";
 import { all_routes } from "../../router/all_routes";
 // type OTPProps = GetProps<typeof Input.OTP>;
 
 const Otp = () => {
-  const loginSLider = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    adaptiveHeight: true,
-    // autoplay: true, // Uncomment if needed
-  };
+  // const loginSLider = {
+  //   dots: true,
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   adaptiveHeight: true,
+  //   // autoplay: true, // Uncomment if needed
+  // };
 
   const route = all_routes;
   const navigate = useNavigate();

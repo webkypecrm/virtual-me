@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Slider from "react-slick";
+//import Slider from "react-slick";
 import { all_routes } from "../../router/all_routes";
 import ImageWithBasePath from "../../../core/common/imageWithBasePath";
 type PasswordField = "password" | "confirmPassword";
 
 const Login = () => {
-  const loginSLider = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    adaptiveHeight: true,
-    // autoplay: true, // Uncomment if needed
-  };
+  // const loginSLider = {
+  //   dots: true,
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   adaptiveHeight: true,
+  //   // autoplay: true, // Uncomment if needed
+  // };
 
   const [passwordVisibility, setPasswordVisibility] = useState({
     password: false,
