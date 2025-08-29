@@ -1,8 +1,8 @@
 export const all_routes = {
   //Home Modules
   // homefour: "/index",
-  // hometwo:"/index-2",
-  // homethree:"/index-3",
+  // homefour:"/index-2",
+  // homefour:"/index-3",
   homefour: "/index-4",
   // homefive:"/index-5",
   // homesix:"/index-6",

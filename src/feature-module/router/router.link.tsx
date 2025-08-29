@@ -1,8 +1,8 @@
 import { Navigate, Route } from "react-router";
 import { all_routes } from "./all_routes";
 // import homefour from "../HomePages/home-one/homefour";
-// import HomeTwo from "../HomePages/home-two/homeTwo";
-// import HomeThree from "../HomePages/home-three/homeThree";
+// import homefour from "../HomePages/home-two/homefour";
+// import homefour from "../HomePages/home-three/homefour";
 import HomeFour from "../HomePages/home-four/homeFour";
 // import HomeFive from "../HomePages/home-five/homeFive";
 // import HomeSix from "../HomePages/home-six/homeSix";
@@ -111,13 +111,13 @@ export const publicRoutes = [
   //   route: Route,
   // },
   // {
-  //   path: routes.hometwo,
-  //   element: <HomeTwo />,
+  //   path: routes.homefour,
+  //   element: <homefour />,
   //   route: Route,
   // },
   // {
-  //   path: routes.homethree,
-  //   element: <HomeThree />,
+  //   path: routes.homefour,
+  //   element: <homefour />,
   //   route: Route,
   // },
   {

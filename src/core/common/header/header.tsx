@@ -330,18 +330,18 @@ const Header = () => {
                         onMouseOver={() => setIsMegaMenu(true)}
                         onMouseLeave={() => setIsMegaMenu(false)}
                       >
-                        <Link to="#">
+                        <Link to={mainMenus.route}>
                           {mainMenus.tittle}
-                          <i
+                          {/* <i
                             className={` ${
                               basePath === "instructor" ||
                               basePath === "student"
                                 ? "isax isax-add"
                                 : "fas fa-chevron-down"
                             }`}
-                          />
+                          /> */}
                         </Link>
-                        <ul
+                        {/* <ul
                           className={`submenu mega-submenu ${
                             subOpen === mainMenus.tittle ? "d-block" : ""
                           }`}
@@ -386,7 +386,7 @@ const Header = () => {
                               </div>
                             </div>
                           </li>
-                        </ul>
+                        </ul> */}
                       </li>
                     ) : (
                       <li
@@ -405,16 +405,163 @@ const Header = () => {
                           onClick={() => toggleSidebar(mainMenus.tittle)}
                         >
                           {mainMenus.tittle}{" "}
-                          <i
-                            className={` ${
-                              basePath === "instructor" ||
-                              basePath === "student"
-                                ? "isax isax-add"
-                                : "fas fa-chevron-down"
-                            }`}
-                          ></i>
+                          {mainMenus.tittle === "Explore" && (
+                            <i
+                              className={` ${
+                                basePath === "instructor" ||
+                                basePath === "student"
+                                  ? "isax isax-add"
+                                  : "fas fa-chevron-down"
+                              }`}
+                            ></i>
+                          )}
                         </Link>
-                        <ul
+                        {mainMenus.tittle === "Explore" && (
+                          <ul
+                            className={`submenu ${
+                              subOpen === mainMenus.tittle ? "d-block" : ""
+                            }`}
+                          >
+                            {mainMenus.menu?.map(
+                              (menu: any, menuIndex: any) => (
+                                <React.Fragment
+                                  key={`${mainIndex}-${menuIndex}`}
+                                >
+                                  {menu.hasSubRoute ? (
+                                    <li
+                                      key={`${mainIndex}-${menuIndex}`}
+                                      className={`${
+                                        menu.hasSubRoute ? "has-submenu" : ""
+                                      } ${
+                                        menu?.subMenus?.some((item: any) =>
+                                          item?.route?.includes(
+                                            location.pathname
+                                          )
+                                        ) || basePath === menu.base
+                                          ? "active"
+                                          : ""
+                                      }`}
+                                    >
+                                      <Link
+                                        to="#"
+                                        className={`hideonmob`}
+                                        onClick={() => {
+                                          toggleSubsidebar(menu.menuValue);
+                                        }}
+                                      >
+                                        {menu.menuValue}
+                                      </Link>
+                                      <ul
+                                        className={`submenu showonmob ${
+                                          subsidebar === menu.menuValue
+                                            ? "d-block"
+                                            : ""
+                                        }`}
+                                      >
+                                        {menu.subMenus?.map(
+                                          (subMenu: any, subMenuIndex: any) => (
+                                            <React.Fragment
+                                              key={`${mainIndex}-${menuIndex}-${subMenuIndex}`}
+                                            >
+                                              {subMenu.hasSubRoute ? (
+                                                <li
+                                                  className={`${
+                                                    menu.hasSubRoute
+                                                      ? "has-submenu"
+                                                      : ""
+                                                  } ${
+                                                    subMenu?.subMenus?.some(
+                                                      (item: any) =>
+                                                        item?.route?.includes(
+                                                          location.pathname
+                                                        )
+                                                    )
+                                                      ? "active"
+                                                      : ""
+                                                  }`}
+                                                >
+                                                  <Link
+                                                    to="#"
+                                                    onClick={() => {
+                                                      toggleSubsidebar2(
+                                                        subMenu.menuValue
+                                                      );
+                                                    }}
+                                                  >
+                                                    {subMenu.menuValue}
+                                                  </Link>
+                                                  <ul
+                                                    className={`submenu ${
+                                                      subsidebar2 ===
+                                                      subMenu.menuValue
+                                                        ? "d-block"
+                                                        : ""
+                                                    }`}
+                                                  >
+                                                    {subMenu.subMenus?.map(
+                                                      (
+                                                        menu: any,
+                                                        menuIndex2: any
+                                                      ) => (
+                                                        <li
+                                                          key={menuIndex2}
+                                                          className={
+                                                            location.pathname ===
+                                                            menu.route
+                                                              ? "active"
+                                                              : ""
+                                                          }
+                                                        >
+                                                          <Link to={menu.route}>
+                                                            {menu.menuValue}
+                                                          </Link>
+                                                        </li>
+                                                      )
+                                                    )}
+                                                  </ul>
+                                                </li>
+                                              ) : (
+                                                <li
+                                                  className={
+                                                    location.pathname ===
+                                                    subMenu.route
+                                                      ? "active"
+                                                      : ""
+                                                  }
+                                                  key={`${mainIndex}-${menuIndex}-${subMenuIndex}`}
+                                                >
+                                                  <Link to={subMenu.route}>
+                                                    {subMenu.menuValue}
+                                                  </Link>
+                                                </li>
+                                              )}
+                                            </React.Fragment>
+                                          )
+                                        )}
+                                      </ul>
+                                    </li>
+                                  ) : (
+                                    <li
+                                      key={`${mainIndex}-${menuIndex}`}
+                                      className={
+                                        location.pathname.includes(
+                                          menu.route || ""
+                                        )
+                                          ? "active"
+                                          : ""
+                                      }
+                                    >
+                                      <Link to={menu.route}>
+                                        {menu.menuValue}
+                                      </Link>
+                                    </li>
+                                  )}
+                                </React.Fragment>
+                              )
+                            )}
+                          </ul>
+                        )}{" "}
+                        {/* <ul
                           className={`submenu ${
                             subOpen === mainMenus.tittle ? "d-block" : ""
                           }`}
@@ -546,7 +693,7 @@ const Header = () => {
                               )}
                             </React.Fragment>
                           ))}
-                        </ul>
+                        </ul> */}
                       </li>
                     )}
                   </React.Fragment>

@@ -12,7 +12,7 @@ const TermsCondition = () => {
               <div className="mb-3">
                 <h5 className="mb-3">Introduction</h5>
                 <p className="mb-0">
-                  Welcome to DreamsLMS. By accessing or using our platform, you
+                  Welcome to VirtualXai. By accessing or using our platform, you
                   agree to comply with and be bound by the following terms and
                   conditions (“Terms”). Please read them carefully before using
                   our services.
@@ -68,7 +68,7 @@ const TermsCondition = () => {
               <div className="mb-0">
                 <h5 className="mb-3">Changes to Terms &amp; Conditions</h5>
                 <p className="mb-0">
-                  DreamsLMS may update these Terms &amp; Conditions
+                  VirtualXai may update these Terms &amp; Conditions
                   periodically. Any changes will be communicated through the
                   website or via email.
                 </p>

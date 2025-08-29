@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
           <div className="row">
             <div className="col-xl-8 mx-auto">
               <p className="mb-4">
-                At DreamsLMS, we are committed to protecting your privacy. This
+                At VirtualXai, we are committed to protecting your privacy. This
                 policy outlines how we handle your information:
               </p>
               <div className="mb-4">
@@ -78,7 +78,7 @@ const PrivacyPolicy = () => {
                   For any questions or concerns about this Privacy Policy,
                   contact us at{" "}
                   <Link to="#" target="_blank">
-                    dreamslms@example.com
+                    VirtualXai@example.com
                   </Link>
                 </p>
               </div>
