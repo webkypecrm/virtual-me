@@ -27,6 +27,7 @@ import InstructorQuiz from "../Instructor/instructor-quiz/instructorQuiz";
 import InstructorQuizResult from "../Instructor/instructor-quiz-result/instructorQuizResult";
 import InstructorEarning from "../Instructor/instructor-earning/instructorEarning";
 import InstructorPayout from "../Instructor/instructor-payout/instructorPayout";
+import InstructorAvatar from "../Instructor/instructor-avatar/createAvatar";
 import InstructorStatement from "../Instructor/instructor-statement/instructorStatement";
 import InstructorMessage from "../Instructor/instructor-message/instructorMessage";
 import InstructorTickets from "../Instructor/instructor-tickets/instructorTickets";
@@ -185,6 +186,7 @@ export const publicRoutes = [
     element: <AddNewCourse />,
     route: Route,
   },
+
   {
     path: routes.instructorDashboard,
     element: <InstructorDashboard />,
@@ -581,6 +583,14 @@ export const authRoutes = [
   {
     path: routes.comingSoon,
     element: <ComingSoon />,
+    route: Route,
+  },
+];
+
+export const virtualRoute = [
+  {
+    path: routes.instructorAvatar,
+    element: <InstructorAvatar />,
     route: Route,
   },
 ];

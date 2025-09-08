@@ -22,6 +22,7 @@ export const all_routes = {
   addNewCourse: "/course/add-course",
 
   //Instructor Modules
+  instructorAvatar: "/instructor/instructor-avatar",
   instructorDashboard: "/instructor/instructor-dashboard",
   instructorProfile: "/instructor/instructor-profile",
   instructorCourse: "/instructor/instructor-course",

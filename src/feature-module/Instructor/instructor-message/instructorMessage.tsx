@@ -10,7 +10,7 @@ const InstructorMessage = () => {
   const [showSearch, setShowSearch] = useState<any>(false);
   return (
     <>
-      <Breadcrumb title="Messages" />
+      {/* <Breadcrumb title="Messages" /> */}
       <div className="content">
         <div className="container">
           <ProfileCard />

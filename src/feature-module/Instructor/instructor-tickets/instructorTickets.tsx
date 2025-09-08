@@ -120,7 +120,7 @@ const InstructorTickets = () => {
   }
   return (
     <>
-      <Breadcrumb title="Tickets" />
+      {/* <Breadcrumb title="Tickets" /> */}
       <div className="content">
         <div className="container">
           <ProfileCard />
@@ -286,11 +286,9 @@ const InstructorTickets = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-4">
-                   
-                  </div>
+                  <div className="col-md-4"></div>
                 </div>
-                  <Table dataSource={data} columns={columns} Search={true} />
+                <Table dataSource={data} columns={columns} Search={true} />
               </div>
             </div>
           </div>

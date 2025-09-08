@@ -1,10 +1,10 @@
-import Breadcrumb from '../../../core/common/Breadcrumb/breadcrumb'
-import ProfileCard from '../common/profileCard'
-import InstructorSidebar from '../common/instructorSidebar'
-import { Link } from 'react-router-dom'
-import ImageWithBasePath from '../../../core/common/imageWithBasePath'
-import { all_routes } from '../../router/all_routes'
-import { courseListData } from '../../../core/common/data/json/courseListData'
+//import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
+import ProfileCard from "../common/profileCard";
+import InstructorSidebar from "../common/instructorSidebar";
+import { Link } from "react-router-dom";
+import ImageWithBasePath from "../../../core/common/imageWithBasePath";
+import { all_routes } from "../../router/all_routes";
+import { courseListData } from "../../../core/common/data/json/courseListData";
 import Table from "../../../core/common/dataTable/index";
 
 const InstructorCourse = () => {
@@ -27,9 +27,7 @@ const InstructorCourse = () => {
           </Link>
           <div>
             <h6 className="fw-medium mb-2">
-              <Link to={all_routes.courseDetails}>
-                {text}
-              </Link>
+              <Link to={all_routes.courseDetails}>{text}</Link>
             </h6>
             <div className="d-flex align-items-center">
               <span className="d-inline-flex fs-12 align-items-center me-2 pe-2 border-end">
@@ -77,7 +75,14 @@ const InstructorCourse = () => {
       dataIndex: "Status",
       render: (text: string) => (
         <span
-          className={`badge badge-sm ${text === 'Pending' ? 'bg-skyblue' : text === 'Draft' ? 'bg-info' : 'bg-success'} d-inline-flex align-items-center me-1`}>
+          className={`badge badge-sm ${
+            text === "Pending"
+              ? "bg-skyblue"
+              : text === "Draft"
+              ? "bg-info"
+              : "bg-success"
+          } d-inline-flex align-items-center me-1`}
+        >
           <i className="fa-solid fa-circle fs-5 me-1" />
           {text}
         </span>
@@ -89,10 +94,7 @@ const InstructorCourse = () => {
       dataIndex: "",
       render: () => (
         <div className="d-flex align-items-center">
-          <Link
-            to="#"
-            className="d-inline-flex fs-14 me-1 action-icon"
-          >
+          <Link to="#" className="d-inline-flex fs-14 me-1 action-icon">
             <i className="isax isax-edit-2" />
           </Link>
           <Link
@@ -106,11 +108,10 @@ const InstructorCourse = () => {
         </div>
       ),
     },
-
-  ]
+  ];
   return (
     <>
-      <Breadcrumb title='Courses' />
+      {/* <Breadcrumb title='Courses' /> */}
       <div className="content">
         <div className="container">
           <ProfileCard />
@@ -123,7 +124,9 @@ const InstructorCourse = () => {
                 <div className="col-xxl col-lg-4 col-md-6">
                   <div className="card bg-success">
                     <div className="card-body">
-                      <h6 className="fw-medium mb-1 text-white">Active Courses</h6>
+                      <h6 className="fw-medium mb-1 text-white">
+                        Active Courses
+                      </h6>
                       <h4 className="fw-bold text-white">45</h4>
                     </div>
                   </div>
@@ -131,7 +134,9 @@ const InstructorCourse = () => {
                 <div className="col-xxl col-lg-4 col-md-6">
                   <div className="card bg-secondary">
                     <div className="card-body">
-                      <h6 className="fw-medium mb-1 text-white">Pending Courses</h6>
+                      <h6 className="fw-medium mb-1 text-white">
+                        Pending Courses
+                      </h6>
                       <h4 className="fw-bold text-white">21</h4>
                     </div>
                   </div>
@@ -139,7 +144,9 @@ const InstructorCourse = () => {
                 <div className="col-xxl col-lg-4 col-md-6">
                   <div className="card bg-info">
                     <div className="card-body">
-                      <h6 className="fw-medium mb-1 text-white">Draft Courses</h6>
+                      <h6 className="fw-medium mb-1 text-white">
+                        Draft Courses
+                      </h6>
                       <h4 className="fw-bold text-white">15</h4>
                     </div>
                   </div>
@@ -147,7 +154,9 @@ const InstructorCourse = () => {
                 <div className="col-xxl col-lg-4 col-md-6">
                   <div className="card bg-skyblue">
                     <div className="card-body">
-                      <h6 className="fw-medium mb-1 text-white">Free Courses</h6>
+                      <h6 className="fw-medium mb-1 text-white">
+                        Free Courses
+                      </h6>
                       <h4 className="fw-bold text-white">16</h4>
                     </div>
                   </div>
@@ -155,7 +164,9 @@ const InstructorCourse = () => {
                 <div className="col-xxl col-lg-4 col-md-6">
                   <div className="card bg-purple">
                     <div className="card-body">
-                      <h6 className="fw-medium mb-1 text-white">Paid Courses</h6>
+                      <h6 className="fw-medium mb-1 text-white">
+                        Paid Courses
+                      </h6>
                       <h4 className="fw-bold text-white">21</h4>
                     </div>
                   </div>
@@ -186,26 +197,17 @@ const InstructorCourse = () => {
                       </Link>
                       <ul className="dropdown-menu dropdown-menu-end p-3">
                         <li>
-                          <Link
-                            to="#"
-                            className="dropdown-item rounded-1"
-                          >
+                          <Link to="#" className="dropdown-item rounded-1">
                             Published
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            to="#"
-                            className="dropdown-item rounded-1"
-                          >
+                          <Link to="#" className="dropdown-item rounded-1">
                             Pending
                           </Link>
                         </li>
                         <li>
-                          <Link
-                            to="#"
-                            className="dropdown-item rounded-1"
-                          >
+                          <Link to="#" className="dropdown-item rounded-1">
                             Draft
                           </Link>
                         </li>
@@ -213,15 +215,12 @@ const InstructorCourse = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-md-4">
-
-                </div>
+                <div className="col-md-4"></div>
               </div>
               <Table dataSource={data} columns={columns} Search={true} />
             </div>
           </div>
         </div>
-
       </div>
       <>
         {/* Delete Modal */}
@@ -234,7 +233,9 @@ const InstructorCourse = () => {
                 </span>
                 <div>
                   <h4 className="mb-2">Delete Course</h4>
-                  <p className="mb-3">Are you sure you want to delete course?</p>
+                  <p className="mb-3">
+                    Are you sure you want to delete course?
+                  </p>
                   <div className="d-flex align-items-center justify-content-center">
                     <Link
                       to="#"
@@ -258,9 +259,8 @@ const InstructorCourse = () => {
         </div>
         {/* /Delete Modal */}
       </>
-
     </>
-  )
-}
+  );
+};
 
-export default InstructorCourse
+export default InstructorCourse;

@@ -82,7 +82,7 @@ const InstructorStatement = () => {
   ];
   return (
     <>
-      <Breadcrumb title="Statements" />
+      {/* <Breadcrumb title="Statements" /> */}
       <div className="content">
         <div className="container">
           <ProfileCard />

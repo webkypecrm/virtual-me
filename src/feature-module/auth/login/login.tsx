@@ -31,7 +31,7 @@ const Login = () => {
   const navigate = useNavigate();
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    const Path = route.homefour;
+    const Path = route.instructorDashboard;
     navigate(Path);
   };
   return (

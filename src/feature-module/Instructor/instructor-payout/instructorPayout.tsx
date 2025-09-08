@@ -7,8 +7,6 @@ import Table from "../../../core/common/dataTable/index";
 import { PayoutData } from "../../../core/common/data/json/payoutData";
 
 const InstructorPayout = () => {
-
-
   const data = PayoutData;
   const columns = [
     {
@@ -60,7 +58,7 @@ const InstructorPayout = () => {
 
   return (
     <>
-      <Breadcrumb title="Payouts" />
+      {/* <Breadcrumb title="Payouts" /> */}
       <div className="content">
         <div className="container">
           <ProfileCard />
@@ -151,7 +149,7 @@ const InstructorPayout = () => {
                               type="radio"
                               className="btn-check"
                               name="btnradio"
-                              id="btnradio2"            
+                              id="btnradio2"
                             />
                             <label
                               className="btn btn-check-label bg-white w-100 d-flex justify-content-between align-items-center"
@@ -253,8 +251,7 @@ const InstructorPayout = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-md-4">
-                    </div>
+                    <div className="col-md-4"></div>
                   </div>
                 </div>
                 <Table dataSource={data} columns={columns} Search={true} />
