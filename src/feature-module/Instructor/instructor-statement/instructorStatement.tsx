@@ -1,4 +1,4 @@
-import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
+//import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
 import InstructorSidebar from "../common/instructorSidebar";
 import ProfileCard from "../common/profileCard";
 import ImageWithBasePath from "../../../core/common/imageWithBasePath";
