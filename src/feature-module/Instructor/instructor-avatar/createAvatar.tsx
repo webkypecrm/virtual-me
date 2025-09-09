@@ -101,7 +101,7 @@ const CreateAvatar: React.FC = () => {
   };
 
   return (
-    <div className="d-flex flex-column  bg-light">
+    <div className="d-flex flex-column bg-light">
       {/* Header */}
       <header className="d-flex align-items-center px-4 py-3 border-bottom bg-white shadow-sm justify-content-between">
         <Link

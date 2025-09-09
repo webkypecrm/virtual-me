@@ -296,7 +296,7 @@ const UploadStep: React.FC = () => {
   };
 
   return (
-    <div className="d-flex flex-column vh-100">
+    <div className="d-flex flex-column">
       {/* Top header with back arrow */}
       <div className="d-flex align-items-center p-1 border-bottom">
         <ArrowLeft
