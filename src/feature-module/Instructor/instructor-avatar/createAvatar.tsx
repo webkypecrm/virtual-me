@@ -18,19 +18,21 @@ const CreateAvatar: React.FC = () => {
     switch (current) {
       case "instructions":
         return (
-          <div>
-            <div className="mb-4">
+          <div className="container-fluid  d-flex flex-column justify-content-center overflow-hidden">
+            <div className="mb-3 text-center">
               <img
                 src="https://media.istockphoto.com/id/2182750801/photo/virtual-reality-concept-businessman-interacting-with-virtual-reality-technology-on-virtual.jpg?s=2048x2048&w=is&k=20&c=2KDj5icdYqVy8rPasZsVMOXITMC0T-0GcCYxi3RZbaM="
                 alt="Instructions preview"
-                className="w-100 rounded"
+                className="img-fluid rounded"
+                style={{ maxHeight: "180px", objectFit: "cover" }}
               />
             </div>
-            {/* Recommended vs Things to avoid */}
-            <div className="row">
+
+            <div className="row flex-grow-1">
+              {/* Recommended */}
               <div className="col-md-6 mb-3">
-                <div className="p-3 border rounded bg-light">
-                  <div className="d-flex align-items-center justify-content-center mb-3">
+                <div className="p-3 border rounded bg-light  overflow-auto">
+                  <div className="d-flex align-items-center justify-content-center mb-2">
                     <hr className="flex-grow-1 me-2" />
                     <h6 className="text-success fw-bold mb-0">
                       <i className="bi bi-check-circle-fill me-1"></i>{" "}
@@ -38,7 +40,7 @@ const CreateAvatar: React.FC = () => {
                     </h6>
                     <hr className="flex-grow-1 ms-2" />
                   </div>
-                  <ul className="mb-0">
+                  <ul className="mb-0 small">
                     <li>
                       At least <strong>2 minutes</strong> of footage
                     </li>
@@ -55,9 +57,11 @@ const CreateAvatar: React.FC = () => {
                   </ul>
                 </div>
               </div>
+
+              {/* Things to avoid */}
               <div className="col-md-6 mb-3">
-                <div className="p-3 border rounded bg-light">
-                  <div className="d-flex align-items-center justify-content-center mb-3">
+                <div className="p-3 border rounded bg-light overflow-auto">
+                  <div className="d-flex align-items-center justify-content-center mb-2">
                     <hr className="flex-grow-1 me-2" />
                     <h6 className="text-danger fw-bold mb-0">
                       <i className="bi bi-x-circle-fill me-1"></i> Things to
@@ -65,7 +69,7 @@ const CreateAvatar: React.FC = () => {
                     </h6>
                     <hr className="flex-grow-1 ms-2" />
                   </div>
-                  <ul className="mb-0">
+                  <ul className="mb-0 small">
                     <li>Stitches or cuts in footage</li>
                     <li>Talking without pauses</li>
                     <li>Excessive movement</li>
@@ -97,7 +101,7 @@ const CreateAvatar: React.FC = () => {
   };
 
   return (
-    <div className="d-flex flex-column vh-100 bg-light">
+    <div className="d-flex flex-column  bg-light">
       {/* Header */}
       <header className="d-flex align-items-center px-4 py-3 border-bottom bg-white shadow-sm justify-content-between">
         <Link
@@ -127,7 +131,7 @@ const CreateAvatar: React.FC = () => {
       </header>
 
       {/* Progress Steps */}
-      <div className="d-flex justify-content-center align-items-center gap-4 py-2 flex-wrap">
+      {/* <div className="d-flex justify-content-center align-items-center gap-4 py-2 flex-wrap">
         {steps.map(({ key, label }, index) => (
           <div key={key} className="d-flex align-items-center gap-2">
             <div
@@ -150,13 +154,43 @@ const CreateAvatar: React.FC = () => {
             </span>
           </div>
         ))}
+      </div> */}
+
+      <div className="d-flex justify-content-center align-items-center gap-3 py-1 flex-wrap">
+        {steps.map(({ key, label }, index) => (
+          <div key={key} className="d-flex align-items-center gap-1">
+            <div
+              className={`rounded-circle fw-bold d-flex justify-content-center align-items-center 
+          ${
+            step === index ? "bg-primary text-white" : "bg-light text-secondary"
+          }`}
+              style={{ width: "24px", height: "24px", fontSize: "0.75rem" }}
+            >
+              {index + 1}
+            </div>
+            <span
+              className={`fw-semibold ${
+                step === index ? "text-primary" : "text-secondary"
+              }`}
+              style={{ fontSize: "0.8rem" }}
+            >
+              {label}
+            </span>
+          </div>
+        ))}
       </div>
 
       {/* Step Content */}
       <main className="flex-grow-1 d-flex flex-column align-items-center px-4">
         <div
           className="bg-white rounded shadow-sm p-4"
-          style={{ maxWidth: "900px", width: "100%", minHeight: "700px" }}
+          // style={{ maxWidth: "900px", width: "100%", minHeight: "700px" }}
+          style={{
+            maxWidth: "700px", // smaller than before
+            width: "100%",
+            maxHeight: "80vh", // fit within viewport
+            overflowY: "auto", // scrolls inside if content is too much
+          }}
         >
           {renderStepContent()}
         </div>
@@ -164,10 +198,10 @@ const CreateAvatar: React.FC = () => {
 
       {/* Footer */}
       {steps[step].key !== "upload" && (
-        <footer className="d-flex justify-content-center py-4 border-top bg-light">
+        <footer className="d-flex justify-content-center py-2  bg-light">
           {step < steps.length - 1 ? (
             <button
-              className="btn btn-primary px-4 py-2 fw-semibold"
+              className="btn btn-primary  px-4 py-2 fw-semibold"
               onClick={() => setStep(step + 1)}
             >
               Next step
