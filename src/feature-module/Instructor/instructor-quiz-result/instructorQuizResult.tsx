@@ -48,7 +48,7 @@ const InstructorQuizResult = () => {
   return (
     <>
       {/* <Breadcrumb title='Quiz Results'/> */}
-      <div className="content">
+      <div className="content p-0">
         <div className="container">
           <ProfileCard />
           <div className="row">

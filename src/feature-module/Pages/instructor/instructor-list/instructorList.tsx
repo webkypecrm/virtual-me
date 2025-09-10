@@ -1,5 +1,5 @@
-import type {  SliderSingleProps } from "antd";
-import  { Slider  } from "antd";
+import type { SliderSingleProps } from "antd";
+import { Slider } from "antd";
 import { useState } from "react";
 import { all_routes } from "../../../router/all_routes";
 import Breadcrumb from "../../../../core/common/Breadcrumb/breadcrumb";
@@ -24,7 +24,7 @@ const InstructorList = () => {
 
   return (
     <>
-      <Breadcrumb title="Instructor List" />
+      <Breadcrumb title="Professionals" />
       <div className="main-wrapper">
         {/* Course */}
         <div className="instructor-list">
@@ -336,11 +336,14 @@ const InstructorList = () => {
                         <form action="#">
                           <div className="d-sm-flex justify-content-center justify-content-lg-end mb-1 mb-lg-0">
                             <div className="view-icons mb-2 mb-sm-0">
-                              <Link to={route.courseGrid} className="grid-view">
+                              <Link
+                                to={route.instructorGrid}
+                                className="grid-view"
+                              >
                                 <i className="isax isax-element-3" />
                               </Link>
                               <Link
-                                to={route.courseList}
+                                to={route.instructorList}
                                 className="list-view active"
                               >
                                 <i className="isax isax-task" />
@@ -371,7 +374,7 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-61.jpg"
+                        src="assets/img/user/user-64.jpeg"
                         alt="img"
                         className="img-fluid"
                       />
@@ -455,7 +458,7 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-62.jpg"
+                        src="assets/img/user/user-64.jpeg"
                         alt="img"
                         className="img-fluid"
                       />
@@ -534,7 +537,7 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-63.jpg"
+                        src="assets/img/user/user-64.jpeg"
                         alt="img"
                         className="img-fluid"
                       />
@@ -610,7 +613,7 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-44.jpg"
+                        src="assets/img/user/user-64.jpeg"
                         alt="img"
                         className="img-fluid"
                       />
@@ -689,7 +692,7 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-45.jpg"
+                        src="assets/img/user/user-64.jpeg"
                         alt="img"
                         className="img-fluid"
                       />
@@ -766,7 +769,7 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-46.jpg"
+                        src="assets/img/user/user-64.jpeg"
                         alt="img"
                         className="img-fluid"
                       />
@@ -848,7 +851,7 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-47.jpg"
+                        src="assets/img/user/user-64.jpeg"
                         alt="img"
                         className="img-fluid"
                       />

@@ -1,10 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { ArrowLeft } from "lucide-react"; // For back arrow icon
 import { Modal, Button, Row, Col, Card } from "react-bootstrap";
 
 const UploadStep: React.FC = () => {
   const [currentDiv, setCurrentDiv] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isCamOn, setIsCamOn] = useState(false);
+
+  const startCamera = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: true, // set to false if you don’t need mic
+      });
+      if (videoRef.current) {
+        videoRef.current.srcObject = stream;
+      }
+      setIsCamOn(true);
+    } catch (err) {
+      console.error("Error accessing webcam:", err);
+    }
+  };
+
+  const stopCamera = () => {
+    if (videoRef.current && videoRef.current.srcObject) {
+      const stream = videoRef.current.srcObject as MediaStream;
+      stream.getTracks().forEach((track) => track.stop());
+      videoRef.current.srcObject = null;
+    }
+    setIsCamOn(false);
+  };
   const options = [
     { title: "Freestyle", icon: "💡" },
     { title: "Tell us about yourself", icon: "🎤" },
@@ -18,14 +44,14 @@ const UploadStep: React.FC = () => {
     <div key="1">
       <div className="p-1 mx-auto">
         {/* Instruction Box */}
-        <h6 className="my-2 small">Upload your footage</h6>
-        <div className="alert alert-warning small mb-3 py-2 px-3">
-          <p className="fw-semibold mb-1 small">
+        <h6 className="my-2">Upload your footage</h6>
+        <div className="alert alert-warning mb-3 py-3 px-3">
+          <p className="fw-semibold mb-2">
             For optimal, most realistic results, we recommend recording a
             continuous 2-minute video recorded with clear voice capture. Please
             make sure to include segments in the order below:
           </p>
-          <ol className="mb-0 ps-3 small">
+          <ol className="mb-0 ps-3">
             <li>
               15s listening state: imagine you are listening to the camera.
             </li>
@@ -35,37 +61,35 @@ const UploadStep: React.FC = () => {
         </div>
 
         {/* Upload Options */}
-        <div className="row g-2">
+        <div className="row g-3">
           {/* Upload Footage */}
           <div className="col-md-6">
-            <div className="position-relative border border-1 border-primary rounded-2 text-center p-3 h-100 hover-bg-light">
-              <span className="badge bg-light text-primary border border-primary position-absolute top-0 end-0 m-1 small">
+            <div className="position-relative border border-1 border-primary rounded-2 text-center p-4 h-100 hover-bg-light">
+              <span className="badge bg-light text-primary border border-primary position-absolute top-0 end-0 m-2">
                 Recommended
               </span>
-              <div className="mb-2 fs-4 text-primary">
+              <div className="mb-1 fs-3 text-primary">
                 <i className="bi bi-cloud-arrow-up"></i>
               </div>
-              <h6 className="fw-semibold mb-1">Upload Footage</h6>
-              <p className="text-success small mb-0">Best quality</p>
+              <h6 className="fw-semibold mb-2">Upload Footage</h6>
+              <p className="text-success mb-0">Best quality</p>
             </div>
           </div>
 
           {/* Record via Webcam */}
           <div className="col-md-6">
-            <div className="border border-1 border-secondary rounded-2 text-center p-3 h-100 hover-bg-light">
-              <div className="mb-2 fs-4 text-secondary">
-                <i className="bi bi-camera-video"></i>
-              </div>
-              <h6 className="fw-semibold mb-1">Record via webcam</h6>
-              <p className="text-warning small mb-0">Quick try</p>
+            <div className="border border-1 border-secondary rounded-2 text-center p-4 h-100 hover-bg-light">
+              <div className="mb-3 text-secondary"></div>
+              <h6 className="fw-semibold mb-2">Record via webcam</h6>
+              <p className="text-warning mb-0">Quick try</p>
             </div>
           </div>
         </div>
 
         {/* Example Footage */}
-        <div className="text-center mt-3">
-          <p className="text-muted small mb-2">Checkout our example footage</p>
-          <div className="mx-auto" style={{ maxWidth: "150px" }}>
+        <div className="text-center mt-4">
+          <p className="text-muted mb-3">Checkout our example footage</p>
+          <div className="mx-auto" style={{ maxWidth: "200px" }}>
             <img
               src="https://images.unsplash.com/photo-1756992293716-b843700b5ab0?w=600&auto=format&fit=crop&q=60"
               className="img-fluid rounded shadow-sm"
@@ -78,15 +102,15 @@ const UploadStep: React.FC = () => {
     <div key="2">
       <div className="p-3 mx-auto" style={{ maxWidth: "500px" }}>
         {/* Buttons */}
-        <div className="d-flex justify-content-center mb-2">
+        <div className="d-flex justify-content-center mb-3">
           <button
-            className="btn btn-outline-primary btn-sm me-2"
+            className="btn btn-outline-primary me-2"
             onClick={() => setShowModal(true)}
           >
             Upload footage
           </button>
           <button
-            className="btn btn-outline-secondary btn-sm"
+            className="btn btn-outline-secondary"
             onClick={() => "turn-mic-on"}
           >
             Record via webcam
@@ -94,13 +118,13 @@ const UploadStep: React.FC = () => {
         </div>
 
         {/* Instructions */}
-        <div className="alert alert-warning small py-2 px-3 mb-2">
-          <p className="mb-1 small">
+        <div className="alert alert-warning py-3 px-3 mb-3">
+          <p className="mb-2">
             For optimal, most realistic results, we recommend recording a
             continuous 2-minute video with clear voice capture. Please include
             segments in the order below:
           </p>
-          <ol className="mb-0 ps-3 small">
+          <ol className="mb-0 ps-3">
             <li>
               <strong>15s listening state:</strong> imagine you are listening to
               the camera.
@@ -117,9 +141,9 @@ const UploadStep: React.FC = () => {
         </div>
 
         {/* Upload Section */}
-        <div className=" rounded p-3 text-center mb-2">
-          <p className="fw-bold mb-2 small">Upload via Google Drive</p>
-          <div className="input-group input-group-sm mb-2">
+        <div className="rounded p-3 text-center mb-3 border">
+          <p className="fw-bold mb-3">Upload via Google Drive</p>
+          <div className="input-group mb-3">
             <span className="input-group-text">
               <i className="bi bi-google"></i>
             </span>
@@ -130,15 +154,13 @@ const UploadStep: React.FC = () => {
             />
           </div>
 
-          <p className="text-muted mb-1 small">
-            Or drag and drop your footage here
-          </p>
-          <small className="text-muted d-block mb-2">
-            landscape or portrait video, mp4/mov/webm format <br />
-            2min recommended, max 10min, <br />
+          <p className="text-muted mb-2">Or drag and drop your footage here</p>
+          <p className="text-muted mb-3">
+            Landscape or portrait video, mp4/mov/webm format <br />
+            2min recommended, max 10min <br />
             360p–4K resolution, &lt; 10GB
-          </small>
-          <a href="#" className="text-decoration-none small">
+          </p>
+          <a href="#" className="text-decoration-none fw-semibold">
             Browse local files
           </a>
         </div>
@@ -147,16 +169,16 @@ const UploadStep: React.FC = () => {
     <div key="3">
       <div className="p-3 mx-auto" style={{ maxWidth: "450px" }}>
         {/* Buttons */}
-        <div className="d-flex justify-content-center mb-2">
+        <div className="d-flex justify-content-center mb-3">
           <button
-            className="btn btn-outline-primary btn-sm me-2"
+            className="btn btn-outline-primary me-2"
             onClick={() => setShowModal(true)}
           >
             Upload footage
           </button>
 
           <button
-            className="btn btn-outline-secondary btn-sm"
+            className="btn btn-outline-secondary"
             onClick={() => "turn-mic-on"}
           >
             Record via webcam
@@ -164,13 +186,13 @@ const UploadStep: React.FC = () => {
         </div>
 
         {/* Instructions */}
-        <div className="alert alert-warning small py-2 px-3 mb-2">
-          <p className="mb-1 small">
+        <div className="alert alert-warning py-3 px-3 mb-3">
+          <p className="mb-2">
             For optimal, most realistic results, we recommend recording a
             continuous 2-minute video with clear voice capture. Please include
             segments in the order below:
           </p>
-          <ol className="mb-0 ps-3 small">
+          <ol className="mb-0 ps-3">
             <li>
               <strong>15s listening state:</strong> imagine you are listening to
               the camera.
@@ -187,29 +209,30 @@ const UploadStep: React.FC = () => {
         </div>
 
         {/* Camera & Mic Section */}
-        <div className="border rounded d-flex flex-column align-items-center justify-content-center p-3 text-muted mb-2">
-          <button className="btn btn-primary btn-sm mb-2">
-            Turn on Cam & Mic
-          </button>
-          <small className="text-center">
+        <div
+          className="border rounded d-flex flex-column align-items-center justify-content-center p-4 text-muted mb-3"
+          style={{ height: "180px" }}
+        >
+          <button className="btn btn-primary mb-3">Turn on Cam & Mic</button>
+          <p className="text-center mb-0">
             Your browser may ask for permission to use your camera and
             microphone.
-          </small>
+          </p>
         </div>
       </div>
     </div>,
     <div key="4">
       <div className="p-3 mx-auto" style={{ maxWidth: "500px" }}>
         {/* Buttons */}
-        <div className="d-flex justify-content-center mb-2">
+        <div className="d-flex justify-content-center mb-3">
           <button
-            className="btn btn-outline-primary btn-sm me-2"
+            className="btn btn-outline-primary me-2"
             onClick={() => setShowModal(true)}
           >
             Upload footage
           </button>
           <button
-            className="btn btn-outline-secondary btn-sm"
+            className="btn btn-outline-secondary"
             onClick={() => "turn-mic-on"}
           >
             Record via webcam
@@ -217,13 +240,13 @@ const UploadStep: React.FC = () => {
         </div>
 
         {/* Instructions */}
-        <div className="alert alert-warning small py-2 px-3 mb-2">
-          <p className="mb-1 small">
+        <div className="alert alert-warning py-3 px-3 mb-3">
+          <p className="mb-2">
             For optimal, most realistic results, we recommend recording a
             continuous 2-minute video recorded with clear voice capture. Please
             make sure to include segments in the order below:
           </p>
-          <ol className="mb-0 ps-3 small">
+          <ol className="mb-0 ps-3">
             <li>
               <strong>15s listening state:</strong> imagine you are listening to
               the camera.
@@ -240,45 +263,56 @@ const UploadStep: React.FC = () => {
         </div>
 
         {/* Video Preview */}
-        <div className="position-relative mb-2">
+        {/* <div className="position-relative mb-3">
           <video
-            className="w-100 rounded"
+            className="w-100 rounded shadow-sm"
             controls
             autoPlay
             muted
-            style={{ maxHeight: "220px", objectFit: "cover" }}
+            style={{ maxHeight: "240px", objectFit: "cover" }}
           >
             <source src="your-video.mp4" type="video/mp4" />
             Your browser does not support video preview.
           </video>
-          <span className="badge bg-danger position-absolute top-0 end-0 m-1 small">
+          <span className="badge bg-danger position-absolute top-0 end-0 m-2">
             Preview
           </span>
+        </div> */}
+        <div className="border rounded p-3 text-center">
+          {!isCamOn ? (
+            <button className="btn btn-primary btn-sm" onClick={startCamera}>
+              Turn on Cam & Mic
+            </button>
+          ) : (
+            <button className="btn btn-danger btn-sm" onClick={stopCamera}>
+              Turn off Cam & Mic
+            </button>
+          )}
+
+          <div className="mt-3">
+            <video
+              ref={videoRef}
+              autoPlay
+              playsInline
+              muted
+              style={{ width: "100%", maxWidth: "300px", borderRadius: "10px" }}
+            />
+          </div>
         </div>
 
         {/* Device Selectors */}
-        <div
-          className="d-flex flex-wrap align-items-center gap-1 mb-2"
-          style={{ fontSize: "0.75rem" }}
-        >
-          <select
-            className="form-select form-select-sm py-0 px-1 w-auto"
-            style={{ minWidth: "100px" }}
-          >
+        <div className="d-flex align-items-center gap-2 mb-3 flex-nowrap">
+          <select className="form-select" style={{ minWidth: "120px" }}>
             <option>Landscape</option>
             <option>Portrait</option>
           </select>
-          <select
-            className="form-select form-select-sm py-0 px-1 w-auto"
-            style={{ minWidth: "150px" }}
-          >
+
+          <select className="form-select" style={{ minWidth: "130px" }}>
             <option>FaceTime HD Camera</option>
             <option>External Camera</option>
           </select>
-          <select
-            className="form-select form-select-sm py-0 px-1 w-auto"
-            style={{ minWidth: "200px" }}
-          >
+
+          <select className="form-select" style={{ minWidth: "180px" }}>
             <option>MacBook Air Microphone</option>
             <option>External Microphone</option>
           </select>
@@ -324,13 +358,18 @@ const UploadStep: React.FC = () => {
       </div>
 
       {/* Modal */}
-      <Modal show={showModal} onHide={() => setShowModal(false)} size="lg">
+      <Modal
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        size="lg"
+        className="p-4"
+      >
         <Modal.Header closeButton>
           <Modal.Title>Record video footage</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
-          <p className="text-muted small">
+          <p className="text-muted ">
             We encourage you to talk without script so that you look more
             natural and confident. Please make sure to follow the structure of
             15s listening, 90s talking and 15s idling.
@@ -339,10 +378,10 @@ const UploadStep: React.FC = () => {
             {options.map((opt, idx) => (
               <Col xs={12} sm={6} md={4} key={idx}>
                 <Card
-                  className={`h-100 text-center p-2 border ${
+                  className={`h-100 text-center p-4 border ${
                     idx === 0 ? "border-primary" : ""
                   }`}
-                  style={{ cursor: "pointer", fontSize: "0.85rem" }}
+                  style={{ cursor: "pointer", fontSize: "1rem" }}
                 >
                   <Card.Body className="p-2">
                     <div style={{ fontSize: "1.2rem" }}>{opt.icon}</div>

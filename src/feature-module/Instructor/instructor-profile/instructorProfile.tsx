@@ -7,7 +7,7 @@ const InstructorProfile = () => {
   return (
     <>
       {/* <Breadcrumb title='My Profile'/> */}
-      <div className="content">
+      <div className="content p-0">
         <div className="container">
           <ProfileCard />
           <div className="row">

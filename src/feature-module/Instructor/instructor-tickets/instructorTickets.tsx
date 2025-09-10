@@ -121,7 +121,7 @@ const InstructorTickets = () => {
   return (
     <>
       {/* <Breadcrumb title="Tickets" /> */}
-      <div className="content">
+      <div className="content p-0">
         <div className="container">
           <ProfileCard />
           <div className="row">

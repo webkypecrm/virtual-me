@@ -9,7 +9,7 @@ const StudentGrid = () => {
   return (
     <>
       {/* <Breadcrumb title='Students Grid'/> */}
-      <div className="content">
+      <div className="content p-0">
         <div className="container">
           <ProfileCard />
           <div className="row">

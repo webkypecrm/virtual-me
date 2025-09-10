@@ -60,9 +60,9 @@ export const header = [
     menu: [],
   },
   {
-    tittle: "People",
-    base: "people",
-    route: all_routes.instructorDetails,
+    tittle: "Professionals",
+    base: "professionals",
+    route: all_routes.instructorGrid,
     showAsTab: false,
     separateRoute: false,
     // menu: [

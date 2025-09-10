@@ -26,7 +26,7 @@ const InstructorDetails = () => {
 
   return (
     <>
-      <Breadcrumb title="Instructor Details" />
+      <Breadcrumb title="Professionals Details" />
 
       {/* Instructor */}
       <div className="instructor-detail-content">
@@ -38,7 +38,7 @@ const InstructorDetails = () => {
                   <div className="instructor-img">
                     <Link to="#">
                       <ImageWithBasePath
-                        src="assets/img/user/user-61.jpg"
+                        src="assets/img/user/user-64.jpeg"
                         alt="img"
                         className="img-fluid"
                       />

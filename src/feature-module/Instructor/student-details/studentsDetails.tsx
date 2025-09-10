@@ -25,7 +25,7 @@ const StudentsDetails = () => {
   return (
     <>
       {/* <Breadcrumb title='Students Details'/> */}
-      <div className="content instructor-detail-content">
+      <div className="content instructor-detail-content p-0">
         <div className="container">
           <ProfileCard />
           <Link

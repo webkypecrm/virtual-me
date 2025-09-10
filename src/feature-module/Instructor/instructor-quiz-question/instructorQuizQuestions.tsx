@@ -25,7 +25,7 @@ const InstructorQuizQuestions = () => {
   return (
     <>
       {/* <Breadcrumb title='Quiz' /> */}
-      <div className="content">
+      <div className="content p-0">
         <div className="container">
           <ProfileCard />
           <div className="row">

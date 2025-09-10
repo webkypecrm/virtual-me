@@ -88,7 +88,7 @@ const StudentList = () => {
   return (
     <>
       {/* <Breadcrumb title='Students List'/> */}
-      <div className="content">
+      <div className="content p-0">
         <div className="container">
           <ProfileCard />
           <div className="row">

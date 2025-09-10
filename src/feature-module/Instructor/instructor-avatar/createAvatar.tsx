@@ -18,29 +18,29 @@ const CreateAvatar: React.FC = () => {
     switch (current) {
       case "instructions":
         return (
-          <div className="container-fluid  d-flex flex-column justify-content-center overflow-hidden">
-            <div className="mb-3 text-center">
+          <div className="container d-flex flex-column justify-content-center overflow-hidden">
+            <div className="mb-4 text-center">
               <img
                 src="https://media.istockphoto.com/id/2182750801/photo/virtual-reality-concept-businessman-interacting-with-virtual-reality-technology-on-virtual.jpg?s=2048x2048&w=is&k=20&c=2KDj5icdYqVy8rPasZsVMOXITMC0T-0GcCYxi3RZbaM="
                 alt="Instructions preview"
-                className="img-fluid rounded"
-                style={{ maxHeight: "180px", objectFit: "cover" }}
+                className="img-fluid rounded shadow-sm"
+                style={{ maxHeight: "250px", objectFit: "cover" }}
               />
             </div>
 
             <div className="row flex-grow-1">
               {/* Recommended */}
-              <div className="col-md-6 mb-3">
-                <div className="p-3 border rounded bg-light  overflow-auto">
-                  <div className="d-flex align-items-center justify-content-center mb-2">
+              <div className="col-md-6 mb-4">
+                <div className="p-4 border rounded bg-light overflow-auto">
+                  <div className="d-flex align-items-center justify-content-center mb-3">
                     <hr className="flex-grow-1 me-2" />
                     <h6 className="text-success fw-bold mb-0">
-                      <i className="bi bi-check-circle-fill me-1"></i>{" "}
+                      <i className="bi bi-check-circle-fill me-1"></i>
                       Recommended
                     </h6>
                     <hr className="flex-grow-1 ms-2" />
                   </div>
-                  <ul className="mb-0 small">
+                  <ul className="mb-0">
                     <li>
                       At least <strong>2 minutes</strong> of footage
                     </li>
@@ -59,17 +59,17 @@ const CreateAvatar: React.FC = () => {
               </div>
 
               {/* Things to avoid */}
-              <div className="col-md-6 mb-3">
-                <div className="p-3 border rounded bg-light overflow-auto">
-                  <div className="d-flex align-items-center justify-content-center mb-2">
+              <div className="col-md-6 mb-4">
+                <div className="p-4 border rounded bg-light overflow-auto">
+                  <div className="d-flex align-items-center justify-content-center mb-3">
                     <hr className="flex-grow-1 me-2" />
                     <h6 className="text-danger fw-bold mb-0">
-                      <i className="bi bi-x-circle-fill me-1"></i> Things to
-                      avoid
+                      <i className="bi bi-x-circle-fill me-1"></i>
+                      Things to avoid
                     </h6>
                     <hr className="flex-grow-1 ms-2" />
                   </div>
-                  <ul className="mb-0 small">
+                  <ul className="mb-0">
                     <li>Stitches or cuts in footage</li>
                     <li>Talking without pauses</li>
                     <li>Excessive movement</li>
@@ -156,7 +156,7 @@ const CreateAvatar: React.FC = () => {
         ))}
       </div> */}
 
-      <div className="d-flex justify-content-center align-items-center gap-3 py-1 flex-wrap">
+      <div className="d-flex justify-content-center align-items-center gap-3 py-3 flex-wrap">
         {steps.map(({ key, label }, index) => (
           <div key={key} className="d-flex align-items-center gap-1">
             <div
@@ -164,7 +164,7 @@ const CreateAvatar: React.FC = () => {
           ${
             step === index ? "bg-primary text-white" : "bg-light text-secondary"
           }`}
-              style={{ width: "24px", height: "24px", fontSize: "0.75rem" }}
+              style={{ width: "24px", height: "24px", fontSize: "0.9rem" }}
             >
               {index + 1}
             </div>
@@ -172,7 +172,7 @@ const CreateAvatar: React.FC = () => {
               className={`fw-semibold ${
                 step === index ? "text-primary" : "text-secondary"
               }`}
-              style={{ fontSize: "0.8rem" }}
+              style={{ fontSize: "0.9rem" }}
             >
               {label}
             </span>
@@ -186,9 +186,9 @@ const CreateAvatar: React.FC = () => {
           className="bg-white rounded shadow-sm p-4"
           // style={{ maxWidth: "900px", width: "100%", minHeight: "700px" }}
           style={{
-            maxWidth: "700px", // smaller than before
+            maxWidth: "800px", // smaller than before
             width: "100%",
-            maxHeight: "80vh", // fit within viewport
+            maxHeight: "100vh", // fit within viewport
             overflowY: "auto", // scrolls inside if content is too much
           }}
         >

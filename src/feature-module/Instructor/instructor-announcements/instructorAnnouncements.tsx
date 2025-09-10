@@ -89,7 +89,7 @@ const InstructorAnnouncements = () => {
   return (
     <>
       {/* <Breadcrumb title="Announcements" /> */}
-      <div className="content">
+      <div className="content p-0">
         <div className="container">
           <ProfileCard />
           <div className="row">

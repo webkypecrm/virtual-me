@@ -2,8 +2,8 @@ import { useState } from "react";
 import Breadcrumb from "../../../../core/common/Breadcrumb/breadcrumb";
 import { Link } from "react-router-dom";
 import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
-import type {  SliderSingleProps } from "antd";
-import  { Slider  } from "antd";
+import type { SliderSingleProps } from "antd";
+import { Slider } from "antd";
 import { all_routes } from "../../../router/all_routes";
 
 const InstructorGrid = () => {
@@ -24,7 +24,7 @@ const InstructorGrid = () => {
 
   return (
     <>
-      <Breadcrumb title="Instructor Grid" />
+      <Breadcrumb title="Professionals" />
       <>
         {/* Instructor */}
         <section className="course-content">
@@ -377,7 +377,7 @@ const InstructorGrid = () => {
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-61.jpg"
+                            src="assets/img/user/user-64.jpeg"
                             alt="img"
                           />
                         </Link>
@@ -412,10 +412,10 @@ const InstructorGrid = () => {
                           </p>
                           <h3 className="title mb-2">
                             <Link to={route.instructorDetails}>
-                              Rolands Granger
+                              Aditya Malik
                             </Link>
                           </h3>
-                          <span className="designation">Developer</span>
+                          <span className="designation">Professor</span>
                         </div>
                         <div className="d-flex justify-content-between align-items-center instructor-bottom">
                           <div className="d-flex align-items-center">
@@ -440,7 +440,7 @@ const InstructorGrid = () => {
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-62.jpg"
+                            src="assets/img/user/user-64.jpeg"
                             alt="img"
                           />
                         </Link>
@@ -494,7 +494,7 @@ const InstructorGrid = () => {
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-63.jpg"
+                            src="assets/img/user/user-64.jpeg"
                             alt="img"
                           />
                         </Link>
@@ -550,7 +550,7 @@ const InstructorGrid = () => {
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-44.jpg"
+                            src="assets/img/user/user-64.jpeg"
                             alt="img"
                           />
                         </Link>
@@ -606,7 +606,7 @@ const InstructorGrid = () => {
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-45.jpg"
+                            src="assets/img/user/user-64.jpeg"
                             alt="img"
                           />
                         </Link>
@@ -660,7 +660,7 @@ const InstructorGrid = () => {
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-46.jpg"
+                            src="assets/img/user/user-64.jpeg"
                             alt="img"
                           />
                         </Link>
@@ -716,7 +716,7 @@ const InstructorGrid = () => {
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-47.jpg"
+                            src="assets/img/user/user-64.jpeg"
                             alt="img"
                           />
                         </Link>
@@ -772,7 +772,7 @@ const InstructorGrid = () => {
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-48.jpg"
+                            src="assets/img/user/user-64.jpeg"
                             alt="img"
                           />
                         </Link>
@@ -828,7 +828,7 @@ const InstructorGrid = () => {
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-49.jpg"
+                            src="assets/img/user/user-64.jpeg"
                             alt="img"
                           />
                         </Link>
