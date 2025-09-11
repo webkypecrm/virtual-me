@@ -71,7 +71,7 @@ const Header = () => {
   }, [dataTheme]);
   useEffect(() => {
     const path = location.pathname;
-    const pathArray = path.split("/").filter(Boolean); // Removes empty strings from the split result
+    const pathArray = path.split("/").filter(Boolean);
     setBasePath(pathArray[0]);
   }, [location.pathname]);
   const DarkButton = () => {

@@ -612,7 +612,7 @@ export const header = [
   },
   {
     tittle: "Videos",
-    route: all_routes.instructorGrid,
+    route: all_routes.instructorVideoGrid,
     showAsTab: false,
     separateRoute: false,
     base: "Videos",

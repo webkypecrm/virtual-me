@@ -52,6 +52,9 @@ import BlogRightSidebar from "../blog/blog-layouts/blogRightSidebar";
 import BlogDetailsLeftSidebar from "../blog/blog-details/blogDetailsLeftSidebar";
 import BlogDetailsRightSidebar from "../blog/blog-details/blogDetailsRightSidebar";
 import InstructorGrid from "../Pages/instructor/instructor-grid/instructorGrid";
+import InstructorVideoGrid from "../Pages/instructor/instructor-video-grid/instructorVideoGrid";
+import InstructionVideoList from "../Pages/instructor/instruction-video-list/instructionVideoList";
+import InstructionVideoDetails from "../Pages/instructor/instruction-video-details/InstructionVideoDetails";
 import InstructorList from "../Pages/instructor/instructor-list/instructorList";
 import InstructorDetails from "../Pages/instructor/instructor-details/instructor-details";
 import AboutUs from "../Pages/about-us/aboutUs";
@@ -370,6 +373,21 @@ export const publicRoutes = [
   {
     path: routes.instructorGrid,
     element: <InstructorGrid />,
+    route: Route,
+  },
+  {
+    path: routes.instructorVideoGrid,
+    element: <InstructorVideoGrid />,
+    route: Route,
+  },
+  {
+    path: routes.instructorVideoList,
+    element: <InstructionVideoList />,
+    route: Route,
+  },
+  {
+    path: routes.instructorVideoDetails,
+    element: <InstructionVideoDetails />,
     route: Route,
   },
   {
