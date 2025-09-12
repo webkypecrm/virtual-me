@@ -1,4 +1,4 @@
-import { img_path} from '../../../environment';
+import { img_path } from "../../../environment";
 
 interface Image {
   className?: string;
@@ -6,12 +6,15 @@ interface Image {
   alt?: string;
   height?: number;
   width?: number;
-  id?:string;
+  id?: string;
 }
 
 const ImageWithBasePath = (props: Image) => {
-  // Combine the base path and the provided src to create the full image source URL
-  const fullSrc = `${img_path}${props.src}`;
+  // Check if src is external
+  const isExternal =
+    props.src.startsWith("http://") || props.src.startsWith("https://");
+  const fullSrc = isExternal ? props.src : `${img_path}${props.src}`;
+
   return (
     <img
       className={props.className}

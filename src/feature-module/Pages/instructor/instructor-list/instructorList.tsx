@@ -30,7 +30,7 @@ const InstructorList = () => {
         <div className="instructor-list">
           <div className="container">
             <div className="row align-items-baseline">
-              <div className="col-lg-3">
+              {/* <div className="col-lg-3">
                 <div className="clear-filter mb-4 pb-lg-2 d-flex align-items-center justify-content-between">
                   <h5>
                     <i className="feather-filter me-2" />
@@ -321,8 +321,8 @@ const InstructorList = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-lg-9">
+              </div> */}
+              <div className="col-lg-12">
                 {/* Filter */}
                 <div className="showing-list mb-4">
                   <div className="row align-items-center">
@@ -370,7 +370,7 @@ const InstructorList = () => {
                   </div>
                 </div>
                 {/* /Filter */}
-                <div className="instructor-item instructor-item-seven">
+                <div className="instructor-item instructor-item-seven ">
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
@@ -454,7 +454,7 @@ const InstructorList = () => {
                     </div>
                   </div>
                 </div>
-                <div className="instructor-item instructor-item-seven">
+                <div className="instructor-item instructor-item-seven ">
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
@@ -533,7 +533,7 @@ const InstructorList = () => {
                     </div>
                   </div>
                 </div>
-                <div className="instructor-item instructor-item-seven">
+                <div className="instructor-item instructor-item-seven ">
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
@@ -609,7 +609,7 @@ const InstructorList = () => {
                     </div>
                   </div>
                 </div>
-                <div className="instructor-item instructor-item-seven">
+                <div className="instructor-item instructor-item-seven ">
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
@@ -688,7 +688,7 @@ const InstructorList = () => {
                     </div>
                   </div>
                 </div>
-                <div className="instructor-item instructor-item-seven">
+                <div className="instructor-item instructor-item-seven ">
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
@@ -765,7 +765,7 @@ const InstructorList = () => {
                     </div>
                   </div>
                 </div>
-                <div className="instructor-item instructor-item-seven">
+                <div className="instructor-item instructor-item-seven ">
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
@@ -847,7 +847,7 @@ const InstructorList = () => {
                     </div>
                   </div>
                 </div>
-                <div className="instructor-item instructor-item-seven">
+                <div className="instructor-item instructor-item-seven ">
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath

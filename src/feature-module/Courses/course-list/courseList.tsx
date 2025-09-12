@@ -1,34 +1,35 @@
-import { useState } from 'react'
-import Breadcrumb from '../../../core/common/Breadcrumb/breadcrumb'
-import { Link } from 'react-router-dom'
-import ImageWithBasePath from '../../../core/common/imageWithBasePath'
-import { Slider } from 'antd'
-import type { SliderSingleProps } from 'antd';
-import { all_routes } from '../../router/all_routes'
+import { useState } from "react";
+import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
+import { Link } from "react-router-dom";
+import ImageWithBasePath from "../../../core/common/imageWithBasePath";
+import { Slider } from "antd";
+import type { SliderSingleProps } from "antd";
+import { all_routes } from "../../router/all_routes";
 
 const CourseList = () => {
-
   const [selectedItems, setSelectedItems] = useState(Array(10).fill(false));
   const handleItemClick = (index: number) => {
-      setSelectedItems((prevSelectedItems) => {
-          const updatedSelectedItems = [...prevSelectedItems];
-          updatedSelectedItems[index] = !updatedSelectedItems[index];
-          return updatedSelectedItems;
-      });
+    setSelectedItems((prevSelectedItems) => {
+      const updatedSelectedItems = [...prevSelectedItems];
+      updatedSelectedItems[index] = !updatedSelectedItems[index];
+      return updatedSelectedItems;
+    });
   };
 
   const route = all_routes;
 
-  const formatter: NonNullable<SliderSingleProps['tooltip']>['formatter'] = (value) => `$${value}`;
+  const formatter: NonNullable<SliderSingleProps["tooltip"]>["formatter"] = (
+    value
+  ) => `$${value}`;
   return (
     <>
-      <Breadcrumb title='Course List' />
+      <Breadcrumb title="Course List" />
       <>
         {/* Course */}
         <section className="course-content course-list-content">
           <div className="container">
             <div className="row align-items-baseline">
-              <div className="col-lg-3 theiaStickySidebar">
+              {/* <div className="col-lg-3 theiaStickySidebar">
                 <div className="filter-clear">
                   <div className="clear-filter mb-4 pb-lg-2 d-flex align-items-center justify-content-between">
                     <h5>
@@ -374,8 +375,8 @@ const CourseList = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-lg-9">
+              </div> */}
+              <div className="col-lg-12">
                 {/* Filter */}
                 <div className="showing-list mb-4">
                   <div className="row align-items-center">
@@ -391,9 +392,11 @@ const CourseList = () => {
                             <div className="view-icons mb-2 mb-sm-0">
                               <Link to={route.courseGrid} className="grid-view">
                                 <i className="isax isax-element-3" />
-                              
                               </Link>
-                              <Link to={route.courseList} className="list-view active">
+                              <Link
+                                to={route.courseList}
+                                className="list-view active"
+                              >
                                 <i className="isax isax-task" />
                               </Link>
                             </div>
@@ -430,8 +433,17 @@ const CourseList = () => {
                               alt="img"
                             />
                           </Link>
-                          <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2" key={1} onClick={() => handleItemClick(1)}>
-                            <Link to="#" className={`like ${selectedItems[1]? 'selected':''}`}>
+                          <div
+                            className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
+                            key={1}
+                            onClick={() => handleItemClick(1)}
+                          >
+                            <Link
+                              to="#"
+                              className={`like ${
+                                selectedItems[1] ? "selected" : ""
+                              }`}
+                            >
                               <i className="isax isax-heart" />
                             </Link>
                           </div>
@@ -449,7 +461,9 @@ const CourseList = () => {
                                 </Link>
                               </div>
                               <p className="ms-2">
-                                <Link to={route.instructorDetails}>David Benitez</Link>
+                                <Link to={route.instructorDetails}>
+                                  David Benitez
+                                </Link>
                               </p>
                             </div>
                             <span>
@@ -464,10 +478,10 @@ const CourseList = () => {
                             </Link>
                           </h4>
                           <div className="d-flex align-items-center">
-                            <p className="d-flex align-items-center mb-0">
-                              <i className="fa-solid fa-star text-warning me-2" /> 4.9
-                              (200 Reviews)
-                            </p>
+                            {/* <p className="d-flex align-items-center mb-0">
+                              <i className="fa-solid fa-star text-warning me-2" />{" "}
+                              4.9 (200 Reviews)
+                            </p> */}
                             <span className="dot" />
                             <p>Intermediate</p>
                           </div>
@@ -496,8 +510,17 @@ const CourseList = () => {
                               alt="img"
                             />
                           </Link>
-                          <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2" key={2} onClick={() => handleItemClick(1)}>
-                            <Link to="#" className={`like ${selectedItems[2]? 'selected':''}`}>
+                          <div
+                            className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
+                            key={2}
+                            onClick={() => handleItemClick(1)}
+                          >
+                            <Link
+                              to="#"
+                              className={`like ${
+                                selectedItems[2] ? "selected" : ""
+                              }`}
+                            >
                               <i className="isax isax-heart" />
                             </Link>
                           </div>
@@ -515,7 +538,9 @@ const CourseList = () => {
                                 </Link>
                               </div>
                               <p className="ms-2">
-                                <Link to={route.instructorDetails}>Ana Reyes</Link>
+                                <Link to={route.instructorDetails}>
+                                  Ana Reyes
+                                </Link>
                               </p>
                             </div>
                             <span>
@@ -530,10 +555,10 @@ const CourseList = () => {
                             </Link>
                           </h4>
                           <div className="d-flex align-items-center">
-                            <p className="d-flex align-items-center mb-0">
+                            {/* <p className="d-flex align-items-center mb-0">
                               <i className="fa-solid fa-star text-warning me-2" />
                               4.4 (160 Reviews)
-                            </p>
+                            </p> */}
                             <span className="dot" />
                             <p>Advanced</p>
                           </div>
@@ -562,8 +587,17 @@ const CourseList = () => {
                               alt="img"
                             />
                           </Link>
-                          <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2" key={3} onClick={() => handleItemClick(1)}>
-                            <Link to="#" className={`like ${selectedItems[3]? 'selected':''}`}>
+                          <div
+                            className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
+                            key={3}
+                            onClick={() => handleItemClick(1)}
+                          >
+                            <Link
+                              to="#"
+                              className={`like ${
+                                selectedItems[3] ? "selected" : ""
+                              }`}
+                            >
                               <i className="isax isax-heart" />
                             </Link>
                           </div>
@@ -581,7 +615,9 @@ const CourseList = () => {
                                 </Link>
                               </div>
                               <p className="ms-2">
-                                <Link to={route.instructorDetails}>Andrew Pirtle</Link>
+                                <Link to={route.instructorDetails}>
+                                  Andrew Pirtle
+                                </Link>
                               </p>
                             </div>
                             <span>
@@ -596,10 +632,10 @@ const CourseList = () => {
                             </Link>
                           </h4>
                           <div className="d-flex align-items-center">
-                            <p className="d-flex align-items-center mb-0">
+                            {/* <p className="d-flex align-items-center mb-0">
                               <i className="fa-solid fa-star text-warning me-2" />
                               4.6 (170 Reviews)
-                            </p>
+                            </p> */}
                             <span className="dot" />
                             <p>Basic</p>
                           </div>
@@ -628,8 +664,17 @@ const CourseList = () => {
                               alt="img"
                             />
                           </Link>
-                          <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2" key={4} onClick={() => handleItemClick(1)}>
-                            <Link to="#" className={`like ${selectedItems[4]? 'selected':''}`}>
+                          <div
+                            className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
+                            key={4}
+                            onClick={() => handleItemClick(1)}
+                          >
+                            <Link
+                              to="#"
+                              className={`like ${
+                                selectedItems[4] ? "selected" : ""
+                              }`}
+                            >
                               <i className="isax isax-heart" />
                             </Link>
                           </div>
@@ -647,7 +692,9 @@ const CourseList = () => {
                                 </Link>
                               </div>
                               <p className="ms-2">
-                                <Link to={route.instructorDetails}>Christy Garner</Link>
+                                <Link to={route.instructorDetails}>
+                                  Christy Garner
+                                </Link>
                               </p>
                             </div>
                             <span>
@@ -658,14 +705,15 @@ const CourseList = () => {
                           </div>
                           <h4 className="mt-3 mb-2">
                             <Link to={route.courseDetails}>
-                              Build Responsive Real World Websites with Crash Course
+                              Build Responsive Real World Websites with Crash
+                              Course
                             </Link>
                           </h4>
                           <div className="d-flex align-items-center">
-                            <p className="d-flex align-items-center mb-0">
+                            {/* <p className="d-flex align-items-center mb-0">
                               <i className="fa-solid fa-star text-warning me-2" />
                               4.2 (220 Reviews)
-                            </p>
+                            </p> */}
                             <span className="dot" />
                             <p>Advanced</p>
                           </div>
@@ -694,8 +742,17 @@ const CourseList = () => {
                               alt="img"
                             />
                           </Link>
-                          <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2" key={5} onClick={() => handleItemClick(1)}>
-                            <Link to="#" className={`like ${selectedItems[5]? 'selected':''}`}>
+                          <div
+                            className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
+                            key={5}
+                            onClick={() => handleItemClick(1)}
+                          >
+                            <Link
+                              to="#"
+                              className={`like ${
+                                selectedItems[5] ? "selected" : ""
+                              }`}
+                            >
                               <i className="isax isax-heart" />
                             </Link>
                           </div>
@@ -713,7 +770,9 @@ const CourseList = () => {
                                 </Link>
                               </div>
                               <p className="ms-2">
-                                <Link to={route.instructorDetails}>Justin Gregory</Link>
+                                <Link to={route.instructorDetails}>
+                                  Justin Gregory
+                                </Link>
                               </p>
                             </div>
                             <span>
@@ -728,10 +787,10 @@ const CourseList = () => {
                             </Link>
                           </h4>
                           <div className="d-flex align-items-center">
-                            <p className="d-flex align-items-center mb-0">
+                            {/* <p className="d-flex align-items-center mb-0">
                               <i className="fa-solid fa-star text-warning me-2" />
                               4.4 (180 Reviews)
-                            </p>
+                            </p> */}
                             <span className="dot" />
                             <p>Intermediate</p>
                           </div>
@@ -760,8 +819,17 @@ const CourseList = () => {
                               alt="img"
                             />
                           </Link>
-                          <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2" key={6} onClick={() => handleItemClick(1)}>
-                            <Link to="#" className={`like ${selectedItems[6]? 'selected':''}`}>
+                          <div
+                            className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
+                            key={6}
+                            onClick={() => handleItemClick(1)}
+                          >
+                            <Link
+                              to="#"
+                              className={`like ${
+                                selectedItems[6] ? "selected" : ""
+                              }`}
+                            >
                               <i className="isax isax-heart" />
                             </Link>
                           </div>
@@ -779,7 +847,9 @@ const CourseList = () => {
                                 </Link>
                               </div>
                               <p className="ms-2">
-                                <Link to={route.instructorDetails}>Carolyn Hines</Link>
+                                <Link to={route.instructorDetails}>
+                                  Carolyn Hines
+                                </Link>
                               </p>
                             </div>
                             <span>
@@ -794,10 +864,10 @@ const CourseList = () => {
                             </Link>
                           </h4>
                           <div className="d-flex align-items-center">
-                            <p className="d-flex align-items-center mb-0">
+                            {/* <p className="d-flex align-items-center mb-0">
                               <i className="fa-solid fa-star text-warning me-2" />
                               4.7 (130 Reviews)
-                            </p>
+                            </p> */}
                             <span className="dot" />
                             <p>Expert</p>
                           </div>
@@ -824,11 +894,7 @@ const CourseList = () => {
                   <div className="col-md-10">
                     <ul className="pagination lms-page justify-content-center justify-content-md-end mt-2 mt-md-0">
                       <li className="page-item prev">
-                        <Link
-                          className="page-link"
-                          to="#"
-                          tabIndex={-1}
-                        >
+                        <Link className="page-link" to="#" tabIndex={-1}>
                           <i className="fas fa-angle-left" />
                         </Link>
                       </li>
@@ -862,9 +928,8 @@ const CourseList = () => {
         </section>
         {/* /Course */}
       </>
-
     </>
-  )
-}
+  );
+};
 
-export default CourseList
+export default CourseList;
