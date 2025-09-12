@@ -2,8 +2,8 @@ import { useState } from "react";
 import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
 import { Link } from "react-router-dom";
 import ImageWithBasePath from "../../../core/common/imageWithBasePath";
-import { Slider } from "antd";
-import type { SliderSingleProps } from "antd";
+// import { Slider } from "antd";
+// import type { SliderSingleProps } from "antd";
 import { all_routes } from "../../router/all_routes";
 
 const CourseList = () => {
@@ -18,9 +18,9 @@ const CourseList = () => {
 
   const route = all_routes;
 
-  const formatter: NonNullable<SliderSingleProps["tooltip"]>["formatter"] = (
-    value
-  ) => `$${value}`;
+  // const formatter: NonNullable<SliderSingleProps["tooltip"]>["formatter"] = (
+  //   value
+  // ) => `$${value}`;
   return (
     <>
       <Breadcrumb title="Course List" />
