@@ -248,7 +248,7 @@ const InstructorVideoDetails = () => {
               <h6 className="mb-3">Suggested Videos</h6>
 
               {/* List Item */}
-              {[1, 2, 3].map((item, index) => (
+              {[1, 2, 3].map((_, index) => (
                 <div
                   className="d-flex flex-column flex-md-row border rounded overflow-hidden mb-3"
                   key={index}
