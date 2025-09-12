@@ -10,6 +10,7 @@ import Knowledge from "./section/knowledge";
 import Featureinstructors from "./section/feature-instructors";
 import Leadingcompanies from "./section/leading-companies";
 import Latestblog from "./section/latest-blog";
+import HomePageTestimonial from "./section/homepageTestimonial";
 
 const HomeFour = () => {
   return (
@@ -23,6 +24,7 @@ const HomeFour = () => {
       <Testimonial />
       <Knowledge />
       <Featureinstructors />
+      <HomePageTestimonial />
       <Leadingcompanies />
       <Latestblog />
       <Footer />

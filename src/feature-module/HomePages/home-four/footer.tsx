@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="footer-top">
         <div className="container">
           <div className="row row-gap-4">
-            <div className="col-lg-4">
+            <div className="col-lg-6">
               <div className="footer-about">
                 <div className="footer-logo">
                   <ImageWithBasePath
@@ -36,30 +36,30 @@ const Footer = () => {
                   activities.
                 </p>
                 <div className="d-flex align-items-center">
-                  <Link to="#" className="me-2">
-                    <ImageWithBasePath
-                      src="assets/img/icon/appstore.svg"
-                      alt=""
-                    />
-                  </Link>
-                  <Link to="#">
-                    <ImageWithBasePath
-                      src="assets/img/icon/googleplay.svg"
-                      alt=""
-                    />
-                  </Link>
+                  {/* <Link to="#" className="me-2">
+                      <ImageWithBasePath
+                        src="assets/img/icon/appstore.svg"
+                        alt=""
+                      />
+                    </Link> */}
+                  {/* <Link to="#">
+                      <ImageWithBasePath
+                        src="assets/img/icon/googleplay.svg"
+                        alt=""
+                      />
+                    </Link> */}
                 </div>
               </div>
             </div>
-            <div className="col-lg-8">
+            <div className="col-lg-6">
               <div className="row row-gap-4">
-                <div className="col-lg-3">
+                <div className="col-lg-4">
                   <div className="footer-widget footer-menu">
                     <h5 className="footer-title">For Instructor</h5>
                     <ul>
-                      <li>
-                        <Link to={all_routes.courseGrid}>Search Mentors</Link>
-                      </li>
+                      {/* <li>
+                          <Link to={all_routes.courseGrid}>Search Mentors</Link>
+                        </li> */}
                       <li>
                         <Link to={all_routes.login}>Login</Link>
                       </li>
@@ -69,89 +69,89 @@ const Footer = () => {
                       <li>
                         <Link to={all_routes.courseList}>Booking</Link>
                       </li>
-                      <li>
-                        <Link to={all_routes.studentDashboard}>
-                          Students Dashboard
-                        </Link>
-                      </li>
+                      {/* <li>
+                          <Link to={all_routes.studentDashboard}>
+                            Students Dashboard
+                          </Link>
+                        </li> */}
                     </ul>
                   </div>
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-4">
                   <div className="footer-widget footer-menu">
                     <h5 className="footer-title">For Student</h5>
                     <ul>
                       <li>
                         <Link to="#">Appointments</Link>
                       </li>
-                      <li>
-                        <Link to={all_routes.instructorMessage}>Chat</Link>
-                      </li>
+                      {/* <li>
+                          <Link to={all_routes.instructorMessage}>Chat</Link>
+                        </li> */}
                       <li>
                         <Link to={all_routes.login}>Login</Link>
                       </li>
-                      <li>
-                        <Link to={all_routes.register}>Register</Link>
-                      </li>
-                      <li>
-                        <Link to={all_routes.instructorDashboard}>
-                          Instructor Dashboard
-                        </Link>
-                      </li>
+                      {/* <li>
+                          <Link to={all_routes.register}>Register</Link>
+                        </li> */}
+                      {/* <li>
+                          <Link to={all_routes.instructorDashboard}>
+                            Instructor Dashboard
+                          </Link>
+                        </li> */}
                     </ul>
                   </div>
                 </div>
-                <div className="col-lg-6">
-                  <div className="footer-widget footer-contact">
-                    <h5 className="footer-title">Newsletter</h5>
-                    <div className="subscribe-input">
-                      <form action="#">
-                        <input
-                          type="email"
-                          className="form-control"
-                          placeholder="Enter your Email Address"
-                        />
-                        <button
-                          type="submit"
-                          className="btn btn-primary btn-sm inline-flex align-items-center"
-                        >
-                          <i className="isax isax-send-2 me-1" />
-                          Subscribe
-                        </button>
-                      </form>
+                {/* <div className="col-lg-6">
+                    <div className="footer-widget footer-contact">
+                      <h5 className="footer-title">Newsletter</h5>
+                      <div className="subscribe-input">
+                        <form action="#">
+                          <input
+                            type="email"
+                            className="form-control"
+                            placeholder="Enter your Email Address"
+                          />
+                          <button
+                            type="submit"
+                            className="btn btn-primary btn-sm inline-flex align-items-center"
+                          >
+                            <i className="isax isax-send-2 me-1" />
+                            Subscribe
+                          </button>
+                        </form>
+                      </div>
+                      <div className="footer-contact-info">
+                        <div className="footer-address d-flex align-items-center">
+                          <ImageWithBasePath
+                            src="assets/img/icon/icon-20.svg"
+                            alt="Img"
+                            className="img-fluid me-2"
+                          />
+                          <p>
+                            {" "}
+                            3556 Beech Street, San Francisco,
+                            <br /> California, CA 94108{" "}
+                          </p>
+                        </div>
+                        <div className="footer-address d-flex align-items-center">
+                          <ImageWithBasePath
+                            src="assets/img/icon/icon-19.svg"
+                            alt="Img"
+                            className="img-fluid me-2"
+                          />
+                          <p>VirtualXai@example.com</p>
+                        </div>
+                        <div className="footer-address d-flex align-items-center">
+                          <ImageWithBasePath
+                            src="assets/img/icon/icon-21.svg"
+                            alt="Img"
+                            className="img-fluid me-2"
+                          />
+                          <p>+19 123-456-7890</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="footer-contact-info">
-                      <div className="footer-address d-flex align-items-center">
-                        <ImageWithBasePath
-                          src="assets/img/icon/icon-20.svg"
-                          alt="Img"
-                          className="img-fluid me-2"
-                        />
-                        <p>
-                          {" "}
-                          3556 Beech Street, San Francisco,
-                          <br /> California, CA 94108{" "}
-                        </p>
-                      </div>
-                      <div className="footer-address d-flex align-items-center">
-                        <ImageWithBasePath
-                          src="assets/img/icon/icon-19.svg"
-                          alt="Img"
-                          className="img-fluid me-2"
-                        />
-                        <p>VirtualXai@example.com</p>
-                      </div>
-                      <div className="footer-address d-flex align-items-center">
-                        <ImageWithBasePath
-                          src="assets/img/icon/icon-21.svg"
-                          alt="Img"
-                          className="img-fluid me-2"
-                        />
-                        <p>+19 123-456-7890</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  </div> */}
               </div>
             </div>
           </div>
@@ -170,6 +170,15 @@ const Footer = () => {
             <div className="col-md-6">
               <div>
                 <ul className="d-flex align-items-center justify-content-center justify-content-md-end footer-link">
+                  <li>
+                    <Link to={all_routes.about_us}>About</Link>
+                  </li>
+                  <li>
+                    <Link to={all_routes.contactUs}>Contact Us</Link>
+                  </li>
+                  <li>
+                    <Link to={all_routes.FAQ}>FAQ</Link>
+                  </li>
                   <li>
                     <Link to={all_routes.termsConditions}>
                       Terms &amp; Conditions

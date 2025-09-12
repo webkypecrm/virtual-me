@@ -28,7 +28,7 @@ const InstructorVideoGrid = () => {
         <section className="course-content">
           <div className="container">
             <div className="row align-items-baseline">
-              <div className="col-lg-3 theiaStickySidebar">
+              {/* <div className="col-lg-3 theiaStickySidebar">
                 <div className="filter-clear">
                   <div className="clear-filter mb-4 pb-lg-2 d-flex align-items-center justify-content-between">
                     <h5>
@@ -319,8 +319,8 @@ const InstructorVideoGrid = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-lg-9">
+              </div> */}
+              <div className="col-lg-12">
                 {/* Filter */}
                 <div className="showing-list mb-4">
                   <div className="row align-items-center">
@@ -369,7 +369,7 @@ const InstructorVideoGrid = () => {
                 </div>
                 {/* /Filter */}
                 <div className="row course-list-cover">
-                  <div className="col-xl-4 col-md-6 mb-4">
+                  <div className="col-xl-3 col-md-6 mb-4">
                     <div className="card video-card border-0">
                       <div className="video-thumbnail position-relative">
                         <Link to={route.instructorVideoDetails}>
@@ -430,7 +430,7 @@ const InstructorVideoGrid = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-4 col-md-6 mb-4">
+                  <div className="col-xl-3 col-md-6 mb-4">
                     <div className="card video-card border-0">
                       <div className="video-thumbnail position-relative">
                         <Link to={route.instructorVideoDetails}>
@@ -491,7 +491,7 @@ const InstructorVideoGrid = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-4 col-md-6 mb-4">
+                  <div className="col-xl-3 col-md-6 mb-4">
                     <div className="card video-card border-0">
                       <div className="video-thumbnail position-relative">
                         <Link to={route.instructorVideoDetails}>
@@ -552,7 +552,7 @@ const InstructorVideoGrid = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-4 col-md-6 mb-4">
+                  <div className="col-xl-3 col-md-6 mb-4">
                     <div className="card video-card border-0">
                       <div className="video-thumbnail position-relative">
                         <Link to={route.instructorVideoDetails}>
@@ -613,7 +613,7 @@ const InstructorVideoGrid = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-4 col-md-6 mb-4">
+                  <div className="col-xl-3 col-md-6 mb-4">
                     <div className="card video-card border-0">
                       <div className="video-thumbnail position-relative">
                         <Link to={route.instructorVideoDetails}>
@@ -674,7 +674,7 @@ const InstructorVideoGrid = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-4 col-md-6 mb-4">
+                  <div className="col-xl-3 col-md-6 mb-4">
                     <div className="card video-card border-0">
                       <div className="video-thumbnail position-relative">
                         <Link to={route.instructorVideoDetails}>

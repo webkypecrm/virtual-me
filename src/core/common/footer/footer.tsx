@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="footer-top">
           <div className="container">
             <div className="row row-gap-4">
-              <div className="col-lg-4">
+              <div className="col-lg-6">
                 <div className="footer-about">
                   <div className="footer-logo">
                     <ImageWithBasePath
@@ -38,30 +38,30 @@ const Footer = () => {
                     activities.
                   </p>
                   <div className="d-flex align-items-center">
-                    <Link to="#" className="me-2">
+                    {/* <Link to="#" className="me-2">
                       <ImageWithBasePath
                         src="assets/img/icon/appstore.svg"
                         alt=""
                       />
-                    </Link>
-                    <Link to="#">
+                    </Link> */}
+                    {/* <Link to="#">
                       <ImageWithBasePath
                         src="assets/img/icon/googleplay.svg"
                         alt=""
                       />
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>
-              <div className="col-lg-8">
+              <div className="col-lg-6">
                 <div className="row row-gap-4">
-                  <div className="col-lg-3">
+                  <div className="col-lg-4">
                     <div className="footer-widget footer-menu">
                       <h5 className="footer-title">For Instructor</h5>
                       <ul>
-                        <li>
+                        {/* <li>
                           <Link to={all_routes.courseGrid}>Search Mentors</Link>
-                        </li>
+                        </li> */}
                         <li>
                           <Link to={all_routes.login}>Login</Link>
                         </li>
@@ -71,39 +71,39 @@ const Footer = () => {
                         <li>
                           <Link to={all_routes.courseList}>Booking</Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <Link to={all_routes.studentDashboard}>
                             Students Dashboard
                           </Link>
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                   </div>
-                  <div className="col-lg-3">
+                  <div className="col-lg-4">
                     <div className="footer-widget footer-menu">
                       <h5 className="footer-title">For Student</h5>
                       <ul>
                         <li>
                           <Link to="#">Appointments</Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <Link to={all_routes.instructorMessage}>Chat</Link>
-                        </li>
+                        </li> */}
                         <li>
                           <Link to={all_routes.login}>Login</Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <Link to={all_routes.register}>Register</Link>
-                        </li>
-                        <li>
+                        </li> */}
+                        {/* <li>
                           <Link to={all_routes.instructorDashboard}>
                             Instructor Dashboard
                           </Link>
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                   </div>
-                  <div className="col-lg-6">
+                  {/* <div className="col-lg-6">
                     <div className="footer-widget footer-contact">
                       <h5 className="footer-title">Newsletter</h5>
                       <div className="subscribe-input">
@@ -153,7 +153,7 @@ const Footer = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -172,6 +172,15 @@ const Footer = () => {
               <div className="col-md-6">
                 <div>
                   <ul className="d-flex align-items-center justify-content-center justify-content-md-end footer-link">
+                    <li>
+                      <Link to={all_routes.about_us}>About</Link>
+                    </li>
+                    <li>
+                      <Link to={all_routes.contactUs}>Contact Us</Link>
+                    </li>
+                    <li>
+                      <Link to={all_routes.FAQ}>FAQ</Link>
+                    </li>
                     <li>
                       <Link to={all_routes.termsConditions}>
                         Terms &amp; Conditions

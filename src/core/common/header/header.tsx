@@ -730,7 +730,7 @@ const Header = () => {
                         ENG
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         className="dropdown-item rounded d-flex align-items-center"
                         to="#"
@@ -755,7 +755,7 @@ const Header = () => {
                         />
                         FRE
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
                 <div className="dropdown icon-btn">
@@ -768,7 +768,7 @@ const Header = () => {
                         USD
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="dropdown-item rounded" to="#">
                         YEN
                       </Link>
@@ -777,7 +777,7 @@ const Header = () => {
                       <Link className="dropdown-item rounded" to="#">
                         EURO
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
                 <DarkButton />
@@ -833,7 +833,7 @@ const Header = () => {
                         ENG
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         className="dropdown-item rounded d-flex align-items-center"
                         to="#"
@@ -858,7 +858,7 @@ const Header = () => {
                         />
                         FRE
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
                 <div className="dropdown me-3">
@@ -876,7 +876,7 @@ const Header = () => {
                         USD
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="dropdown-item rounded" to="#">
                         YEN
                       </Link>
@@ -885,7 +885,7 @@ const Header = () => {
                       <Link className="dropdown-item rounded" to="#">
                         EURO
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
                 <Link
@@ -932,7 +932,7 @@ const Header = () => {
                         ENG
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         className="dropdown-item rounded d-flex align-items-center"
                         to="#"
@@ -957,7 +957,7 @@ const Header = () => {
                         />
                         FRE
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
                 <div className="dropdown me-3">
@@ -975,7 +975,7 @@ const Header = () => {
                         USD
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="dropdown-item rounded" to="#">
                         YEN
                       </Link>
@@ -984,7 +984,7 @@ const Header = () => {
                       <Link className="dropdown-item rounded" to="#">
                         EURO
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
                 <Link
