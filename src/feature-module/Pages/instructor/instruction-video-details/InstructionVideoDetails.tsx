@@ -52,6 +52,195 @@ const InstructorVideoDetails = () => {
                 This is a full course to become a full-stack web developer.
                 Learn from basics to advanced concepts in just 12 hours.
               </p>
+
+              {/* comments and replies */}
+              <div className="blog-reviews mb-3">
+                <h5 className="mb-3 fs-18">Reviews</h5>
+                <div className="review-item shadow-none mb-3">
+                  <div className="review-info">
+                    <div className="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                      <div className="d-flex align-items-center mb-2">
+                        <span className="avatar avatar-lg me-2 flex-shrink-0">
+                          <Link to={"all_routes.studentsDetails"}>
+                            <ImageWithBasePath
+                              src="assets/img/user/user-05.jpg"
+                              className="rounded-circle"
+                              alt="img"
+                            />
+                          </Link>
+                        </span>
+                        <div>
+                          <h5 className="fs-16 fw-medium">
+                            <Link to={"all_routes.studentsDetails"}>
+                              Adrian Hendriques
+                            </Link>
+                          </h5>
+                          <div className="d-flex align-items-center flex-wrap date-info">
+                            <span className="mb-0 fs-14">2 days ago</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Link
+                        to="#"
+                        className="btn btn-md d-inline-flex align-items-center me-2 mb-2 text-gray-5"
+                      >
+                        <i className="isax isax-repeat me-1" />
+                        Reply
+                      </Link>
+                    </div>
+                    <p className="mb-2 mt-1">
+                      I highly recommend to anyone looking to learn . Their
+                      passion for the subject and dedication to students make
+                      them an outstanding instructor. I would definitely take
+                      another course with them in the future.
+                    </p>
+                    <div className="d-inline-flex align-items-center">
+                      <Link
+                        to="#"
+                        className="text-gray-5 d-inline-flex align-items-center me-3 fs-14"
+                      >
+                        <i className="isax isax-like-15 me-1" />
+                        21
+                      </Link>
+                      <Link
+                        to="#"
+                        className="text-gray-5 d-inline-flex align-items-center me-3 fs-14"
+                      >
+                        <i className="isax isax-dislike5 me-1" />
+                        50
+                      </Link>
+                      <Link
+                        to="#"
+                        className="text-gray-5 d-inline-flex align-items-center me-3 fs-14"
+                      >
+                        <i className="isax isax-heart5 text-danger me-1" />
+                        45
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="review-item shadow-none mb-0">
+                  <div className="review-info">
+                    <div className="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                      <div className="d-flex align-items-center mb-2">
+                        <span className="avatar avatar-lg me-2 flex-shrink-0">
+                          <Link to={"all_routes.studentsDetails"}>
+                            <ImageWithBasePath
+                              src="assets/img/user/user-26.jpg"
+                              className="rounded-circle"
+                              alt="img"
+                            />
+                          </Link>
+                        </span>
+                        <div>
+                          <h5 className="fs-16 fw-medium">
+                            <Link to={"all_routes.studentsDetails"}>
+                              Adrian Hendriques
+                            </Link>
+                          </h5>
+                          <div className="d-flex align-items-center flex-wrap date-info">
+                            <span className="mb-0 fs-14">2 days ago</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Link
+                        to="#"
+                        className="btn btn-md d-inline-flex align-items-center mb-2 text-gray-5"
+                      >
+                        <i className="isax isax-repeat me-1" />
+                        Reply
+                      </Link>
+                    </div>
+                    <p className="mb-2 mt-1">
+                      While I learned a lot from this course, I feel like I
+                      could have used more practical examples or exercises that
+                      apply the theory. The course focused a lot on
+                      lecture-based content and could have incorporated more
+                      real-world scenarios.
+                    </p>
+                    <div className="d-inline-flex align-items-center">
+                      <Link
+                        to="#"
+                        className="text-gray-5 d-inline-flex align-items-center me-3 fs-14"
+                      >
+                        <i className="isax isax-like-15 me-1" />
+                        21
+                      </Link>
+                      <Link
+                        to="#"
+                        className="text-gray-5 d-inline-flex align-items-center me-3 fs-14"
+                      >
+                        <i className="isax isax-dislike5 me-1" />
+                        50
+                      </Link>
+                      <Link
+                        to="#"
+                        className="text-gray-5 d-inline-flex align-items-center me-3 fs-14"
+                      >
+                        <i className="isax isax-heart5 text-danger me-1" />
+                        45
+                      </Link>
+                    </div>
+                    <div className="review-info border-0 bg-light-900 reply mt-4 p-3 rounded-2">
+                      <div className="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                        <div className="d-flex align-items-center mb-2">
+                          <span className="avatar avatar-lg me-2 flex-shrink-0">
+                            <Link to={"all_routes.instructorDetails"}>
+                              <ImageWithBasePath
+                                src="assets/img/user/user-25.jpg"
+                                className="rounded-circle"
+                                alt="img"
+                              />
+                            </Link>
+                          </span>
+                          <div>
+                            <h6 className="fs-16 fw-medium">
+                              <Link to={"all_routes.instructorDetails"}>
+                                Rolands Granger
+                              </Link>
+                            </h6>
+                            <div className="d-flex align-items-center flex-wrap date-info">
+                              <span className="mb-0 fs-14">2 days ago</span>
+                            </div>
+                          </div>
+                        </div>
+                        <Link
+                          to="#"
+                          className="btn btn-md d-inline-flex align-items-center me-2 mb-2 text-gray-5"
+                        >
+                          <i className="isax isax-repeat me-1" />
+                          Reply
+                        </Link>
+                      </div>
+                      <p className="mb-2">Thanks! Best luck for Future</p>
+                      <div className="d-inline-flex align-items-center">
+                        <Link
+                          to="#"
+                          className="text-gray-5 d-inline-flex align-items-center me-3 fs-14"
+                        >
+                          <i className="isax isax-like-15 me-1" />
+                          21
+                        </Link>
+                        <Link
+                          to="#"
+                          className="text-gray-5 d-inline-flex align-items-center me-3 fs-14"
+                        >
+                          <i className="isax isax-dislike5 me-1" />
+                          50
+                        </Link>
+                        <Link
+                          to="#"
+                          className="text-gray-5 d-inline-flex align-items-center me-3 fs-14"
+                        >
+                          <i className="isax isax-heart5 text-danger me-1" />
+                          45
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* comments and replies */}
             </div>
 
             {/* RIGHT: Suggested Videos List */}
