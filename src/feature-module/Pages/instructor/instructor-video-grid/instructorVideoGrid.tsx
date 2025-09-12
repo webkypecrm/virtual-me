@@ -1,7 +1,5 @@
-import { useState } from "react";
 import Breadcrumb from "../../../../core/common/Breadcrumb/breadcrumb";
 import { Link } from "react-router-dom";
-import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
 import type { SliderSingleProps } from "antd";
 import { Slider } from "antd";
 import { all_routes } from "../../../router/all_routes";
@@ -11,14 +9,14 @@ const InstructorVideoGrid = () => {
     value
   ) => `$${value}`;
 
-  const [selectedItems, setSelectedItems] = useState(Array(10).fill(false));
-  const handleItemClick = (index: number) => {
-    setSelectedItems((prevSelectedItems) => {
-      const updatedSelectedItems = [...prevSelectedItems];
-      updatedSelectedItems[index] = !updatedSelectedItems[index];
-      return updatedSelectedItems;
-    });
-  };
+  // const [selectedItems, setSelectedItems] = useState(Array(10).fill(false));
+  // const handleItemClick = (index: number) => {
+  //   setSelectedItems((prevSelectedItems) => {
+  //     const updatedSelectedItems = [...prevSelectedItems];
+  //     updatedSelectedItems[index] = !updatedSelectedItems[index];
+  //     return updatedSelectedItems;
+  //   });
+  // };
 
   const route = all_routes;
 

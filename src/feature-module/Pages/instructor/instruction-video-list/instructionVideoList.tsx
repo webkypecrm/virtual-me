@@ -1,24 +1,24 @@
 import type { SliderSingleProps } from "antd";
 import { Slider } from "antd";
-import { useState } from "react";
 import { all_routes } from "../../../router/all_routes";
 import Breadcrumb from "../../../../core/common/Breadcrumb/breadcrumb";
 import { Link } from "react-router-dom";
-import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
 
 const InstructorList = () => {
   const formatter: NonNullable<SliderSingleProps["tooltip"]>["formatter"] = (
     value
   ) => `$${value}`;
 
-  const [selectedItems, setSelectedItems] = useState(Array(10).fill(false));
-  const handleItemClick = (index: number) => {
-    setSelectedItems((prevSelectedItems) => {
-      const updatedSelectedItems = [...prevSelectedItems];
-      updatedSelectedItems[index] = !updatedSelectedItems[index];
-      return updatedSelectedItems;
-    });
-  };
+  // const [selectedItems, setSelectedItems] = useState(Array(10).fill(false));
+  // const handleItemClick = (index: number) => {
+  //   setSelectedItems((prevSelectedItems) => {
+  //     const updatedSelectedItems = [...prevSelectedItems];
+  //     updatedSelectedItems[index] = !updatedSelectedItems[index];
+  //     return updatedSelectedItems;
+  //   });
+  // };
+
+  // console.log(selectedItems);
 
   const route = all_routes;
 
