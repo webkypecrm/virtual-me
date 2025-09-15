@@ -1,13 +1,13 @@
-import type { SliderSingleProps } from "antd";
-import { Slider } from "antd";
+// import type { SliderSingleProps } from "antd";
+// import { Slider } from "antd";
 import { all_routes } from "../../../router/all_routes";
-import Breadcrumb from "../../../../core/common/Breadcrumb/breadcrumb";
+// import Breadcrumb from "../../../../core/common/Breadcrumb/breadcrumb";
 import { Link } from "react-router-dom";
 
 const InstructorList = () => {
-  const formatter: NonNullable<SliderSingleProps["tooltip"]>["formatter"] = (
-    value
-  ) => `$${value}`;
+  // const formatter: NonNullable<SliderSingleProps["tooltip"]>["formatter"] = (
+  //   value
+  // ) => `$${value}`;
 
   // const [selectedItems, setSelectedItems] = useState(Array(10).fill(false));
   // const handleItemClick = (index: number) => {
@@ -24,7 +24,7 @@ const InstructorList = () => {
 
   return (
     <>
-      <Breadcrumb title="Professionals" />
+      {/* <Breadcrumb title="Professionals" /> */}
       <div className="main-wrapper">
         {/* Course */}
         <div className="instructor-list">

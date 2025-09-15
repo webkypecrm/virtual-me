@@ -12,8 +12,8 @@
   position: absolute;
   bottom: 40px; /* push video to bottom */
   right: 30px; /* add slight spacing from edge */
-  width: 18%; /* smaller width */
-  height: 35%; /* smaller height */
+  width: 48%; /* smaller width */
+  height: 85%; /* smaller height */
   overflow: hidden;
   z-index: -2;
 }

@@ -1,12 +1,12 @@
-import Breadcrumb from '../../../core/common/Breadcrumb/breadcrumb';
-import { Link } from 'react-router-dom';
-import ImageWithBasePath from '../../../core/common/imageWithBasePath';
-import { all_routes } from '../../router/all_routes';
+// import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
+import { Link } from "react-router-dom";
+import ImageWithBasePath from "../../../core/common/imageWithBasePath";
+import { all_routes } from "../../router/all_routes";
 
 const BlogDetails = () => {
   return (
     <>
-      <Breadcrumb title='Blog Details'/>
+      {/* <Breadcrumb title='Blog Details'/> */}
       <div className="blog-sec blog-details">
         <div className="container">
           <div className="row justify-content-center">
@@ -52,29 +52,33 @@ const BlogDetails = () => {
                   </li>
                 </ul>
               </div>
-              <h5 className="mb-3">Learn Web App Development from Experts in 2024</h5>
+              <h5 className="mb-3">
+                Learn Web App Development from Experts in 2024
+              </h5>
               <p>
                 Web app development continues to be one of the most sought-after
-                skills in the tech industry, and 2024 is the perfect year to start
-                your journey. With businesses across the globe increasingly relying on
-                web applications for their operations, the demand for skilled
-                developers is at an all-time high. From lucrative job opportunities to
-                the chance to work on cutting-edge technologies, learning web app
-                development opens doors to a wide array of possibilities. Emerging
-                trends like Progressive Web Apps (PWAs), serverless architectures, and
-                AI integration are transforming the field, making it an exciting time
-                to dive in.
+                skills in the tech industry, and 2024 is the perfect year to
+                start your journey. With businesses across the globe
+                increasingly relying on web applications for their operations,
+                the demand for skilled developers is at an all-time high. From
+                lucrative job opportunities to the chance to work on
+                cutting-edge technologies, learning web app development opens
+                doors to a wide array of possibilities. Emerging trends like
+                Progressive Web Apps (PWAs), serverless architectures, and AI
+                integration are transforming the field, making it an exciting
+                time to dive in.
               </p>
               <div className="p-3 my-4 bg-light-900 blog-blockquote">
                 <p className="text-gray-9">
-                  To succeed in web app development, it’s crucial to master a range of
-                  skills. On the frontend, knowledge of HTML5, CSS3, and JavaScript is
-                  foundational, along with frameworks like React or Vue.js. For
-                  backend development, expertise in Node.js, Python (Django or Flask),
-                  or PHP is essential. Familiarity with databases, including SQL and
-                  NoSQL options like MongoDB and PostgreSQL, is equally important.
-                  Tools like Git for version control and Jest or Selenium for testing
-                  round out the technical skill set.{" "}
+                  To succeed in web app development, it’s crucial to master a
+                  range of skills. On the frontend, knowledge of HTML5, CSS3,
+                  and JavaScript is foundational, along with frameworks like
+                  React or Vue.js. For backend development, expertise in
+                  Node.js, Python (Django or Flask), or PHP is essential.
+                  Familiarity with databases, including SQL and NoSQL options
+                  like MongoDB and PostgreSQL, is equally important. Tools like
+                  Git for version control and Jest or Selenium for testing round
+                  out the technical skill set.{" "}
                 </p>
               </div>
               <div className="row">
@@ -98,21 +102,23 @@ const BlogDetails = () => {
                 </div>
               </div>
               <p>
-                One of the key advantages of starting in 2024 is the availability of
-                advanced tools, frameworks, and learning resources. Frameworks like
-                React, Angular, and Vue.js have matured, making development more
-                efficient and user-friendly. Additionally, the rise of online
-                platforms and boot camps provides access to high-quality training,
-                whether you're a beginner or an experienced programmer. The developer
-                community is also thriving, with frequent conferences, virtual
-                meetups, and forums that offer networking and collaborative
+                One of the key advantages of starting in 2024 is the
+                availability of advanced tools, frameworks, and learning
+                resources. Frameworks like React, Angular, and Vue.js have
+                matured, making development more efficient and user-friendly.
+                Additionally, the rise of online platforms and boot camps
+                provides access to high-quality training, whether you're a
+                beginner or an experienced programmer. The developer community
+                is also thriving, with frequent conferences, virtual meetups,
+                and forums that offer networking and collaborative
                 opportunities.
               </p>
               <p>
-                If you’re ready to embark on this exciting journey, now is the time to
-                invest in your future. With expert mentorship, practical experience,
-                and a commitment to continuous learning, you can unlock a world of
-                opportunities in web app development in 2024 and beyond.
+                If you’re ready to embark on this exciting journey, now is the
+                time to invest in your future. With expert mentorship, practical
+                experience, and a commitment to continuous learning, you can
+                unlock a world of opportunities in web app development in 2024
+                and beyond.
               </p>
               <div className="p-3 text-center text-md-start p-lg-4 my-4 bg-light-900 rounded-2 d-md-flex align-items-center">
                 <div className="avatar flex-shrink-0 blog-avatar">
@@ -127,15 +133,17 @@ const BlogDetails = () => {
                 <div className="ps-md-3 mt-2 mt-md-0">
                   <span className="text-secondary mb-1">Author</span>
                   <h5 className="mb-1 fs-18">
-                    <Link to={all_routes.instructorDetails}>Robert Hollenbeck</Link>
+                    <Link to={all_routes.instructorDetails}>
+                      Robert Hollenbeck
+                    </Link>
                   </h5>
                   <p>
                     I am experienced project manager and consultant with a rich
                     background in digital project execution and freelance talent
-                    acquisition. With over 10 years in the industry, I have mastered
-                    the art of identifying and collaborating with top-tier freelance
-                    talent across various fields including technology, marketing, and
-                    creative services.
+                    acquisition. With over 10 years in the industry, I have
+                    mastered the art of identifying and collaborating with
+                    top-tier freelance talent across various fields including
+                    technology, marketing, and creative services.
                   </p>
                 </div>
               </div>
@@ -206,7 +214,9 @@ const BlogDetails = () => {
                         </span>
                         <div>
                           <h5 className="fs-16 fw-medium">
-                            <Link to={all_routes.studentsDetails}>Adrian Hendriques</Link>
+                            <Link to={all_routes.studentsDetails}>
+                              Adrian Hendriques
+                            </Link>
                           </h5>
                           <div className="d-flex align-items-center flex-wrap date-info">
                             <span className="mb-0 fs-14">2 days ago</span>
@@ -222,10 +232,10 @@ const BlogDetails = () => {
                       </Link>
                     </div>
                     <p className="mb-2 mt-1">
-                      I highly recommend to anyone looking to learn . Their passion
-                      for the subject and dedication to students make them an
-                      outstanding instructor. I would definitely take another course
-                      with them in the future.
+                      I highly recommend to anyone looking to learn . Their
+                      passion for the subject and dedication to students make
+                      them an outstanding instructor. I would definitely take
+                      another course with them in the future.
                     </p>
                     <div className="d-inline-flex align-items-center">
                       <Link
@@ -267,7 +277,9 @@ const BlogDetails = () => {
                         </span>
                         <div>
                           <h5 className="fs-16 fw-medium">
-                            <Link to={all_routes.studentsDetails}>Adrian Hendriques</Link>
+                            <Link to={all_routes.studentsDetails}>
+                              Adrian Hendriques
+                            </Link>
                           </h5>
                           <div className="d-flex align-items-center flex-wrap date-info">
                             <span className="mb-0 fs-14">2 days ago</span>
@@ -283,10 +295,11 @@ const BlogDetails = () => {
                       </Link>
                     </div>
                     <p className="mb-2 mt-1">
-                      While I learned a lot from this course, I feel like I could have
-                      used more practical examples or exercises that apply the theory.
-                      The course focused a lot on lecture-based content and could have
-                      incorporated more real-world scenarios.
+                      While I learned a lot from this course, I feel like I
+                      could have used more practical examples or exercises that
+                      apply the theory. The course focused a lot on
+                      lecture-based content and could have incorporated more
+                      real-world scenarios.
                     </p>
                     <div className="d-inline-flex align-items-center">
                       <Link
@@ -325,7 +338,9 @@ const BlogDetails = () => {
                           </span>
                           <div>
                             <h6 className="fs-16 fw-medium">
-                              <Link to={all_routes.instructorDetails}>Rolands Granger</Link>
+                              <Link to={all_routes.instructorDetails}>
+                                Rolands Granger
+                              </Link>
                             </h6>
                             <div className="d-flex align-items-center flex-wrap date-info">
                               <span className="mb-0 fs-14">2 days ago</span>
@@ -395,8 +410,8 @@ const BlogDetails = () => {
                         <label className="custom_check">
                           <input type="checkbox" name="select_specialist" />
                           <span className="checkmark" />
-                          Save my name &amp; email in this browser for the next time I
-                          comment
+                          Save my name &amp; email in this browser for the next
+                          time I comment
                         </label>
                       </div>
                     </div>
@@ -411,7 +426,7 @@ const BlogDetails = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default BlogDetails;

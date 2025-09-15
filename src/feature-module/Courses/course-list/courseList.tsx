@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
+// import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
 import { Link } from "react-router-dom";
 import ImageWithBasePath from "../../../core/common/imageWithBasePath";
 // import { Slider } from "antd";
@@ -23,7 +23,7 @@ const CourseList = () => {
   // ) => `$${value}`;
   return (
     <>
-      <Breadcrumb title="Course List" />
+      {/* <Breadcrumb title="Course List" /> */}
       <>
         {/* Course */}
         <section className="course-content course-list-content">

@@ -2,7 +2,7 @@
 // import { Slider } from "antd";
 import { useState } from "react";
 import { all_routes } from "../../../router/all_routes";
-import Breadcrumb from "../../../../core/common/Breadcrumb/breadcrumb";
+// import Breadcrumb from "../../../../core/common/Breadcrumb/breadcrumb";
 import { Link } from "react-router-dom";
 import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
 
@@ -24,7 +24,7 @@ const InstructorList = () => {
 
   return (
     <>
-      <Breadcrumb title="Professionals" />
+      {/* <Breadcrumb title="Professionals" /> */}
       <div className="main-wrapper">
         {/* Course */}
         <div className="instructor-list">
@@ -379,7 +379,7 @@ const InstructorList = () => {
                         className="img-fluid"
                       />
                     </Link>
-                    <div
+                    {/* <div
                       className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                       key={1}
                       onClick={() => handleItemClick(1)}
@@ -392,7 +392,7 @@ const InstructorList = () => {
                       >
                         <i className="isax isax-heart color-active" />
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="instructor-content flex-fill">
                     <div className="pb-3 border-bottom mb-3">
@@ -463,7 +463,7 @@ const InstructorList = () => {
                         className="img-fluid"
                       />
                     </Link>
-                    <div
+                    {/* <div
                       className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                       key={2}
                       onClick={() => handleItemClick(2)}
@@ -476,7 +476,7 @@ const InstructorList = () => {
                       >
                         <i className="isax isax-heart color-active" />
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="instructor-content flex-fill">
                     <div className="pb-3 border-bottom mb-3">
@@ -542,7 +542,7 @@ const InstructorList = () => {
                         className="img-fluid"
                       />
                     </Link>
-                    <div
+                    {/* <div
                       className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                       key={3}
                       onClick={() => handleItemClick(3)}
@@ -555,7 +555,7 @@ const InstructorList = () => {
                       >
                         <i className="isax isax-heart color-active" />
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="instructor-content flex-fill">
                     <div className="pb-3 border-bottom mb-3">
@@ -618,7 +618,7 @@ const InstructorList = () => {
                         className="img-fluid"
                       />
                     </Link>
-                    <div
+                    {/* <div
                       className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                       key={4}
                       onClick={() => handleItemClick(4)}
@@ -631,7 +631,7 @@ const InstructorList = () => {
                       >
                         <i className="isax isax-heart color-active" />
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="instructor-content flex-fill">
                     <div className="pb-3 border-bottom mb-3">
@@ -697,7 +697,7 @@ const InstructorList = () => {
                         className="img-fluid"
                       />
                     </Link>
-                    <div
+                    {/* <div
                       className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                       key={5}
                       onClick={() => handleItemClick(5)}
@@ -710,7 +710,7 @@ const InstructorList = () => {
                       >
                         <i className="isax isax-heart color-active" />
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="instructor-content flex-fill">
                     <div className="pb-3 border-bottom mb-3">
@@ -774,7 +774,7 @@ const InstructorList = () => {
                         className="img-fluid"
                       />
                     </Link>
-                    <div
+                    {/* <div
                       className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                       key={6}
                       onClick={() => handleItemClick(6)}
@@ -787,7 +787,7 @@ const InstructorList = () => {
                       >
                         <i className="isax isax-heart color-active" />
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="instructor-content flex-fill">
                     <div className="pb-3 border-bottom mb-3">
@@ -856,7 +856,7 @@ const InstructorList = () => {
                         className="img-fluid"
                       />
                     </Link>
-                    <div
+                    {/* <div
                       className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                       key={7}
                       onClick={() => handleItemClick(7)}
@@ -869,7 +869,7 @@ const InstructorList = () => {
                       >
                         <i className="isax isax-heart color-active" />
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="instructor-content flex-fill">
                     <div className="pb-3 border-bottom mb-3">

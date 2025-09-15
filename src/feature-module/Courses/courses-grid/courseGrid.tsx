@@ -1,4 +1,4 @@
-import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
+// import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
 // import type { SliderSingleProps } from "antd";
 // import { Slider } from "antd";
 import { Link } from "react-router-dom";
@@ -78,7 +78,7 @@ const CourseGrid = () => {
 
   return (
     <>
-      <Breadcrumb title="Course Grid" />
+      {/* <Breadcrumb title="Course Grid" /> */}
 
       {/* Course */}
       <section className="course-content">

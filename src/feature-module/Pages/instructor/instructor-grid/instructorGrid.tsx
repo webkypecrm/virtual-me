@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Breadcrumb from "../../../../core/common/Breadcrumb/breadcrumb";
+// import Breadcrumb from "../../../../core/common/Breadcrumb/breadcrumb";
 import { Link } from "react-router-dom";
 import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
 // import type { SliderSingleProps } from "antd";
@@ -11,20 +11,20 @@ const InstructorGrid = () => {
   //   value
   // ) => `$${value}`;
 
-  const [selectedItems, setSelectedItems] = useState(Array(10).fill(false));
-  const handleItemClick = (index: number) => {
-    setSelectedItems((prevSelectedItems) => {
-      const updatedSelectedItems = [...prevSelectedItems];
-      updatedSelectedItems[index] = !updatedSelectedItems[index];
-      return updatedSelectedItems;
-    });
-  };
+  // const [selectedItems, setSelectedItems] = useState(Array(10).fill(false));
+  // const handleItemClick = (index: number) => {
+  //   setSelectedItems((prevSelectedItems) => {
+  //     const updatedSelectedItems = [...prevSelectedItems];
+  //     updatedSelectedItems[index] = !updatedSelectedItems[index];
+  //     return updatedSelectedItems;
+  //   });
+  // };
 
   const route = all_routes;
 
   return (
     <>
-      <Breadcrumb title="Professionals" />
+      {/* <Breadcrumb title="Professionals" /> */}
       <>
         {/* Instructor */}
         <section className="course-content">
@@ -381,7 +381,8 @@ const InstructorGrid = () => {
                             alt="img"
                           />
                         </Link>
-                        <div
+                        {/* Professor */}
+                        {/* <div
                           className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                           key={1}
                           onClick={() => handleItemClick(1)}
@@ -402,14 +403,14 @@ const InstructorGrid = () => {
                           >
                             <i className="isax isax-heart" />
                           </Link>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="instructor-content">
                         <div>
-                          <p className="rating mb-2">
+                          {/* <p className="rating mb-2">
                             <i className="fas fa-star me-1" />
                             4.9 (200 Reviews)
-                          </p>
+                          </p> */}
                           <h3 className="title mb-2">
                             <Link to={route.instructorDetails}>
                               Aditya Malik
@@ -444,7 +445,7 @@ const InstructorGrid = () => {
                             alt="img"
                           />
                         </Link>
-                        <div
+                        {/* <div
                           className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                           key={2}
                           onClick={() => handleItemClick(2)}
@@ -458,14 +459,14 @@ const InstructorGrid = () => {
                           >
                             <i className="isax isax-heart" />
                           </Link>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="instructor-content">
                         <div>
-                          <p className="rating mb-2">
+                          {/* <p className="rating mb-2">
                             <i className="fas fa-star me-1" />
                             4.4 (130 Reviews)
-                          </p>
+                          </p> */}
                           <h3 className="title mb-2">
                             <Link to={route.instructorDetails}>Lisa Lopez</Link>
                           </h3>
@@ -498,7 +499,7 @@ const InstructorGrid = () => {
                             alt="img"
                           />
                         </Link>
-                        <div
+                        {/* <div
                           className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                           key={3}
                           onClick={() => handleItemClick(3)}
@@ -512,14 +513,14 @@ const InstructorGrid = () => {
                           >
                             <i className="isax isax-heart" />
                           </Link>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="instructor-content">
                         <div>
-                          <p className="rating mb-2">
+                          {/* <p className="rating mb-2">
                             <i className="fas fa-star me-1" />
                             4.5 (120 Reviews)
-                          </p>
+                          </p> */}
                           <h3 className="title mb-2">
                             <Link to={route.instructorDetails}>
                               Charles Ruiz
@@ -554,7 +555,7 @@ const InstructorGrid = () => {
                             alt="img"
                           />
                         </Link>
-                        <div
+                        {/* <div
                           className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                           key={4}
                           onClick={() => handleItemClick(4)}
@@ -568,14 +569,14 @@ const InstructorGrid = () => {
                           >
                             <i className="isax isax-heart" />
                           </Link>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="instructor-content">
                         <div>
-                          <p className="rating mb-2">
+                          {/* <p className="rating mb-2">
                             <i className="fas fa-star me-1" />
                             4.6 (180 Reviews)
-                          </p>
+                          </p> */}
                           <h3 className="title mb-2">
                             <Link to={route.instructorDetails}>
                               Rogerina Grogan
@@ -610,7 +611,7 @@ const InstructorGrid = () => {
                             alt="img"
                           />
                         </Link>
-                        <div
+                        {/* <div
                           className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                           key={4}
                           onClick={() => handleItemClick(4)}
@@ -624,14 +625,14 @@ const InstructorGrid = () => {
                           >
                             <i className="isax isax-heart" />
                           </Link>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="instructor-content">
                         <div>
-                          <p className="rating mb-2">
+                          {/* <p className="rating mb-2">
                             <i className="fas fa-star me-1" />
                             4.2 (210 Reviews)
-                          </p>
+                          </p> */}
                           <h3 className="title mb-2">
                             <Link to={route.instructorDetails}>Ivana Tow</Link>
                           </h3>
@@ -664,7 +665,7 @@ const InstructorGrid = () => {
                             alt="img"
                           />
                         </Link>
-                        <div
+                        {/* <div
                           className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                           key={4}
                           onClick={() => handleItemClick(4)}
@@ -678,14 +679,14 @@ const InstructorGrid = () => {
                           >
                             <i className="isax isax-heart" />
                           </Link>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="instructor-content">
                         <div>
-                          <p className="rating mb-2">
+                          {/* <p className="rating mb-2">
                             <i className="fas fa-star me-1" />
                             4.5 (140 Reviews)
-                          </p>
+                          </p> */}
                           <h3 className="title mb-2">
                             <Link to={route.instructorDetails}>
                               Kevin Leonard
@@ -720,7 +721,7 @@ const InstructorGrid = () => {
                             alt="img"
                           />
                         </Link>
-                        <div
+                        {/* <div
                           className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                           key={5}
                           onClick={() => handleItemClick(5)}
@@ -734,14 +735,14 @@ const InstructorGrid = () => {
                           >
                             <i className="isax isax-heart" />
                           </Link>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="instructor-content">
                         <div>
-                          <p className="rating mb-2">
+                          {/* <p className="rating mb-2">
                             <i className="fas fa-star me-1" />
                             4.3 (190 Reviews)
-                          </p>
+                          </p> */}
                           <h3 className="title mb-2">
                             <Link to={route.instructorDetails}>
                               David Roccoz
@@ -776,7 +777,7 @@ const InstructorGrid = () => {
                             alt="img"
                           />
                         </Link>
-                        <div
+                        {/* <div
                           className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                           key={5}
                           onClick={() => handleItemClick(5)}
@@ -790,14 +791,14 @@ const InstructorGrid = () => {
                           >
                             <i className="isax isax-heart" />
                           </Link>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="instructor-content">
                         <div>
-                          <p className="rating mb-2">
+                          {/* <p className="rating mb-2">
                             <i className="fas fa-star me-1" />
                             4.3 (190 Reviews)
-                          </p>
+                          </p> */}
                           <h3 className="title mb-2">
                             <Link to={route.instructorDetails}>
                               Jeanette Dulaney
@@ -832,7 +833,7 @@ const InstructorGrid = () => {
                             alt="img"
                           />
                         </Link>
-                        <div
+                        {/* <div
                           className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
                           key={5}
                           onClick={() => handleItemClick(5)}
@@ -846,14 +847,14 @@ const InstructorGrid = () => {
                           >
                             <i className="isax isax-heart" />
                           </Link>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="instructor-content">
                         <div>
-                          <p className="rating mb-2">
+                          {/* <p className="rating mb-2">
                             <i className="fas fa-star me-1" />
                             4.3 (190 Reviews)
-                          </p>
+                          </p> */}
                           <h3 className="title mb-2">
                             <Link to={route.instructorDetails}>
                               Debran Andrew

@@ -588,9 +588,9 @@
         color: variables.$secondary;
       }
     }
-    & .instructor-bottom {
-      border-top: 1px solid variables.$border-color;
-    }
+    // & .instructor-bottom {
+    //   border-top: 1px solid variables.$border-color;
+    // }
 
     &.instructor-item-three {
       display: block;
@@ -735,7 +735,7 @@
           text-decoration: underline;
           padding-bottom: 15px;
           margin: 0;
-          border-bottom: 1px solid variables.$border-color;
+          // border-bottom: 1px solid variables.$border-color;
         }
         & .student-count {
           padding: 15px 0 0;

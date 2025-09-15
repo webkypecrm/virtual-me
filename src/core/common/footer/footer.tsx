@@ -52,55 +52,29 @@ const Footer = () => {
                     </Link> */}
                   </div>
                 </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="row row-gap-4">
+                <div className="row ">
                   <div className="col-lg-4">
                     <div className="footer-widget footer-menu">
-                      <h5 className="footer-title">For Instructor</h5>
-                      <ul>
-                        {/* <li>
-                          <Link to={all_routes.courseGrid}>Search Mentors</Link>
-                        </li> */}
-                        <li>
-                          <Link to={all_routes.login}>Login</Link>
-                        </li>
-                        <li>
-                          <Link to={all_routes.register}>Register</Link>
-                        </li>
-                        <li>
-                          <Link to={all_routes.courseList}>Booking</Link>
-                        </li>
-                        {/* <li>
-                          <Link to={all_routes.studentDashboard}>
-                            Students Dashboard
-                          </Link>
-                        </li> */}
-                      </ul>
+                      <div>
+                        <Link
+                          to={all_routes.login}
+                          className="btn btn-primary d-inline-flex align-items-center me-2 px-3"
+                        >
+                          For Instructor
+                        </Link>
+                      </div>
                     </div>
                   </div>
                   <div className="col-lg-4">
                     <div className="footer-widget footer-menu">
-                      <h5 className="footer-title">For Student</h5>
-                      <ul>
-                        <li>
-                          <Link to="#">Appointments</Link>
-                        </li>
-                        {/* <li>
-                          <Link to={all_routes.instructorMessage}>Chat</Link>
-                        </li> */}
-                        <li>
-                          <Link to={all_routes.login}>Login</Link>
-                        </li>
-                        {/* <li>
-                          <Link to={all_routes.register}>Register</Link>
-                        </li> */}
-                        {/* <li>
-                          <Link to={all_routes.instructorDashboard}>
-                            Instructor Dashboard
-                          </Link>
-                        </li> */}
-                      </ul>
+                      <div>
+                        <Link
+                          to={all_routes.login}
+                          className="btn btn-secondary d-inline-flex align-items-center me-2 px-3"
+                        >
+                          For Student
+                        </Link>
+                      </div>
                     </div>
                   </div>
                   {/* <div className="col-lg-6">
@@ -156,6 +130,7 @@ const Footer = () => {
                   </div> */}
                 </div>
               </div>
+              <div className="col-lg-6"></div>
             </div>
           </div>
         </div>
@@ -171,25 +146,73 @@ const Footer = () => {
               </div>
               <div className="col-md-6">
                 <div>
-                  <ul className="d-flex align-items-center justify-content-center justify-content-md-end footer-link">
-                    <li>
-                      <Link to={all_routes.about_us}>About</Link>
-                    </li>
-                    <li>
-                      <Link to={all_routes.contactUs}>Contact Us</Link>
-                    </li>
-                    <li>
-                      <Link to={all_routes.FAQ}>FAQ</Link>
-                    </li>
-                    <li>
-                      <Link to={all_routes.termsConditions}>
-                        Terms &amp; Conditions
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to={all_routes.privacyPolicy}>Privacy Policy</Link>
-                    </li>
-                  </ul>
+                  {/* ✅ Show stacked lists below md */}
+                  <div className="d-block d-md-none">
+                    <ul className="d-flex align-items-center justify-content-center footer-link">
+                      <li>
+                        <Link to={all_routes.about_us}>About</Link>
+                      </li>
+                      <li>
+                        <Link to={all_routes.contactUs}>Contact Us</Link>
+                      </li>
+                      <li>
+                        <Link to={all_routes.FAQ}>FAQ</Link>
+                      </li>
+                    </ul>
+                    <ul className="d-flex align-items-center justify-content-center footer-link">
+                      <li>
+                        <Link to={all_routes.about_us}>Team</Link>
+                      </li>
+                      <li>
+                        <Link to={all_routes.contactUs}>Career</Link>
+                      </li>
+                      <li>
+                        <Link to={all_routes.FAQ}>Partners</Link>
+                      </li>
+                    </ul>
+                    <ul className="d-flex align-items-center justify-content-center footer-link">
+                      <li>
+                        <Link to={all_routes.termsConditions}>
+                          Terms &amp; Conditions
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to={all_routes.privacyPolicy}>
+                          Privacy Policy
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* ✅ Show inline list on md+ */}
+                  <div className="d-none d-md-block">
+                    <ul className="d-flex align-items-center justify-content-md-end footer-link flex-wrap gap-0">
+                      <li>
+                        <Link to={all_routes.about_us}>About</Link>
+                      </li>
+                      <li>
+                        <Link to={all_routes.contactUs}>Contact Us</Link>
+                      </li>
+                      <li>
+                        <Link to={all_routes.FAQ}>FAQ</Link>
+                      </li>
+                      <li>
+                        <Link to={all_routes.about_us}>Team</Link>
+                      </li>
+                      <li>
+                        <Link to={all_routes.contactUs}>Career</Link>
+                      </li>
+                      <li>
+                        <Link to={all_routes.FAQ}>Partners</Link>
+                      </li>
+                      <li>
+                        <Link to={all_routes.termsConditions}>Terms</Link>
+                      </li>
+                      <li>
+                        <Link to={all_routes.privacyPolicy}>Privacy</Link>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,10 +1,10 @@
-import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
+// import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
 import { Link } from "react-router-dom";
 
 const ContactUs = () => {
   return (
     <>
-      <Breadcrumb title="Contact Us" />
+      {/* <Breadcrumb title="Contact Us" /> */}
 
       <section className="contact-sec">
         <div className="container">

@@ -1,4 +1,4 @@
-import Breadcrumb from "../../../../core/common/Breadcrumb/breadcrumb";
+// import Breadcrumb from "../../../../core/common/Breadcrumb/breadcrumb";
 import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
 import { Link } from "react-router-dom";
 //import Slider from "react-slick";
@@ -26,7 +26,7 @@ const InstructorDetails = () => {
 
   return (
     <>
-      <Breadcrumb title="Professionals Details" />
+      {/* <Breadcrumb title="Professionals Details" /> */}
 
       {/* Instructor */}
       <div className="instructor-detail-content">

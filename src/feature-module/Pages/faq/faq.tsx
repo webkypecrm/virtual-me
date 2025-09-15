@@ -1,14 +1,13 @@
-import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
+// import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
 import { Link } from "react-router-dom";
 import { all_routes } from "../../router/all_routes";
 
 const Faq = () => {
-
-  const route = all_routes
+  const route = all_routes;
 
   return (
     <>
-      <Breadcrumb title="FAQ" />
+      {/* <Breadcrumb title="FAQ" /> */}
 
       <div className="content">
         <div className="container">

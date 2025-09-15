@@ -1,10 +1,10 @@
-import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
+// import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
 import { Link } from "react-router-dom";
 
 const PrivacyPolicy = () => {
   return (
     <>
-      <Breadcrumb title="Privacy Policy" />
+      {/* <Breadcrumb title="Privacy Policy" /> */}
 
       <div className="content">
         <div className="container">

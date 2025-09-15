@@ -1,9 +1,9 @@
-import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
+// import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
 
 const TermsCondition = () => {
   return (
     <>
-      <Breadcrumb title="Terms and Conditions" />
+      {/* <Breadcrumb title="Terms and Conditions" /> */}
 
       <div className="content">
         <div className="container">
