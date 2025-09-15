@@ -32,6 +32,50 @@ const Featureinstructors = () => {
                       <ImageWithBasePath
                         className="img-fluid"
                         alt="Img"
+                        src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757936392/0112_dutta_tnd_0_2_vbcsmn.jpg"
+                        style={{
+                          width: "100%",
+                          height: "300px",
+                          objectFit: "cover",
+                          borderRadius: "8px",
+                        }}
+                      />
+                    </Link>
+                    <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2">
+                      <div className="featured-img">
+                        <ImageWithBasePath
+                          src="assets/img/icons/category-4.svg"
+                          alt="Img"
+                          className="img-fluid"
+                        />
+                      </div>
+                      <Link to="#" className="favourite ms-auto">
+                        <i className="isax isax-heart" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="instructor-content">
+                    <h5 className="title">
+                      <Link to={route.instructorDetails}>Pinero</Link>
+                    </h5>
+                    <span className="designation">Python</span>
+                    <div className="student-count">
+                      <i className="fa-solid fa-user-group me-2" />
+                      <span>40 Students</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="col-xl-3 col-lg-6 col-md-6 col-sm-12"
+                data-aos="fade-up"
+              >
+                <div className="instructor-item instructor-item-four">
+                  <div className="instructors-img ">
+                    <Link to={route.instructorList} tabIndex={0}>
+                      <ImageWithBasePath
+                        className="img-fluid"
+                        alt="Img"
                         src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919372/IE_Marketplace_Website_By_e2OD_s03x9j.png"
                         style={{
                           width: "100%",
@@ -151,50 +195,6 @@ const Featureinstructors = () => {
                     <div className="student-count">
                       <i className="fa-solid fa-user-group me-2" />
                       <span>60 Students</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-xl-3 col-lg-6 col-md-6 col-sm-12"
-                data-aos="fade-up"
-              >
-                <div className="instructor-item instructor-item-four">
-                  <div className="instructors-img ">
-                    <Link to={route.instructorList} tabIndex={0}>
-                      <ImageWithBasePath
-                        className="img-fluid"
-                        alt="Img"
-                        src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919373/Screenshot_2025-09-05_at_1.22.27PM_1_cviunv.png"
-                        style={{
-                          width: "100%",
-                          height: "300px",
-                          objectFit: "cover",
-                          borderRadius: "8px",
-                        }}
-                      />
-                    </Link>
-                    <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2">
-                      <div className="featured-img">
-                        <ImageWithBasePath
-                          src="assets/img/icons/category-4.svg"
-                          alt="Img"
-                          className="img-fluid"
-                        />
-                      </div>
-                      <Link to="#" className="favourite ms-auto">
-                        <i className="isax isax-heart" />
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="instructor-content">
-                    <h5 className="title">
-                      <Link to={route.instructorDetails}>Pinero</Link>
-                    </h5>
-                    <span className="designation">Python</span>
-                    <div className="student-count">
-                      <i className="fa-solid fa-user-group me-2" />
-                      <span>40 Students</span>
                     </div>
                   </div>
                 </div>
