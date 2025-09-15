@@ -1,4 +1,4 @@
-import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
+// import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
 import { Link } from "react-router-dom";
 import ImageWithBasePath from "../../../core/common/imageWithBasePath";
 import { all_routes } from "../../router/all_routes";
