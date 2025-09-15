@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { all_routes } from "../../../router/all_routes";
+import { useRef, useState } from "react";
+// import { useNavigate } from "react-router-dom";
+// import { all_routes } from "../../../router/all_routes";
 import "./Banner.css";
 
 const Banner = () => {
-  const route = all_routes;
-  const navigate = useNavigate();
+  // const route = all_routes;
+  // const navigate = useNavigate();
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [muted, setMuted] = useState(true);
 
