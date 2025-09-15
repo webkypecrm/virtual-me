@@ -369,7 +369,7 @@ const InstructorVideoGrid = () => {
                 </div>
                 {/* /Filter */}
                 <div className="row course-list-cover">
-                  <div className="col-xl-3 col-md-6 mb-4">
+                  <div className="col-xl-4 col-md-6 mb-4">
                     <div className="card video-card border-0">
                       <div className="video-thumbnail position-relative">
                         <Link to={route.instructorVideoDetails}>
@@ -379,7 +379,7 @@ const InstructorVideoGrid = () => {
                             // poster="assets/img/videos/video-thumbnail.jpg"
                           >
                             <source
-                              src="https://res.cloudinary.com/drj0uehgx/video/upload/v1757586791/istockphoto-1464751572-640_adpp_is_nlyxyv.mp4"
+                              src="https://res.cloudinary.com/drj0uehgx/video/upload/v1757921134/videoplayback_emlkcy.mp4"
                               type="video/mp4"
                             />
                             Your browser does not support the video tag.
@@ -395,8 +395,8 @@ const InstructorVideoGrid = () => {
                         <div className="d-flex align-items-start">
                           {/* Profile Image */}
                           <img
-                            src="http://localhost:5173/assets/img/user/user-64.jpeg"
-                            alt="Aditya Malik"
+                            src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919372/Generated_Image_August_27_2025_-_1_43PM_1_biessq.jpg "
+                            alt="Prof. Soumitra Dutta"
                             className="rounded-circle me-2 mt-1"
                             width="36"
                             height="36"
@@ -408,15 +408,17 @@ const InstructorVideoGrid = () => {
                               <Link
                                 to={route.instructorVideoDetails}
                                 className="text-dark"
+                                style={{}}
                               >
-                                Learn Full Stack Development in 12 Hours!
+                                Global Indexing Explained: Importance, Usability
+                                & Need | Prof. Soumitra Dutta
                               </Link>
                             </h6>
                             <p className="text-muted mb-0 small">
-                              Aditya Malik
+                              Prof. Soumitra Dutta
                             </p>
                             <p className="text-muted mb-0 small">
-                              1.2M views • 2 weeks ago
+                              1.2 M View | 11 Months.
                             </p>
                           </div>
                         </div>
@@ -424,13 +426,13 @@ const InstructorVideoGrid = () => {
                         {/* Indent views + time text to align with title */}
                         <div className="ms-5">
                           {/* <p className="text-muted mb-0 small mt-1">
-                            1.2M views • 2 weeks ago
+                            1.2 M View  | 11 Months.
                           </p> */}
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-md-6 mb-4">
+                  <div className="col-xl-4 col-md-6 mb-4">
                     <div className="card video-card border-0">
                       <div className="video-thumbnail position-relative">
                         <Link to={route.instructorVideoDetails}>
@@ -440,7 +442,7 @@ const InstructorVideoGrid = () => {
                             // poster="assets/img/videos/video-thumbnail.jpg"
                           >
                             <source
-                              src="https://res.cloudinary.com/drj0uehgx/video/upload/v1757586791/istockphoto-1464751572-640_adpp_is_nlyxyv.mp4"
+                              src="https://res.cloudinary.com/drj0uehgx/video/upload/v1757921352/videoplayback2_dbbtck.mp4"
                               type="video/mp4"
                             />
                             Your browser does not support the video tag.
@@ -456,8 +458,8 @@ const InstructorVideoGrid = () => {
                         <div className="d-flex align-items-start">
                           {/* Profile Image */}
                           <img
-                            src="http://localhost:5173/assets/img/user/user-64.jpeg"
-                            alt="Aditya Malik"
+                            src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919372/Generated_Image_August_27_2025_-_1_43PM_1_biessq.jpg "
+                            alt="Prof. Soumitra Dutta"
                             className="rounded-circle me-2 mt-1"
                             width="36"
                             height="36"
@@ -470,14 +472,15 @@ const InstructorVideoGrid = () => {
                                 to={route.instructorVideoDetails}
                                 className="text-dark"
                               >
-                                Learn Full Stack Development in 12 Hours!
+                                Global Indexing Explained: Importance, Usability
+                                & Need | Prof. Soumitra Dutta
                               </Link>
                             </h6>
                             <p className="text-muted mb-0 small">
-                              Aditya Malik
+                              Prof. Soumitra Dutta
                             </p>
                             <p className="text-muted mb-0 small">
-                              1.2M views • 2 weeks ago
+                              1.2 M View | 11 Months.
                             </p>
                           </div>
                         </div>
@@ -485,13 +488,13 @@ const InstructorVideoGrid = () => {
                         {/* Indent views + time text to align with title */}
                         <div className="ms-5">
                           {/* <p className="text-muted mb-0 small mt-1">
-                            1.2M views • 2 weeks ago
+                            1.2 M View  | 11 Months.
                           </p> */}
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-md-6 mb-4">
+                  <div className="col-xl-4 col-md-6 mb-4">
                     <div className="card video-card border-0">
                       <div className="video-thumbnail position-relative">
                         <Link to={route.instructorVideoDetails}>
@@ -501,7 +504,7 @@ const InstructorVideoGrid = () => {
                             // poster="assets/img/videos/video-thumbnail.jpg"
                           >
                             <source
-                              src="https://res.cloudinary.com/drj0uehgx/video/upload/v1757586791/istockphoto-1464751572-640_adpp_is_nlyxyv.mp4"
+                              src="https://res.cloudinary.com/drj0uehgx/video/upload/v1757921510/videoplayback3_qaywne.mp4"
                               type="video/mp4"
                             />
                             Your browser does not support the video tag.
@@ -517,8 +520,8 @@ const InstructorVideoGrid = () => {
                         <div className="d-flex align-items-start">
                           {/* Profile Image */}
                           <img
-                            src="http://localhost:5173/assets/img/user/user-64.jpeg"
-                            alt="Aditya Malik"
+                            src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919372/Generated_Image_August_27_2025_-_1_43PM_1_biessq.jpg "
+                            alt="Prof. Soumitra Dutta"
                             className="rounded-circle me-2 mt-1"
                             width="36"
                             height="36"
@@ -531,14 +534,15 @@ const InstructorVideoGrid = () => {
                                 to={route.instructorVideoDetails}
                                 className="text-dark"
                               >
-                                Learn Full Stack Development in 12 Hours!
+                                Global Indexing Explained: Importance, Usability
+                                & Need | Prof. Soumitra Dutta
                               </Link>
                             </h6>
                             <p className="text-muted mb-0 small">
-                              Aditya Malik
+                              Prof. Soumitra Dutta
                             </p>
                             <p className="text-muted mb-0 small">
-                              1.2M views • 2 weeks ago
+                              1.2 M View | 11 Months.
                             </p>
                           </div>
                         </div>
@@ -546,13 +550,13 @@ const InstructorVideoGrid = () => {
                         {/* Indent views + time text to align with title */}
                         <div className="ms-5">
                           {/* <p className="text-muted mb-0 small mt-1">
-                            1.2M views • 2 weeks ago
+                            1.2 M View  | 11 Months.
                           </p> */}
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-md-6 mb-4">
+                  <div className="col-xl-4 col-md-6 mb-4">
                     <div className="card video-card border-0">
                       <div className="video-thumbnail position-relative">
                         <Link to={route.instructorVideoDetails}>
@@ -562,7 +566,7 @@ const InstructorVideoGrid = () => {
                             // poster="assets/img/videos/video-thumbnail.jpg"
                           >
                             <source
-                              src="https://res.cloudinary.com/drj0uehgx/video/upload/v1757586791/istockphoto-1464751572-640_adpp_is_nlyxyv.mp4"
+                              src="https://r1---sn-qxaelnel.googlevideo.com/videoplayback?expire=1757943157&ei=FcHHaIOPEv67vdIPq6vyoQ8&ip=176.1.206.122&id=o-ANm2m9HLhTQLs0dUtEZN58JVjmJfnfxHs9nQ9Se8Gby2&itag=135&aitags=133%2C134%2C135%2C136%2C160%2C242%2C243%2C244%2C247%2C278%2C394%2C395%2C396%2C397%2C398%2C598&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&rms=au%2Cau&bui=ATw7iSV0QSHG0sfM9zkHZEL946-prwtCHUFv0cg3MYAlB4E-lqnLPcU0tgJ2kHpQbDVC90HCfYbHDw68&spc=hcYD5eEOv__M90OaRgLB5fLKg771O7WhsB_VhcdBow0jShQj64PgvCS6A4BSRVXgpAAarnAhQLbnXayrKgmbgCeR&vprv=1&svpuc=1&mime=video%2Fmp4&ns=rOHbSyQs-oTqydhAgLnPciEQ&rqh=1&gir=yes&clen=77921521&dur=1910.080&lmt=1693582413246133&keepalive=yes&fexp=51331020%2C51552689%2C51565115%2C51565681%2C51580968&c=MWEB&sefc=1&txp=5432434&n=3YucUeBUIpOqoA&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgPT39fqDNkgcuVWMTOPZfZg2Z3xo64gnSdSw2ZK5Z56YCIQD2Ds3km_wuGRfPX0HiRrrZw26tdV037q0FxhD_tRVc5A%3D%3D&pot=MnbelozV9pfa1t6oy7RWV-ggjq4PpYSrzngaeUuEA4qdGdQjX6uzJp6Cv6vCm47wbr6GY0k4oYjWhtGtmTmK_rZlhKf9GR0MIKGZYwzLIPlupT9HzTt0gx0hT-PhQFnOylPCQRf4YhobhkukOF3uMqQrSCg9B02I&cms_redirect=yes&met=1757921623,&mh=m0&mip=103.172.252.176&mm=31&mn=sn-qxaelnel&ms=au&mt=1757920904&mv=m&mvi=1&pl=24&lsparams=met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgTZRhuJ6ILy_y8BQImpTXtHElLXQ5dcgUvdq2YwAOo-UCIBGfGgb6sDb0kAcSQ5q4VaqDtI6A4pXDU9YOBX-_LIbz"
                               type="video/mp4"
                             />
                             Your browser does not support the video tag.
@@ -578,8 +582,8 @@ const InstructorVideoGrid = () => {
                         <div className="d-flex align-items-start">
                           {/* Profile Image */}
                           <img
-                            src="http://localhost:5173/assets/img/user/user-64.jpeg"
-                            alt="Aditya Malik"
+                            src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919372/Generated_Image_August_27_2025_-_1_43PM_1_biessq.jpg "
+                            alt="Prof. Soumitra Dutta"
                             className="rounded-circle me-2 mt-1"
                             width="36"
                             height="36"
@@ -592,14 +596,15 @@ const InstructorVideoGrid = () => {
                                 to={route.instructorVideoDetails}
                                 className="text-dark"
                               >
-                                Learn Full Stack Development in 12 Hours!
+                                Global Indexing Explained: Importance, Usability
+                                & Need | Prof. Soumitra Dutta
                               </Link>
                             </h6>
                             <p className="text-muted mb-0 small">
-                              Aditya Malik
+                              Prof. Soumitra Dutta
                             </p>
                             <p className="text-muted mb-0 small">
-                              1.2M views • 2 weeks ago
+                              1.2 M View | 11 Months.
                             </p>
                           </div>
                         </div>
@@ -607,13 +612,13 @@ const InstructorVideoGrid = () => {
                         {/* Indent views + time text to align with title */}
                         <div className="ms-5">
                           {/* <p className="text-muted mb-0 small mt-1">
-                            1.2M views • 2 weeks ago
+                            1.2 M View  | 11 Months.
                           </p> */}
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-md-6 mb-4">
+                  <div className="col-xl-4 col-md-6 mb-4">
                     <div className="card video-card border-0">
                       <div className="video-thumbnail position-relative">
                         <Link to={route.instructorVideoDetails}>
@@ -623,7 +628,7 @@ const InstructorVideoGrid = () => {
                             // poster="assets/img/videos/video-thumbnail.jpg"
                           >
                             <source
-                              src="https://res.cloudinary.com/drj0uehgx/video/upload/v1757586791/istockphoto-1464751572-640_adpp_is_nlyxyv.mp4"
+                              src="https://r2---sn-qxaeense.googlevideo.com/videoplayback?expire=1757943293&ei=ncHHaJS5KLX2xN8PmfjJmQc&ip=176.1.198.34&id=o-AOZqEitPmi1duOgMyeIBfMFg54LtqGRHtX1oPNDgN3rB&itag=136&aitags=134%2C136%2C137%2C160%2C243&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&rms=au%2Cau&bui=ATw7iSVVwNZCw6_pgd37qfD17Y9a5VyKbH8a2PEF4h10ChVxp8Ig9hYSUmyr8BmctdNxQTYcQOVJKW9S&spc=hcYD5fhCNR-1uFBuAVm28tZ4ki6VR38U4xGjytzhO0XjMIpnZgF5Xd8W7sdW5N2fsyE7LA&vprv=1&svpuc=1&mime=video%2Fmp4&ns=s4c8AGiRb1Cp_In-lgrt-HkQ&rqh=1&gir=yes&clen=102703201&dur=2179.644&lmt=1711031121325567&keepalive=yes&fexp=51331020%2C51552689%2C51565115%2C51565681%2C51580968&c=MWEB&sefc=1&txp=5309224&n=FUwPf1gtTFT5vw&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhANVtQcAMHHr-QhMQ20FcM6MU0VjHiM7iZdYX7c2LuLkmAiBAI8MXj3Gi6Ggrw60eotVHCR4LGpThjLlWf_WW736ZtQ%3D%3D&pot=MnbxsxmEbDwZ6PGNLQSliwJrvML6CEsD-EaqpNV1tS3_xRvwB3S4TAIUH_fx6nL1T3nUsOAjhymbEgG8LVpXXtSXo19tyd9if23HemPH1cskGBCuVSwgiSS2EW0AcAwYlMlDFykuNINHvnuny_mOHFITgczX6ESP&cms_redirect=yes&met=1757921697,&mh=Mu&mip=103.172.252.176&mm=31&mn=sn-qxaeense&ms=au&mt=1757920904&mv=m&mvi=2&pl=24&lsparams=met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgX8bxBpm4trH5nt2q_B_46Ss5_rP6OPPMAeGTKyUC7NsCICGPv-NMmXXQMsCjS2V-0MUNsct5Zh-7oDvwVWA4KXhy"
                               type="video/mp4"
                             />
                             Your browser does not support the video tag.
@@ -639,8 +644,8 @@ const InstructorVideoGrid = () => {
                         <div className="d-flex align-items-start">
                           {/* Profile Image */}
                           <img
-                            src="http://localhost:5173/assets/img/user/user-64.jpeg"
-                            alt="Aditya Malik"
+                            src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919372/Generated_Image_August_27_2025_-_1_43PM_1_biessq.jpg "
+                            alt="Prof. Soumitra Dutta"
                             className="rounded-circle me-2 mt-1"
                             width="36"
                             height="36"
@@ -653,14 +658,15 @@ const InstructorVideoGrid = () => {
                                 to={route.instructorVideoDetails}
                                 className="text-dark"
                               >
-                                Learn Full Stack Development in 12 Hours!
+                                Global Indexing Explained: Importance, Usability
+                                & Need | Prof. Soumitra Dutta
                               </Link>
                             </h6>
                             <p className="text-muted mb-0 small">
-                              Aditya Malik
+                              Prof. Soumitra Dutta
                             </p>
                             <p className="text-muted mb-0 small">
-                              1.2M views • 2 weeks ago
+                              1.2 M View | 11 Months.
                             </p>
                           </div>
                         </div>
@@ -668,13 +674,13 @@ const InstructorVideoGrid = () => {
                         {/* Indent views + time text to align with title */}
                         <div className="ms-5">
                           {/* <p className="text-muted mb-0 small mt-1">
-                            1.2M views • 2 weeks ago
+                            1.2 M View  | 11 Months.
                           </p> */}
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-md-6 mb-4">
+                  <div className="col-xl-4 col-md-6 mb-4">
                     <div className="card video-card border-0">
                       <div className="video-thumbnail position-relative">
                         <Link to={route.instructorVideoDetails}>
@@ -684,7 +690,7 @@ const InstructorVideoGrid = () => {
                             // poster="assets/img/videos/video-thumbnail.jpg"
                           >
                             <source
-                              src="https://res.cloudinary.com/drj0uehgx/video/upload/v1757586791/istockphoto-1464751572-640_adpp_is_nlyxyv.mp4"
+                              src="https://r4---sn-qxaelnez.googlevideo.com/videoplayback?expire=1757943360&ei=4MHHaIujDLSOp-oPko7CmAM&ip=176.6.183.24&id=o-AJfMBsEy59JCt0meCb8uqZeIxZ8gfyRBsqM6r5nhGhda&itag=135&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C278%2C598&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&rms=au%2Cau&pcm2=yes&bui=AY1jyLO_PnijiahO1UDWE0S7DzS10zfl7nm5jgsscAlewhvz5LHpeREoPlZ0n4lIjjgU_SQUbCFOlvy4&spc=l3OVKYiPr2xSVVEwQjYQck3nwkxTigpWVzfwFPye27cH2DOoUqK32fuXS94MlzIkxycQIA&vprv=1&svpuc=1&mime=video%2Fmp4&ns=SzuctyxdnkjODYhWX_OKYhsQ&rqh=1&gir=yes&clen=82544121&dur=2187.932&lmt=1745122339146716&keepalive=yes&fexp=51331020%2C51552689%2C51565115%2C51565681%2C51580968&c=MWEB&sefc=1&txp=6309224&n=jBdtRPRGuoOc1Q&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cxpc%2Cpcm2%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhAPfzoOGMRFbgjJSNmZbP03gVikedyRDzza4Pc46NMdNLAiBnucY8TUrfUBwIRy_0AZ_2dPHTQCWiNw9byrNb3Ddilg%3D%3D&pot=MnYyxOjhwVxRBDL67o8YK0nhFs-dANdRcBDQejyi7XfhDe2qcQIILh3SPQ0nmJolKGgOnqfkuEFpjYGfd-pblSBTMhkPhG0YNux-OiCaX8yjUA5bbxt-5vlV9JpODus7m8jdIcPueepNWdd6PnzUnRRlxRKeW6m9&cms_redirect=yes&met=1757921763,&mh=4F&mip=103.172.252.176&mm=31&mn=sn-qxaelnez&ms=au&mt=1757920904&mv=m&mvi=4&pl=24&lsparams=met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgOMiLhNUInEmVGRX3XHH0objxOOCYnpMbXXdcAA_pPuICIQDpr98mEoUcLUGNvwwbedu7JY32NCJobGhKF9drqCi5jg%3D%3D"
                               type="video/mp4"
                             />
                             Your browser does not support the video tag.
@@ -700,8 +706,8 @@ const InstructorVideoGrid = () => {
                         <div className="d-flex align-items-start">
                           {/* Profile Image */}
                           <img
-                            src="http://localhost:5173/assets/img/user/user-64.jpeg"
-                            alt="Aditya Malik"
+                            src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919372/Generated_Image_August_27_2025_-_1_43PM_1_biessq.jpg "
+                            alt="Prof. Soumitra Dutta"
                             className="rounded-circle me-2 mt-1"
                             width="36"
                             height="36"
@@ -714,14 +720,15 @@ const InstructorVideoGrid = () => {
                                 to={route.instructorVideoDetails}
                                 className="text-dark"
                               >
-                                Learn Full Stack Development in 12 Hours!
+                                Global Indexing Explained: Importance, Usability
+                                & Need | Prof. Soumitra Dutta
                               </Link>
                             </h6>
                             <p className="text-muted mb-0 small">
-                              Aditya Malik
+                              Prof. Soumitra Dutta
                             </p>
                             <p className="text-muted mb-0 small">
-                              1.2M views • 2 weeks ago
+                              1.2 M View | 11 Months.
                             </p>
                           </div>
                         </div>
@@ -729,7 +736,7 @@ const InstructorVideoGrid = () => {
                         {/* Indent views + time text to align with title */}
                         <div className="ms-5">
                           {/* <p className="text-muted mb-0 small mt-1">
-                            1.2M views • 2 weeks ago
+                            1.2 M View  | 11 Months.
                           </p> */}
                         </div>
                       </div>

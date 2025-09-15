@@ -33,13 +33,14 @@
 
 .banner-title {
   color: #392c7d;
-  font-weight: 700;
+  font-weight: 400;
+  font-size: 32px;
   margin-bottom: 20px;
 }
 
 .banner-description {
   color: #392c7d;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
 }
 

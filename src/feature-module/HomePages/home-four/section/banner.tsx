@@ -47,14 +47,17 @@ const Banner = () => {
       <div className="container position-relative h-100 d-flex align-items-center">
         <div className="text-content">
           <h1 className="banner-title">
-            AI Video Generator: Create Talking Videos with AI
+            An Interactive AI Avatars’ Marketplace for education sector is
+            designed to transform education and professional development into
+            revenue-generating ecosystems
           </h1>
           <p className="banner-description">
             Fast, simple, and incredibly powerful.
             <br />
-            Start with a text, image, or audio clip. Then, our AI video
-            generator creates the entire video for you, complete with
-            voiceovers, translations, and styles that match your brand.
+            Enabling personalised AI learning, scalable teaching, and monetised
+            earning opportunities via course/content selling across the EdTech,
+            Corporate L&amp;D, Universities, and Community platforms. -{" "}
+            <strong>Powered by AI</strong>
           </p>
 
           {/* <form

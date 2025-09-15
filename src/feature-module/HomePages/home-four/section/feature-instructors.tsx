@@ -32,9 +32,16 @@ const Featureinstructors = () => {
                       <ImageWithBasePath
                         className="img-fluid"
                         alt="Img"
-                        src="https://dreamslms.dreamstechnologies.com/html/template/assets/img/instructor/instructor-02.jpg"
+                        src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919372/IE_Marketplace_Website_By_e2OD_s03x9j.png"
+                        style={{
+                          width: "100%",
+                          height: "300px",
+                          objectFit: "cover",
+                          borderRadius: "8px",
+                        }}
                       />
                     </Link>
+
                     <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2">
                       <div className="featured-img">
                         <ImageWithBasePath
@@ -70,7 +77,13 @@ const Featureinstructors = () => {
                       <ImageWithBasePath
                         className="img-fluid"
                         alt="Img"
-                        src="https://dreamslms.dreamstechnologies.com/html/template/assets/img/instructor/instructor-03.jpg"
+                        src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919373/Screenshot_2025-07-09_at_4.51.03PM_1_sokq6i.png"
+                        style={{
+                          width: "100%",
+                          height: "300px",
+                          objectFit: "cover",
+                          borderRadius: "8px",
+                        }}
                       />
                     </Link>
                     <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2">
@@ -108,7 +121,13 @@ const Featureinstructors = () => {
                       <ImageWithBasePath
                         className="img-fluid"
                         alt="Img"
-                        src="https://dreamslms.dreamstechnologies.com/html/template/assets/img/instructor/instructor-01.jpg"
+                        src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919372/Generated_Image_August_27_2025_-_1_43PM_1_biessq.jpg"
+                        style={{
+                          width: "100%",
+                          height: "300px",
+                          objectFit: "cover",
+                          borderRadius: "8px",
+                        }}
                       />
                     </Link>
                     <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2">
@@ -146,7 +165,13 @@ const Featureinstructors = () => {
                       <ImageWithBasePath
                         className="img-fluid"
                         alt="Img"
-                        src="https://dreamslms.dreamstechnologies.com/html/template/assets/img/instructor/instructor-04.jpg"
+                        src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919373/Screenshot_2025-09-05_at_1.22.27PM_1_cviunv.png"
+                        style={{
+                          width: "100%",
+                          height: "300px",
+                          objectFit: "cover",
+                          borderRadius: "8px",
+                        }}
                       />
                     </Link>
                     <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2">

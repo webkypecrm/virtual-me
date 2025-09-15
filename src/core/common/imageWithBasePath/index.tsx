@@ -4,9 +4,10 @@ interface Image {
   className?: string;
   src: string;
   alt?: string;
-  height?: number;
-  width?: number;
+  height?: number | string;
+  width?: number | string;
   id?: string;
+  style?: React.CSSProperties; // <-- add style prop
 }
 
 const ImageWithBasePath = (props: Image) => {
@@ -23,6 +24,7 @@ const ImageWithBasePath = (props: Image) => {
       alt={props.alt}
       width={props.width}
       id={props.id}
+      style={props.style} // <-- forward it
     />
   );
 };
