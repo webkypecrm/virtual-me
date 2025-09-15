@@ -57,7 +57,7 @@ const Footer = () => {
                     <div className="footer-widget footer-menu">
                       <div>
                         <Link
-                          to={all_routes.login}
+                          to={all_routes.instructorDashboard}
                           className="btn btn-primary d-inline-flex align-items-center me-2 px-3"
                         >
                           For Instructor
@@ -69,7 +69,7 @@ const Footer = () => {
                     <div className="footer-widget footer-menu">
                       <div>
                         <Link
-                          to={all_routes.login}
+                          to={all_routes.studentDashboard}
                           className="btn btn-secondary d-inline-flex align-items-center me-2 px-3"
                         >
                           For Student
