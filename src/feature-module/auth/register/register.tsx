@@ -1,28 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import ImageWithBasePath from "../../../core/common/imageWithBasePath";
-//import Slider from "react-slick";
 import { all_routes } from "../../router/all_routes";
 
-const hasNumber = (value: string): boolean => {
-  return /[0-9]/.test(value);
-};
-
-const hasMixed = (value: string): boolean => {
-  return /[a-z]/.test(value) && /[A-Z]/.test(value);
-};
-
-const hasSpecial = (value: string): boolean => {
-  return /[!#@$%^&*)(+=._-]/.test(value);
-};
+const hasNumber = (value: string): boolean => /[0-9]/.test(value);
+const hasMixed = (value: string): boolean =>
+  /[a-z]/.test(value) && /[A-Z]/.test(value);
+const hasSpecial = (value: string): boolean => /[!#@$%^&*)(+=._-]/.test(value);
 
 const strengthColor = (count: number): string => {
   if (count < 1) return "poor";
   if (count < 2) return "weak";
   if (count < 3) return "strong";
   if (count < 4) return "heavy";
-  return "poor"; // Default return to ensure it's always a string
+  return "poor";
 };
 
 const Register: React.FC = () => {
@@ -35,14 +26,13 @@ const Register: React.FC = () => {
 
   const route = all_routes;
   const navigate = useNavigate();
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    const Path = route.login;
-    navigate(Path);
+    navigate(route.registerStepTwo);
   };
-  const onEyeClick = () => {
-    setEye((prev) => !prev);
-  };
+
+  const onEyeClick = () => setEye((prev) => !prev);
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newPassword = event.target.value;
@@ -51,27 +41,12 @@ const Register: React.FC = () => {
   };
 
   const validatePassword = (value: string) => {
-    if (!value) {
-      setValidationError(1);
-    } else if (value.length < 8) {
-      setValidationError(2);
-    } else if (!/[0-9]/.test(value)) {
-      setValidationError(3);
-    } else if (!/[!@#$%^&*()]/.test(value)) {
-      setValidationError(4);
-    } else {
-      setValidationError(5);
-    }
+    if (!value) setValidationError(1);
+    else if (value.length < 8) setValidationError(2);
+    else if (!/[0-9]/.test(value)) setValidationError(3);
+    else if (!/[!@#$%^&*()]/.test(value)) setValidationError(4);
+    else setValidationError(5);
   };
-
-  // const loginSLider = {
-  //   dots: true,
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   adaptiveHeight: true,
-  //   // autoplay: true, // Uncomment if needed
-  // };
 
   const messages = () => {
     switch (validationError) {
@@ -94,7 +69,7 @@ const Register: React.FC = () => {
         return (
           <span
             id="weak"
-            className="active  mt-2"
+            className="active mt-2"
             style={{ fontSize: 14, color: "#FFC107", marginTop: "8px" }}
           >
             <ImageWithBasePath
@@ -109,7 +84,7 @@ const Register: React.FC = () => {
         return (
           <span
             id="strong"
-            className="active  mt-2"
+            className="active mt-2"
             style={{ fontSize: 14, color: "#0D6EFD", marginTop: "8px" }}
           >
             <ImageWithBasePath
@@ -124,7 +99,7 @@ const Register: React.FC = () => {
         return (
           <span
             id="heavy"
-            className="active  mt-2"
+            className="active mt-2"
             style={{ fontSize: 14, color: "#4BB543", marginTop: "8px" }}
           >
             <ImageWithBasePath
@@ -158,9 +133,8 @@ const Register: React.FC = () => {
 
   useEffect(() => {
     if (password) {
-      let strengthValue = strengthIndicator(password);
-      let color = strengthColor(strengthValue);
-      setStrength(color);
+      const strengthValue = strengthIndicator(password);
+      setStrength(strengthColor(strengthValue));
     } else {
       setStrength("");
     }
@@ -170,266 +144,219 @@ const Register: React.FC = () => {
     <>
       {/* Main Wrapper */}
       <div className="main-wrapper">
-        <div className="login-content">
-          <div className="row">
-            {/* Login Banner */}
-            <div className="col-md-6 login-bg d-none d-lg-flex">
-              {/* <Slider {...loginSLider} className="login-carousel">
-                <div>
-                  <div className="login-carousel-section mb-3">
-                    <div className="login-banner">
-                      <ImageWithBasePath
-                        src="assets/img/auth/auth-1.svg"
-                        className="img-fluid"
-                        alt="Logo"
+        {/* Make login-content full viewport height and center everything */}
+        <div
+          className="login-content d-flex align-items-center justify-content-center min-vh-100"
+          style={{
+            background: "linear-gradient(to right, #feeef0, #f6cbccff)",
+          }}
+        >
+          {/* single centered column (no left banner) */}
+          <div
+            className="login-wrapper w-100 rounded-4"
+            style={{ maxWidth: 540, padding: "1rem", background: "white" }}
+          >
+            <div className="loginbox">
+              <div className="w-100">
+                <div className="d-flex align-items-center justify-content-between login-header mb-3">
+                  <ImageWithBasePath
+                    src="assets/img/logo-virtual.png"
+                    className="img-fluid"
+                    alt="Logo"
+                    height={80}
+                    width={80}
+                  />
+                  <Link to={route.homefour} className="link-1">
+                    Back to Home
+                  </Link>
+                </div>
+
+                <h1 className="fs-26 fw-semibold topic">Sign up</h1>
+
+                <form onSubmit={handleSubmit} className="mb-1 mt-3 pb-3">
+                  <div className="mb-1 position-relative">
+                    <label className="form-label">
+                      Name<span className="text-danger ms-1">*</span>
+                    </label>
+                    <div className="position-relative">
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
                       />
-                    </div>
-                    <div className="mentor-course text-center">
-                      <h3 className="mb-2">
-                        Welcome to <br />
-                        Dreams<span className="text-secondary">LMS</span>{" "}
-                        Courses.
-                      </h3>
-                      <p>
-                        Platform designed to help organizations, educators, and
-                        learners manage, deliver, and track learning and
-                        training activities.
-                      </p>
+                      <span>
+                        <i className="isax isax-user input-icon text-gray-7 fs-14" />
+                      </span>
                     </div>
                   </div>
-                </div>
-                <div>
-                  <div className="login-carousel-section mb-3">
-                    <div className="login-banner">
-                      <ImageWithBasePath
-                        src="assets/img/auth/auth-1.svg"
-                        className="img-fluid"
-                        alt="Logo"
+                  <div className="mb-1 position-relative">
+                    <label className="form-label">
+                      Mobile<span className="text-danger ms-1">*</span>
+                    </label>
+                    <div className="position-relative">
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
                       />
-                    </div>
-                    <div className="mentor-course text-center">
-                      <h3 className="mb-2">
-                        Welcome to <br />
-                        Dreams<span className="text-secondary">LMS</span>{" "}
-                        Courses.
-                      </h3>
-                      <p>
-                        Platform designed to help organizations, educators, and
-                        learners manage, deliver, and track learning and
-                        training activities.
-                      </p>
+                      <span>
+                        {/* <i className="isax isax-user input-icon text-gray-7 fs-14" /> */}
+                      </span>
                     </div>
                   </div>
-                </div>
-                <div>
-                  <div className="login-carousel-section mb-3">
-                    <div className="login-banner">
-                      <ImageWithBasePath
-                        src="assets/img/auth/auth-1.svg"
-                        className="img-fluid"
-                        alt="Logo"
+
+                  {/* <div className="mb-3 position-relative">
+                    <label className="form-label">
+                      Email<span className="text-danger ms-1">*</span>
+                    </label>
+                    <div className="position-relative">
+                      <input
+                        type="email"
+                        className="form-control form-control-lg"
+                      />
+                      <span>
+                        <i className="isax isax-sms input-icon text-gray-7 fs-14" />
+                      </span>
+                    </div>
+                  </div> */}
+
+                  <div className="mb-3 position-relative">
+                    <label className="form-label">
+                      New Password <span className="text-danger"> *</span>
+                    </label>
+                    <div className="position-relative" id="passwordInput">
+                      <input
+                        className="form-control pass-input"
+                        type={eye ? "password" : "text"}
+                        onChange={handlePasswordChange}
+                      />
+                      {/* fixed stray-quote and toggling classes */}
+                      <span
+                        onClick={onEyeClick}
+                        className={`toggle-passwords text-gray-7 fs-14 isax ${
+                          eye ? "isax-eye-slash" : "isax-eye"
+                        }`}
+                        style={{
+                          cursor: "pointer",
+                          position: "absolute",
+                          right: "10px",
+                          top: "50%",
+                          transform: "translateY(-50%)",
+                        }}
                       />
                     </div>
-                    <div className="mentor-course text-center">
-                      <h3 className="mb-2">
-                        Welcome to <br />
-                        Dreams<span className="text-secondary">LMS</span>{" "}
-                        Courses.
-                      </h3>
-                      <p>
-                        Platform designed to help organizations, educators, and
-                        learners manage, deliver, and track learning and
-                        training activities.
-                      </p>
+
+                    <div
+                      id="passwordStrength"
+                      style={{ display: "flex", marginTop: 8 }}
+                      className={`password-strength ${
+                        strength === "poor"
+                          ? "poor-active"
+                          : strength === "weak"
+                          ? "avg-active"
+                          : strength === "strong"
+                          ? "strong-active"
+                          : strength === "heavy"
+                          ? "heavy-active"
+                          : ""
+                      }`}
+                    >
+                      <span id="poor" className="active"></span>
+                      <span id="weak" className="active"></span>
+                      <span id="strong" className="active"></span>
+                      <span id="heavy" className="active"></span>
+                    </div>
+                    <div id="passwordInfo">{messages()}</div>
+                  </div>
+
+                  <div className="mb-1 position-relative">
+                    <label className="form-label">
+                      Confirm Password <span className="text-danger"> *</span>
+                    </label>
+                    <div className="position-relative">
+                      <input
+                        type={eyeConfirmPassword ? "password" : "text"}
+                        className="pass-inputa form-control form-control-lg"
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                      />
+                      <span
+                        className={`isax toggle-passworda ${
+                          eyeConfirmPassword ? "isax-eye-slash" : "isax-eye"
+                        } text-gray-7 fs-14`}
+                        onClick={() => setEyeConfirmPassword((prev) => !prev)}
+                        style={{
+                          cursor: "pointer",
+                          position: "absolute",
+                          right: "10px",
+                          top: "50%",
+                          transform: "translateY(-50%)",
+                        }}
+                      />
                     </div>
                   </div>
-                </div>
-              </Slider> */}
-            </div>
-            {/* /Login Banner */}
-            <div className="col-md-6 login-wrap-bg">
-              {/* Login */}
-              <div className="login-wrapper">
-                <div className="loginbox">
-                  <div className="w-100">
-                    <div className="d-flex align-items-center justify-content-between login-header">
-                      <ImageWithBasePath
-                        src="assets/img/logo-virtual.png"
-                        className="img-fluid"
-                        alt="Logo"
-                        height={200}
-                        width={200}
+
+                  <div className="d-flex align-items-center justify-content-between mb-4">
+                    <div className="remember-me d-flex align-items-center">
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        defaultValue=""
+                        id="flexCheckDefault"
                       />
-                      <Link to={route.homefour} className="link-1">
-                        Back to Home
-                      </Link>
-                    </div>
-                    <h1 className="fs-32 fw-bold topic">Sign up</h1>
-                    <form onSubmit={handleSubmit} className="mb-3 pb-3">
-                      <div className="mb-3 position-relative">
-                        <label className="form-label">
-                          Full Name<span className="text-danger ms-1">*</span>
-                        </label>
-                        <div className="position-relative">
-                          <input
-                            type="text"
-                            className="form-control form-control-lg"
-                          />
-                          <span>
-                            <i className="isax isax-user input-icon text-gray-7 fs-14" />
-                          </span>
-                        </div>
-                      </div>
-                      <div className="mb-3 position-relative">
-                        <label className="form-label">
-                          Email<span className="text-danger ms-1">*</span>
-                        </label>
-                        <div className="position-relative">
-                          <input
-                            type="email"
-                            className="form-control form-control-lg"
-                          />
-                          <span>
-                            <i className="isax isax-sms input-icon text-gray-7 fs-14" />
-                          </span>
-                        </div>
-                      </div>
-                      <div className="mb-3 position-relative">
-                        <label className="form-label">
-                          New Password <span className="text-danger"> *</span>
-                        </label>
-                        <div className="position-relative" id="passwordInput">
-                          <input
-                            className="form-control pass-input"
-                            type={eye ? "password" : "text"}
-                            onChange={handlePasswordChange}
-                          />
-                          <span
-                            onClick={onEyeClick}
-                            className={`toggle-passwords text-gray-7 fs-14 isax isax-eye-slash" ${
-                              eye ? "isax-eye-slash" : "isax-eye"
-                            }`}
-                          />
-                        </div>
-                        <div
-                          id="passwordStrength"
-                          style={{ display: "flex" }}
-                          className={`password-strength ${
-                            strength === "poor"
-                              ? "poor-active"
-                              : strength === "weak"
-                              ? "avg-active"
-                              : strength === "strong"
-                              ? "strong-active"
-                              : strength === "heavy"
-                              ? "heavy-active"
-                              : ""
-                          }`}
+                      <label
+                        className="form-check-label mb-0 d-inline-flex remember-me fs-14"
+                        htmlFor="flexCheckDefault"
+                      >
+                        I agree with{" "}
+                        <Link
+                          to={route.termsConditions}
+                          className="link-2 mx-2"
                         >
-                          <span id="poor" className="active"></span>
-                          <span id="weak" className="active"></span>
-                          <span id="strong" className="active"></span>
-                          <span id="heavy" className="active"></span>
-                        </div>
-                        <div id="passwordInfo">{messages()}</div>
-                      </div>
-                      <div className="mb-3 position-relative">
-                        <label className="form-label">
-                          Confirm Password{" "}
-                          <span className="text-danger"> *</span>
-                        </label>
-                        <div className="position-relative">
-                          <input
-                            type={eyeConfirmPassword ? "password" : "text"}
-                            className="pass-inputa form-control form-control-lg"
-                            value={confirmPassword}
-                            onChange={(e) => setConfirmPassword(e.target.value)}
-                          />
-                          <span
-                            className={`isax toggle-passworda ${
-                              eyeConfirmPassword ? "isax-eye-slash" : "isax-eye"
-                            } text-gray-7 fs-14`}
-                            onClick={() =>
-                              setEyeConfirmPassword((prev) => !prev)
-                            }
-                            style={{
-                              cursor: "pointer",
-                              position: "absolute",
-                              right: "10px",
-                              top: "50%",
-                              transform: "translateY(-50%)",
-                            }}
-                          />
-                        </div>
-                      </div>
-                      <div className="d-flex align-items-center justify-content-between mb-4">
-                        <div className="remember-me d-flex align-items-center">
-                          <input
-                            className="form-check-input"
-                            type="checkbox"
-                            defaultValue=""
-                            id="flexCheckDefault"
-                          />
-                          <label
-                            className="form-check-label mb-0 d-inline-flex remember-me fs-14"
-                            htmlFor="flexCheckDefault"
-                          >
-                            I agree with{" "}
-                            <Link
-                              to={route.termsConditions}
-                              className="link-2 mx-2"
-                            >
-                              Terms of Service
-                            </Link>{" "}
-                            and{" "}
-                            <Link
-                              to={route.privacyPolicy}
-                              className="link-2 mx-2"
-                            >
-                              Privacy Policy
-                            </Link>
-                          </label>
-                        </div>
-                      </div>
-                      <div className="d-grid">
-                        <button
-                          className="btn btn-secondary btn-lg"
-                          type="submit"
-                        >
-                          Sign Up <i className="isax isax-arrow-right-3 ms-1" />
-                        </button>
-                      </div>
-                    </form>
-                    <div className="d-flex align-items-center justify-content-center or fs-14 mb-3">
-                      Or
+                          Terms of Service
+                        </Link>{" "}
+                        and{" "}
+                        <Link to={route.privacyPolicy} className="link-2 mx-2">
+                          Privacy Policy
+                        </Link>
+                      </label>
                     </div>
-                    <div className="d-flex align-items-center justify-content-center mb-3">
-                      <Link to="#" className="btn btn-light me-2">
-                        <ImageWithBasePath
-                          src="assets/img/icons/google.svg"
-                          alt="img"
-                          className="me-2"
-                        />
-                        Google
-                      </Link>
-                      <Link to="#" className="btn btn-light">
-                        <ImageWithBasePath
-                          src="assets/img/icons/facebook.svg"
-                          alt="img"
-                          className="me-2"
-                        />
-                        Facebook
-                      </Link>
-                    </div>
-                    <div className="fs-14 fw-normal d-flex align-items-center justify-content-center">
-                      Already you have an account?
-                      <Link to={route.login} className="link-2 ms-1">
-                        {" "}
-                        Login
-                      </Link>
-                    </div>
-                    {/* /Login */}
                   </div>
+
+                  <div className="d-grid">
+                    <button className="btn btn-secondary btn-md" type="submit">
+                      Sign Up <i className="isax isax-arrow-right-3 ms-1" />
+                    </button>
+                  </div>
+                </form>
+
+                <div className="d-flex align-items-center justify-content-center or fs-14 mb-3">
+                  Or
+                </div>
+
+                <div className="d-flex align-items-center justify-content-center mb-3">
+                  <Link to="#" className="btn btn-light me-2">
+                    <ImageWithBasePath
+                      src="assets/img/icons/google.svg"
+                      alt="img"
+                      className="me-2"
+                    />{" "}
+                    Google
+                  </Link>
+                  <Link to="#" className="btn btn-light">
+                    <ImageWithBasePath
+                      src="assets/img/icons/facebook.svg"
+                      alt="img"
+                      className="me-2"
+                    />{" "}
+                    Facebook
+                  </Link>
+                </div>
+
+                <div className="fs-14 fw-normal d-flex align-items-center justify-content-center">
+                  Already you have an account?
+                  <Link to={route.login} className="link-2 ms-1">
+                    {" "}
+                    Login
+                  </Link>
                 </div>
               </div>
             </div>

@@ -68,6 +68,7 @@ import TermsCondition from "../Pages/terms-condition/termsCondition";
 import PrivacyPolicy from "../Pages/privacy-policy/privacyPolicy";
 import Login from "../auth/login/login";
 import Register from "../auth/register/register";
+import Registerstep2 from "../auth/register/registerstep2";
 import ForgortPassword from "../auth/forgot-password/forgortPassword";
 import SetPassword from "../auth/set-password/setPassword";
 import Otp from "../auth/otp/otp";
@@ -99,6 +100,7 @@ import StudentBillingAddress from "../student/student-settings/student-billing-a
 import StudentQuizQuestion from "../student/student-quiz-question/studentQuizQuestion";
 import InstructorProfileSettings from "../Instructor/instructor-settings/instructor-profile-settings/instructorProfile";
 import BlogDetails from "../blog/blog-details/blogDetails";
+import Registerstep3 from "../auth/register/registerstep3";
 
 const routes = all_routes;
 
@@ -561,6 +563,16 @@ export const authRoutes = [
   {
     path: routes.register,
     element: <Register />,
+    route: Route,
+  },
+  {
+    path: routes.registerStepTwo,
+    element: <Registerstep2 />,
+    route: Route,
+  },
+  {
+    path: routes.registerStepThree,
+    element: <Registerstep3 />,
     route: Route,
   },
   {

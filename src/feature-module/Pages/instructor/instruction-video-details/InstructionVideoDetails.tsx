@@ -2,6 +2,8 @@ import { useState } from "react";
 import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
 import { Link } from "react-router-dom";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { Divider } from "antd";
+import { all_routes } from "../../../router/all_routes";
 
 const InstructorVideoDetails = () => {
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -61,6 +63,37 @@ const InstructorVideoDetails = () => {
     setComments([newEntry, ...comments]);
     setNewComment("");
   };
+
+  const courses = [
+    {
+      img: "assets/img/course/course-04.jpg",
+      discount: null,
+      instructorImg: "assets/img/user/user-32.jpg",
+      instructorName: "Jane Smith",
+      category: "Programming",
+      title: "Learn Python Programming",
+      price: "$110",
+    },
+
+    {
+      img: "assets/img/course/course-06.jpg",
+      discount: null,
+      instructorImg: "assets/img/user/user-34.jpg",
+      instructorName: "Emily Clark",
+      category: "Business",
+      title: "Entrepreneurship 101",
+      price: "$130",
+    },
+    {
+      img: "assets/img/course/course-07.jpg",
+      discount: "5% off",
+      instructorImg: "assets/img/user/user-35.jpg",
+      instructorName: "Robert Brown",
+      category: "Finance",
+      title: "Financial Analysis for Beginners",
+      price: "$100",
+    },
+  ];
 
   return (
     <>
@@ -191,7 +224,6 @@ const InstructorVideoDetails = () => {
                 </div>
 
                 {/* Existing Comments */}
-                {/* Existing Comments */}
                 {comments.map((c) => (
                   <div className="review-item shadow-none mb-3" key={c.id}>
                     <div className="review-info">
@@ -303,11 +335,63 @@ const InstructorVideoDetails = () => {
             </div>
 
             {/* Suggested Videos List */}
-            <div className="col-lg-5">
+            <div className="col-lg-5 ">
               <h6 className="mb-3">Suggested Videos</h6>
               {[1, 2, 3].map((_, index) => (
                 <div
-                  className="d-flex flex-column flex-md-row rounded-3 overflow-hidden mb-3 position-relative suggested-video-item"
+                  className="d-flex flex-column flex-md-row rounded-3 overflow-hidden  position-relative suggested-video-item"
+                  key={index}
+                  style={{ cursor: "pointer" }}
+                >
+                  <div style={{ flex: "0 0 200px", maxWidth: "160px" }}>
+                    <Link to="#">
+                      <video
+                        className="img-fluid w-100 h-100 rounded-3"
+                        controls
+                      >
+                        <source
+                          src="https://res.cloudinary.com/drj0uehgx/video/upload/v1757921510/videoplayback3_qaywne.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </Link>
+                  </div>
+
+                  <div className="p-2 flex-grow-1 d-flex justify-content-between">
+                    <div>
+                      <h6 className="mb-1">
+                        <Link
+                          to="#"
+                          className="text-dark"
+                          style={{ fontSize: "13px" }}
+                        >
+                          Global Indexing Explained: Importance, Usability &
+                          Need | Prof. Soumitra Dutta
+                        </Link>
+                      </h6>
+                      <p className="text-muted small mb-0">Aditya Malik</p>
+                      <p className="text-muted small mb-0">
+                        899K views • 1 month ago
+                      </p>
+                    </div>
+
+                    {/* 3-dot options menu */}
+                    <BsThreeDotsVertical
+                      style={{
+                        color: "black",
+                        fontSize: "26px",
+                        cursor: "pointer",
+                      }}
+                    />
+                  </div>
+                </div>
+              ))}
+
+              <Divider />
+
+              {[1, 2, 3, 4].map((_, index) => (
+                <div
+                  className="d-flex flex-column flex-md-row rounded-3 overflow-hidden  position-relative suggested-video-item"
                   key={index}
                   style={{ cursor: "pointer" }}
                 >
@@ -355,6 +439,75 @@ const InstructorVideoDetails = () => {
                 </div>
               ))}
             </div>
+
+            <h6 className="mb-3">Most Opted Courses</h6>
+            {courses.map((course, index) => (
+              <div className="col-xl-4 col-md-6 mb-4" key={index}>
+                <div className="course-item-two course-item mx-0">
+                  <div className="course-img">
+                    <Link to={all_routes.courseDetails}>
+                      <ImageWithBasePath
+                        src={course.img}
+                        alt="img"
+                        className="img-fluid"
+                      />
+                    </Link>
+                    <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-3">
+                      {course.discount && (
+                        <div className="badge text-bg-danger">
+                          {course.discount}
+                        </div>
+                      )}
+                      <Link to="#" className="fav-icon ms-auto">
+                        <i className="isax isax-heart" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="course-content">
+                    <div className="d-flex justify-content-between mb-2">
+                      <div className="d-flex align-items-center">
+                        <Link
+                          to={all_routes.instructorDetails}
+                          className="avatar avatar-sm"
+                        >
+                          <ImageWithBasePath
+                            src={course.instructorImg}
+                            alt="img"
+                            className="img-fluid avatar avatar-sm rounded-circle"
+                          />
+                        </Link>
+                        <div className="ms-2">
+                          <Link
+                            to={all_routes.instructorDetails}
+                            className="link-default fs-14"
+                          >
+                            {course.instructorName}
+                          </Link>
+                        </div>
+                      </div>
+                      <span className="badge badge-light rounded-pill bg-light d-inline-flex align-items-center fs-13 fw-medium mb-0">
+                        {course.category}
+                      </span>
+                    </div>
+                    <h6 className="title mb-2">
+                      <Link to={all_routes.courseDetails}>{course.title}</Link>
+                    </h6>
+                    <div className="">
+                      <h5 className="text-secondary mt-2 mb-0">
+                        {course.price}
+                      </h5>
+                      <Link
+                        to={all_routes.courseDetails}
+                        className="btn btn-dark btn-sm mt-4 d-inline-flex align-items-center"
+                      >
+                        View Course
+                        <i className="isax isax-arrow-right-3 ms-1" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

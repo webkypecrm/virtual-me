@@ -2,7 +2,7 @@
 import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
 import { Link } from "react-router-dom";
 //import Slider from "react-slick";
-//import { all_routes } from "../../../router/all_routes";
+import { all_routes } from "../../../router/all_routes";
 
 const InstructorDetails = () => {
   //  const route = all_routes;
@@ -23,6 +23,39 @@ const InstructorDetails = () => {
   //       },
   //     ],
   //   };
+
+  const courses = [
+    {
+      img: "assets/img/course/course-04.jpg",
+      discount: null,
+      instructorImg: "assets/img/user/user-32.jpg",
+      instructorName: "Jane Smith",
+      category: "Programming",
+      title: "Learn Python Programming",
+      price: "$110",
+    },
+
+    {
+      img: "assets/img/course/course-06.jpg",
+      discount: null,
+      instructorImg: "assets/img/user/user-34.jpg",
+      instructorName: "Emily Clark",
+      category: "Business",
+      title: "Entrepreneurship 101",
+      price: "$130",
+    },
+    {
+      img: "assets/img/course/course-07.jpg",
+      discount: "5% off",
+      instructorImg: "assets/img/user/user-35.jpg",
+      instructorName: "Robert Brown",
+      category: "Finance",
+      title: "Financial Analysis for Beginners",
+      price: "$100",
+    },
+  ];
+
+  const route = all_routes;
 
   return (
     <>
@@ -253,7 +286,6 @@ const InstructorDetails = () => {
                   </div>
                 </div>
               </div>
-
               {/* Skills Card */}
               <div className="card mt-4">
                 <div className="card-body">
@@ -797,6 +829,274 @@ const InstructorDetails = () => {
                   </div>
 
                   {/* Add more suggested pages similarly */}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* most opted courses */}
+          <div className=" ">
+            <h6 className="mb-3">Most Opted Courses</h6>
+            <div className=" row">
+              {courses.map((course, index) => (
+                <div className="col-xl-4 col-md-6 mb-4" key={index}>
+                  <div className="course-item-two course-item mx-0">
+                    <div className="course-img">
+                      <Link to={all_routes.courseDetails}>
+                        <ImageWithBasePath
+                          src={course.img}
+                          alt="img"
+                          className="img-fluid"
+                        />
+                      </Link>
+                      <div className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-3">
+                        {course.discount && (
+                          <div className="badge text-bg-danger">
+                            {course.discount}
+                          </div>
+                        )}
+                        <Link to="#" className="fav-icon ms-auto">
+                          <i className="isax isax-heart" />
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="course-content">
+                      <div className="d-flex justify-content-between mb-2">
+                        <div className="d-flex align-items-center">
+                          <Link
+                            to={all_routes.instructorDetails}
+                            className="avatar avatar-sm"
+                          >
+                            <ImageWithBasePath
+                              src={course.instructorImg}
+                              alt="img"
+                              className="img-fluid avatar avatar-sm rounded-circle"
+                            />
+                          </Link>
+                          <div className="ms-2">
+                            <Link
+                              to={all_routes.instructorDetails}
+                              className="link-default fs-14"
+                            >
+                              {course.instructorName}
+                            </Link>
+                          </div>
+                        </div>
+                        <span className="badge badge-light rounded-pill bg-light d-inline-flex align-items-center fs-13 fw-medium mb-0">
+                          {course.category}
+                        </span>
+                      </div>
+                      <h6 className="title mb-2">
+                        <Link to={all_routes.courseDetails}>
+                          {course.title}
+                        </Link>
+                      </h6>
+                      <div className="">
+                        <h5 className="text-secondary mt-2 mb-0">
+                          {course.price}
+                        </h5>
+                        <Link
+                          to={all_routes.courseDetails}
+                          className="btn btn-dark btn-sm mt-4 d-inline-flex align-items-center"
+                        >
+                          View Course
+                          <i className="isax isax-arrow-right-3 ms-1" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* most popular videos */}
+          <div className="row course-list-cover">
+            <h6 className="mb-3">Popular Videos</h6>
+            <div className="col-xl-4 col-md-6 mb-4">
+              <div className="card video-card border-0">
+                <div className="video-thumbnail position-relative">
+                  <Link to={route.instructorVideoDetails}>
+                    <video
+                      className="img-fluid rounded w-100"
+                      controls
+                      // poster="assets/img/videos/video-thumbnail.jpg"
+                    >
+                      <source
+                        src="https://res.cloudinary.com/drj0uehgx/video/upload/v1757921134/videoplayback_emlkcy.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </Link>
+                  <span className="video-duration position-absolute bottom-0 end-0 m-2 px-2 py-1 bg-dark text-white small rounded">
+                    12:34
+                  </span>
+                </div>
+
+                <div className="video-info mt-2">
+                  {/* Row with profile image and title */}
+                  <div className="d-flex align-items-start">
+                    {/* Profile Image */}
+                    <img
+                      src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919372/Generated_Image_August_27_2025_-_1_43PM_1_biessq.jpg "
+                      alt="Prof. Soumitra Dutta"
+                      className="rounded-circle me-2 mt-1"
+                      width="36"
+                      height="36"
+                    />
+
+                    {/* Title and Author */}
+                    <div>
+                      <h6 className="video-title mb-1">
+                        <Link
+                          to={route.instructorVideoDetails}
+                          className="text-dark"
+                          style={{}}
+                        >
+                          Global Indexing Explained: Importance, Usability &
+                          Need | Prof. Soumitra Dutta
+                        </Link>
+                      </h6>
+                      <p className="text-muted mb-0 small">
+                        Prof. Soumitra Dutta
+                      </p>
+                      <p className="text-muted mb-0 small">
+                        1.2 M View | 11 Months.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Indent views + time text to align with title */}
+                  <div className="ms-5">
+                    {/* <p className="text-muted mb-0 small mt-1">
+                            1.2 M View  | 11 Months.
+                          </p> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 col-md-6 mb-4">
+              <div className="card video-card border-0">
+                <div className="video-thumbnail position-relative">
+                  <Link to={route.instructorVideoDetails}>
+                    <video
+                      className="img-fluid rounded w-100"
+                      controls
+                      // poster="assets/img/videos/video-thumbnail.jpg"
+                    >
+                      <source
+                        src="https://res.cloudinary.com/drj0uehgx/video/upload/v1757921352/videoplayback2_dbbtck.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </Link>
+                  <span className="video-duration position-absolute bottom-0 end-0 m-2 px-2 py-1 bg-dark text-white small rounded">
+                    12:34
+                  </span>
+                </div>
+
+                <div className="video-info mt-2">
+                  {/* Row with profile image and title */}
+                  <div className="d-flex align-items-start">
+                    {/* Profile Image */}
+                    <img
+                      src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919372/Generated_Image_August_27_2025_-_1_43PM_1_biessq.jpg "
+                      alt="Prof. Soumitra Dutta"
+                      className="rounded-circle me-2 mt-1"
+                      width="36"
+                      height="36"
+                    />
+
+                    {/* Title and Author */}
+                    <div>
+                      <h6 className="video-title mb-1">
+                        <Link
+                          to={route.instructorVideoDetails}
+                          className="text-dark"
+                        >
+                          Global Indexing Explained: Importance, Usability &
+                          Need | Prof. Soumitra Dutta
+                        </Link>
+                      </h6>
+                      <p className="text-muted mb-0 small">
+                        Prof. Soumitra Dutta
+                      </p>
+                      <p className="text-muted mb-0 small">
+                        1.2 M View | 11 Months.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Indent views + time text to align with title */}
+                  <div className="ms-5">
+                    {/* <p className="text-muted mb-0 small mt-1">
+                            1.2 M View  | 11 Months.
+                          </p> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 col-md-6 mb-4">
+              <div className="card video-card border-0">
+                <div className="video-thumbnail position-relative">
+                  <Link to={route.instructorVideoDetails}>
+                    <video
+                      className="img-fluid rounded w-100"
+                      controls
+                      // poster="assets/img/videos/video-thumbnail.jpg"
+                    >
+                      <source
+                        src="https://res.cloudinary.com/drj0uehgx/video/upload/v1757921510/videoplayback3_qaywne.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </Link>
+                  <span className="video-duration position-absolute bottom-0 end-0 m-2 px-2 py-1 bg-dark text-white small rounded">
+                    12:34
+                  </span>
+                </div>
+
+                <div className="video-info mt-2">
+                  {/* Row with profile image and title */}
+                  <div className="d-flex align-items-start">
+                    {/* Profile Image */}
+                    <img
+                      src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757919372/Generated_Image_August_27_2025_-_1_43PM_1_biessq.jpg "
+                      alt="Prof. Soumitra Dutta"
+                      className="rounded-circle me-2 mt-1"
+                      width="36"
+                      height="36"
+                    />
+
+                    {/* Title and Author */}
+                    <div>
+                      <h6 className="video-title mb-1">
+                        <Link
+                          to={route.instructorVideoDetails}
+                          className="text-dark"
+                        >
+                          Global Indexing Explained: Importance, Usability &
+                          Need | Prof. Soumitra Dutta
+                        </Link>
+                      </h6>
+                      <p className="text-muted mb-0 small">
+                        Prof. Soumitra Dutta
+                      </p>
+                      <p className="text-muted mb-0 small">
+                        1.2 M View | 11 Months.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Indent views + time text to align with title */}
+                  <div className="ms-5">
+                    {/* <p className="text-muted mb-0 small mt-1">
+                            1.2 M View  | 11 Months.
+                          </p> */}
+                  </div>
                 </div>
               </div>
             </div>

@@ -78,6 +78,8 @@ export const all_routes = {
   cart: "/cart",
   login: "/login",
   register: "/register",
+  registerStepTwo: "/registerStep2",
+  registerStepThree: "/registerStep3",
   forgotpassword: "/forgot-password",
   setpassowrd: "/set-password",
   otp: "/otp",

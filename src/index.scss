@@ -588,3 +588,20 @@
   height: 100vh;
   overflow: hidden;
 }
+
+.scroll-area {
+  max-height: 500px; /* adjust as needed */
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+.scroll-area::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* Hide scrollbar for Firefox */
+.scroll-area {
+  scrollbar-width: none;
+}
