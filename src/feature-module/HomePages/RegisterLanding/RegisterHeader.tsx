@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ImageWithBasePath from "../../../core/common/imageWithBasePath";
 import { header } from "../../../core/common/data/json/header";
 import { Link, useLocation } from "react-router-dom";
-import { all_routes } from "../../../feature-module/router/all_routes";
+import { all_routes } from "../../router/all_routes";
 import { setDataTheme } from "../../../core/redux/themeSettingSlice";
 import { useDispatch, useSelector } from "react-redux";
 const RegisterHeader = () => {

@@ -68,7 +68,7 @@ import TermsCondition from "../Pages/terms-condition/termsCondition";
 import PrivacyPolicy from "../Pages/privacy-policy/privacyPolicy";
 import Login from "../auth/login/login";
 import Register from "../auth/register/register";
-import RegisterLandingPage from "../Pages/RegisterLanding/registerLandingPage";
+import RegisterLandingPage from "../HomePages/RegisterLanding/registerLandingPage";
 import Registerstep2 from "../auth/register/registerstep2";
 import ForgortPassword from "../auth/forgot-password/forgortPassword";
 import SetPassword from "../auth/set-password/setPassword";
@@ -104,6 +104,8 @@ import BlogDetails from "../blog/blog-details/blogDetails";
 import Registerstep3 from "../auth/register/registerstep3";
 import RegisterstepTwoHalf from "../auth/register/registerstepTwoHalf";
 import RegisterstepTwoFourth from "../auth/register/registerstepTwoFourth";
+import HomeFour2 from "../HomePages/home-four copy/homeFour2";
+import HomeFive from "../HomePages/home-five/homeFive";
 
 const routes = all_routes;
 
@@ -114,6 +116,12 @@ export const publicRoutes = [
     element: <Navigate to="/index-4" />,
     route: Route,
   },
+  // {
+  //   path: "/",
+  //   name: "Root",
+  //   element: <Navigate to="/index-5" />,
+  //   route: Route,
+  // },
   // {
   //   path: routes.homefour,
   //   element: <homefour />,
@@ -135,15 +143,20 @@ export const publicRoutes = [
     route: Route,
   },
   {
+    path: routes.homefour2,
+    element: <HomeFour2 />,
+    route: Route,
+  },
+  {
     path: routes.homefourregister,
     element: <HomeFour />,
     route: Route,
   },
-  // {
-  //   path: routes.homefive,
-  //   element: <HomeFive />,
-  //   route: Route,
-  // },
+  {
+    path: routes.homefive,
+    element: <HomeFive />,
+    route: Route,
+  },
   // {
   //   path: routes.homesix,
   //   element: <HomeSix />,

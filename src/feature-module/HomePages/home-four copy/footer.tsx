@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ImageWithBasePath from "../../../core/common/imageWithBasePath";
-import { all_routes } from "../../../feature-module/router/all_routes";
+import { all_routes } from "../../router/all_routes";
 
 const Footer = () => {
   return (

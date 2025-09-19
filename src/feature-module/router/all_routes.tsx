@@ -4,8 +4,9 @@ export const all_routes = {
   // homefour:"/index-2",
   // homefour:"/index-3",
   homefour: "/index-4",
+  homefour2: "/index-register-landing",
   homefourregister: "/homefourregister",
-  // homefive:"/index-5",
+  homefive: "/index-5",
   // homesix:"/index-6",
 
   //Course Modules
