@@ -4,6 +4,7 @@ export const all_routes = {
   // homefour:"/index-2",
   // homefour:"/index-3",
   homefour: "/index-4",
+  homefourregister: "/homefourregister",
   // homefive:"/index-5",
   // homesix:"/index-6",
 
@@ -78,7 +79,10 @@ export const all_routes = {
   cart: "/cart",
   login: "/login",
   register: "/register",
+  registerLandingPage: "/register-landing-page",
   registerStepTwo: "/registerStep2",
+  registerStepTwoHalf: "/registerStepTwoHalf",
+  registerStepTwoFourth: "/registerStepTwoFourth",
   registerStepThree: "/registerStep3",
   forgotpassword: "/forgot-password",
   setpassowrd: "/set-password",

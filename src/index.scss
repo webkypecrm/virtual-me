@@ -339,6 +339,18 @@
 .ant-select-dropdown {
   z-index: 99999999;
 }
+
+.register-bg-gredient {
+  background: linear-gradient(
+    to right,
+    lighten(skyblue, 15%),
+    // brighter start
+    lighten(skyblue, 5%),
+    // lighter center
+    lighten(#2b215f, 35%)
+  );
+}
+
 .ant-otp .ant-otp-input {
   width: 88px;
   height: 70px;

@@ -30,7 +30,7 @@ const InstructorGrid = () => {
         <section className="course-content">
           <div className="container">
             <div className="row align-items-baseline">
-              {/* <div className="col-lg-3 theiaStickySidebar">
+              <div className="col-lg-3 theiaStickySidebar">
                 <div className="filter-clear">
                   <div className="clear-filter mb-4 pb-lg-2 d-flex align-items-center justify-content-between">
                     <h5>
@@ -55,7 +55,8 @@ const InstructorGrid = () => {
                           aria-expanded="false"
                           aria-controls="collapsecustomicon1One"
                         >
-                          Categories <i className="fa-solid fa-chevron-down" />
+                          Professionals{" "}
+                          <i className="fa-solid fa-chevron-down" />
                         </Link>
                       </h2>
                       <div
@@ -69,25 +70,29 @@ const InstructorGrid = () => {
                           <div>
                             <label className="custom_check">
                               <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Backend (3)
+                              <span className="checkmark" /> Teaching &
+                              Instruction
                             </label>
                           </div>
                           <div>
                             <label className="custom_check">
                               <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> CSS (2)
+                              <span className="checkmark" /> Research &
+                              Knowledge Creation
                             </label>
                           </div>
                           <div>
                             <label className="custom_check">
                               <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Frontend (2)
+                              <span className="checkmark" />
+                              Administration & Leadership
                             </label>
                           </div>
                           <div>
                             <label className="custom_check">
                               <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> General (2)
+                              <span className="checkmark" /> Corporate &
+                              Executive Education
                             </label>
                           </div>
                           <div>
@@ -97,29 +102,11 @@ const InstructorGrid = () => {
                                 name="select_specialist"
                                 defaultChecked
                               />
-                              <span className="checkmark" /> IT &amp; Software
-                              (2)
+                              <span className="checkmark" />
+                              EdTech & Modern Learning
                             </label>
                           </div>
-                          <div>
-                            <label className="custom_check">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Photography (2)
-                            </label>
-                          </div>
-                          <div>
-                            <label className="custom_check">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Programming
-                              Language (3)
-                            </label>
-                          </div>
-                          <div>
-                            <label className="custom_check mb-0">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Technology (2)
-                            </label>
-                          </div>
+
                           <Link to="#" className="see-more-btn">
                             See More
                           </Link>
@@ -139,7 +126,7 @@ const InstructorGrid = () => {
                           aria-expanded="false"
                           aria-controls="collapsecustomicon1Two"
                         >
-                          Instructors
+                          Profile
                           <i className="fa-solid fa-chevron-down" />
                         </Link>
                       </h2>
@@ -197,7 +184,7 @@ const InstructorGrid = () => {
                           aria-expanded="false"
                           aria-controls="collapsecustomicon1Three"
                         >
-                          Price
+                          Experience
                           <i className="fa-solid fa-chevron-down" />
                         </Link>
                       </h2>
@@ -208,27 +195,30 @@ const InstructorGrid = () => {
                         data-bs-parent="#accordioncustomicon1Example"
                       >
                         <div className="accordion-body">
-                          <div>
-                            <label className="custom_check custom_one">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> All (10)
-                            </label>
-                          </div>
-                          <div>
-                            <label className="custom_check custom_one">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Free (5)
-                            </label>
-                          </div>
-                          <div>
-                            <label className="custom_check custom_one mb-0">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Paid (3)
-                            </label>
-                          </div>
+                          {[
+                            "0-5 Years",
+                            "5-9 Years",
+                            "10-14 Years",
+                            "14-20 Years",
+                            "20-24 Years",
+                            "24-29 Years",
+                            "30+ Years",
+                          ].map((range, index) => (
+                            <div key={index}>
+                              <label className="custom_check custom_one mb-3">
+                                <input
+                                  type="checkbox"
+                                  name="experience_range"
+                                  value={range}
+                                />
+                                <span className="checkmark" /> {range}
+                              </label>
+                            </div>
+                          ))}
                         </div>
                       </div>
                     </div>
+
                     <div className="accordion-item">
                       <h2
                         className="accordion-header"
@@ -242,11 +232,50 @@ const InstructorGrid = () => {
                           aria-expanded="false"
                           aria-controls="collapsecustomicon1Four"
                         >
-                          Range
+                          Country
                           <i className="fa-solid fa-chevron-down" />
                         </Link>
                       </h2>
                       <div
+                        id="collapsecustomicon1Five"
+                        className="accordion-collapse collapse show"
+                        aria-labelledby="headingcustomicon1Five"
+                        data-bs-parent="#accordioncustomicon1Example"
+                      >
+                        <div className="accordion-body">
+                          <div>
+                            <label className="custom_check custom_one">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              India
+                            </label>
+                          </div>
+                          <div>
+                            <label className="custom_check custom_one">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              Canada
+                            </label>
+                          </div>
+
+                          <div>
+                            <label className="custom_check custom_one">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              USA
+                            </label>
+                          </div>
+
+                          <div>
+                            <label className="custom_check custom_one mb-0">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              Australia
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      {/* <div
                         id="collapsecustomicon1Four"
                         className="accordion-collapse collapse show"
                         aria-labelledby="headingcustomicon1Four"
@@ -261,6 +290,63 @@ const InstructorGrid = () => {
                               max={5695}
                               defaultValue={[50, 2000]}
                             />
+                          </div>
+                        </div>
+                      </div> */}
+                    </div>
+                    <div className="accordion-item">
+                      <h2
+                        className="accordion-header"
+                        id="headingcustomicon1Five"
+                      >
+                        <Link
+                          to="#"
+                          className="accordion-button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapsecustomicon1Five"
+                          aria-expanded="false"
+                          aria-controls="collapsecustomicon1Five"
+                        >
+                          Availabilty
+                          <i className="fa-solid fa-chevron-down" />
+                        </Link>
+                      </h2>
+                      <div
+                        id="collapsecustomicon1Five"
+                        className="accordion-collapse collapse show"
+                        aria-labelledby="headingcustomicon1Five"
+                        data-bs-parent="#accordioncustomicon1Example"
+                      >
+                        <div className="accordion-body">
+                          <div>
+                            <label className="custom_check custom_one">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              Interact Avatar
+                            </label>
+                          </div>
+                          <div>
+                            <label className="custom_check custom_one">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              Profile On
+                            </label>
+                          </div>
+
+                          <div>
+                            <label className="custom_check custom_one">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              Real Me
+                            </label>
+                          </div>
+
+                          <div>
+                            <label className="custom_check custom_one mb-0">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              Chat
+                            </label>
                           </div>
                         </div>
                       </div>
@@ -278,7 +364,7 @@ const InstructorGrid = () => {
                           aria-expanded="false"
                           aria-controls="collapsecustomicon1Five"
                         >
-                          Level
+                          Gender
                           <i className="fa-solid fa-chevron-down" />
                         </Link>
                       </h2>
@@ -293,27 +379,15 @@ const InstructorGrid = () => {
                             <label className="custom_check custom_one">
                               <input type="checkbox" name="select_specialist" />
                               <span className="checkmark" />
-                              Beginner (10)
+                              Male
                             </label>
                           </div>
-                          <div>
-                            <label className="custom_check custom_one">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Intermediate (5)
-                            </label>
-                          </div>
+
                           <div>
                             <label className="custom_check custom_one">
                               <input type="checkbox" name="select_specialist" />
                               <span className="checkmark" />
-                              Advanced (21)
-                            </label>
-                          </div>
-                          <div>
-                            <label className="custom_check custom_one mb-0">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" />
-                              Expert (3)
+                              Female
                             </label>
                           </div>
                         </div>
@@ -321,8 +395,8 @@ const InstructorGrid = () => {
                     </div>
                   </div>
                 </div>
-              </div> */}
-              <div className="col-lg-12">
+              </div>
+              <div className="col-lg-9">
                 {/* Filter */}
                 <div className="showing-list mb-4">
                   <div className="row align-items-center">
@@ -371,14 +445,81 @@ const InstructorGrid = () => {
                 </div>
                 {/* /Filter */}
                 <div className="row course-list-cover">
-                  <div className="col-xl-3 col-md-6 d-flex">
+                  <div className="col-xl-4 col-md-6 d-flex">
                     <div className="instructor-item instructor-item-six flex-fill">
                       <div className="instructors-img ">
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-64.jpeg"
+                            src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757936392/0112_dutta_tnd_0_2_vbcsmn.jpg"
+                            style={{
+                              width: "100%",
+                              height: "300px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                            }}
                             alt="img"
+                          />
+                        </Link>
+                        {/* <div
+                          className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
+                          key={2}
+                          onClick={() => handleItemClick(2)}
+                        >
+                          <Link
+                            to="#"
+                            className={`favourite ms-auto ${
+                              selectedItems[2] ? "selected" : ""
+                            }`}
+                            tabIndex={0}
+                          >
+                            <i className="isax isax-heart" />
+                          </Link>
+                        </div> */}
+                      </div>
+                      <div className="instructor-content">
+                        <div>
+                          {/* <p className="rating mb-2">
+                            <i className="fas fa-star me-1" />
+                            4.4 (130 Reviews)
+                          </p> */}
+                          <h3 className="title mb-2">
+                            <Link to={route.instructorDetails}>Lisa Lopez</Link>
+                          </h3>
+                          <span className="designation">Finance</span>
+                        </div>
+                        <div className="d-flex justify-content-between align-items-center instructor-bottom">
+                          <div className="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
+                              <i className="isax isax-book-saved5  me-2 fs-16 text-secondary" />
+                              22+ Lesson
+                            </span>
+                          </div>
+                          <div className="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
+                              <i className="isax isax-timer-start5 me-2  fs-16 text-primary" />
+                              15hr 06min
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-xl-4 col-md-6 d-flex">
+                    <div className="instructor-item instructor-item-six flex-fill">
+                      <div className="instructors-img ">
+                        <Link to={route.instructorDetails} tabIndex={0}>
+                          <ImageWithBasePath
+                            className="img-fluid"
+                            src="https://webkype.com/storage/profile_images/WbkIAFAe9b82aOgrK0A2X4fytxuxRp4qEpjnBIl6.jpg"
+                            alt="img"
+                            style={{
+                              width: "100%",
+                              height: "300px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                            }}
                           />
                         </Link>
                         {/* Professor */}
@@ -435,123 +576,20 @@ const InstructorGrid = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-md-6 d-flex">
+
+                  <div className="col-xl-4 col-md-6 d-flex">
                     <div className="instructor-item instructor-item-six flex-fill">
                       <div className="instructors-img ">
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-64.jpeg"
-                            alt="img"
-                          />
-                        </Link>
-                        {/* <div
-                          className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
-                          key={2}
-                          onClick={() => handleItemClick(2)}
-                        >
-                          <Link
-                            to="#"
-                            className={`favourite ms-auto ${
-                              selectedItems[2] ? "selected" : ""
-                            }`}
-                            tabIndex={0}
-                          >
-                            <i className="isax isax-heart" />
-                          </Link>
-                        </div> */}
-                      </div>
-                      <div className="instructor-content">
-                        <div>
-                          {/* <p className="rating mb-2">
-                            <i className="fas fa-star me-1" />
-                            4.4 (130 Reviews)
-                          </p> */}
-                          <h3 className="title mb-2">
-                            <Link to={route.instructorDetails}>Lisa Lopez</Link>
-                          </h3>
-                          <span className="designation">Finance</span>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center instructor-bottom">
-                          <div className="d-flex align-items-center">
-                            <span className="d-flex align-items-center">
-                              <i className="isax isax-book-saved5  me-2 fs-16 text-secondary" />
-                              22+ Lesson
-                            </span>
-                          </div>
-                          <div className="d-flex align-items-center">
-                            <span className="d-flex align-items-center">
-                              <i className="isax isax-timer-start5 me-2  fs-16 text-primary" />
-                              15hr 06min
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-6 d-flex">
-                    <div className="instructor-item instructor-item-six flex-fill">
-                      <div className="instructors-img ">
-                        <Link to={route.instructorDetails} tabIndex={0}>
-                          <ImageWithBasePath
-                            className="img-fluid"
-                            src="assets/img/user/user-64.jpeg"
-                            alt="img"
-                          />
-                        </Link>
-                        {/* <div
-                          className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
-                          key={3}
-                          onClick={() => handleItemClick(3)}
-                        >
-                          <Link
-                            to="#"
-                            className={`favourite ms-auto ${
-                              selectedItems[3] ? "selected" : ""
-                            }`}
-                            tabIndex={0}
-                          >
-                            <i className="isax isax-heart" />
-                          </Link>
-                        </div> */}
-                      </div>
-                      <div className="instructor-content">
-                        <div>
-                          {/* <p className="rating mb-2">
-                            <i className="fas fa-star me-1" />
-                            4.5 (120 Reviews)
-                          </p> */}
-                          <h3 className="title mb-2">
-                            <Link to={route.instructorDetails}>
-                              Charles Ruiz
-                            </Link>
-                          </h3>
-                          <span className="designation">Cloud Engineer</span>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center instructor-bottom">
-                          <div className="d-flex align-items-center">
-                            <span className="d-flex align-items-center">
-                              <i className="isax isax-book-saved5 fs-16 text-secondary me-2" />
-                              16+ Lesson
-                            </span>
-                          </div>
-                          <div className="d-flex align-items-center">
-                            <span className="d-flex align-items-center">
-                              <i className="isax isax-timer-start5 fs-16 text-primary me-2" />
-                              2hr 25min
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-6 d-flex">
-                    <div className="instructor-item instructor-item-six flex-fill">
-                      <div className="instructors-img ">
-                        <Link to={route.instructorDetails} tabIndex={0}>
-                          <ImageWithBasePath
-                            className="img-fluid"
-                            src="assets/img/user/user-64.jpeg"
+                            src="https://webkype.com/storage/1728468439.jpeg"
+                            style={{
+                              width: "100%",
+                              height: "300px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                            }}
                             alt="img"
                           />
                         </Link>
@@ -601,13 +639,146 @@ const InstructorGrid = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-md-6 d-flex">
+
+                  <div className="col-xl-4 col-md-6 d-flex">
                     <div className="instructor-item instructor-item-six flex-fill">
                       <div className="instructors-img ">
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-64.jpeg"
+                            src="https://webkype.com/storage/1727701196.jpg"
+                            style={{
+                              width: "100%",
+                              height: "300px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                            }}
+                            alt="img"
+                          />
+                        </Link>
+                        {/* <div
+                          className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
+                          key={3}
+                          onClick={() => handleItemClick(3)}
+                        >
+                          <Link
+                            to="#"
+                            className={`favourite ms-auto ${
+                              selectedItems[3] ? "selected" : ""
+                            }`}
+                            tabIndex={0}
+                          >
+                            <i className="isax isax-heart" />
+                          </Link>
+                        </div> */}
+                      </div>
+                      <div className="instructor-content">
+                        <div>
+                          {/* <p className="rating mb-2">
+                            <i className="fas fa-star me-1" />
+                            4.5 (120 Reviews)
+                          </p> */}
+                          <h3 className="title mb-2">
+                            <Link to={route.instructorDetails}>
+                              Charles Ruiz
+                            </Link>
+                          </h3>
+                          <span className="designation">Cloud Engineer</span>
+                        </div>
+                        <div className="d-flex justify-content-between align-items-center instructor-bottom">
+                          <div className="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
+                              <i className="isax isax-book-saved5 fs-16 text-secondary me-2" />
+                              16+ Lesson
+                            </span>
+                          </div>
+                          <div className="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
+                              <i className="isax isax-timer-start5 fs-16 text-primary me-2" />
+                              2hr 25min
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-xl-4 col-md-6 d-flex">
+                    <div className="instructor-item instructor-item-six flex-fill">
+                      <div className="instructors-img ">
+                        <Link to={route.instructorDetails} tabIndex={0}>
+                          <ImageWithBasePath
+                            className="img-fluid"
+                            src="https://res.cloudinary.com/drj0uehgx/image/upload/v1758191704/5397-0520_1_bcfrsx.jpg"
+                            style={{
+                              width: "100%",
+                              height: "300px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                            }}
+                            alt="img"
+                          />
+                        </Link>
+                        {/* <div
+                          className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
+                          key={3}
+                          onClick={() => handleItemClick(3)}
+                        >
+                          <Link
+                            to="#"
+                            className={`favourite ms-auto ${
+                              selectedItems[3] ? "selected" : ""
+                            }`}
+                            tabIndex={0}
+                          >
+                            <i className="isax isax-heart" />
+                          </Link>
+                        </div> */}
+                      </div>
+                      <div className="instructor-content">
+                        <div>
+                          {/* <p className="rating mb-2">
+                            <i className="fas fa-star me-1" />
+                            4.5 (120 Reviews)
+                          </p> */}
+                          <h3 className="title mb-2">
+                            <Link to={route.instructorDetails}>
+                              Charles Ruiz
+                            </Link>
+                          </h3>
+                          <span className="designation">Cloud Engineer</span>
+                        </div>
+                        <div className="d-flex justify-content-between align-items-center instructor-bottom">
+                          <div className="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
+                              <i className="isax isax-book-saved5 fs-16 text-secondary me-2" />
+                              16+ Lesson
+                            </span>
+                          </div>
+                          <div className="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
+                              <i className="isax isax-timer-start5 fs-16 text-primary me-2" />
+                              2hr 25min
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-xl-4 col-md-6 d-flex">
+                    <div className="instructor-item instructor-item-six flex-fill">
+                      <div className="instructors-img ">
+                        <Link to={route.instructorDetails} tabIndex={0}>
+                          <ImageWithBasePath
+                            className="img-fluid"
+                            src="https://webkype.com/storage/1727701481.JPG"
+                            style={{
+                              width: "100%",
+                              height: "300px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                            }}
                             alt="img"
                           />
                         </Link>
@@ -655,13 +826,20 @@ const InstructorGrid = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-md-6 d-flex">
+
+                  <div className="col-xl-4 col-md-6 d-flex">
                     <div className="instructor-item instructor-item-six flex-fill">
                       <div className="instructors-img ">
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-64.jpeg"
+                            src="https://webkype.com/storage/1727701208.jpg"
+                            style={{
+                              width: "100%",
+                              height: "300px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                            }}
                             alt="img"
                           />
                         </Link>
@@ -711,25 +889,32 @@ const InstructorGrid = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-md-6 d-flex">
+
+                  <div className="col-xl-4 col-md-6 d-flex">
                     <div className="instructor-item instructor-item-six flex-fill">
                       <div className="instructors-img ">
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-64.jpeg"
+                            src="https://webkype.com/storage/1727701450.JPG"
+                            style={{
+                              width: "100%",
+                              height: "300px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                            }}
                             alt="img"
                           />
                         </Link>
                         {/* <div
                           className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
-                          key={5}
-                          onClick={() => handleItemClick(5)}
+                          key={4}
+                          onClick={() => handleItemClick(4)}
                         >
                           <Link
                             to="#"
                             className={`favourite ms-auto ${
-                              selectedItems[5] ? "selected" : ""
+                              selectedItems[4] ? "selected" : ""
                             }`}
                             tabIndex={0}
                           >
@@ -741,51 +926,58 @@ const InstructorGrid = () => {
                         <div>
                           {/* <p className="rating mb-2">
                             <i className="fas fa-star me-1" />
-                            4.3 (190 Reviews)
+                            4.5 (140 Reviews)
                           </p> */}
                           <h3 className="title mb-2">
                             <Link to={route.instructorDetails}>
-                              David Roccoz
+                              Kevin Leonard
                             </Link>
                           </h3>
-                          <span className="designation">Sports Coach</span>
+                          <span className="designation">Developer</span>
                         </div>
                         <div className="d-flex justify-content-between align-items-center instructor-bottom">
                           <div className="d-flex align-items-center">
                             <span className="d-flex align-items-center">
                               <i className="isax isax-book-saved5 fs-16 text-secondary me-2" />
-                              04+ Lesson
+                              11+ Lesson
                             </span>
                           </div>
                           <div className="d-flex align-items-center">
                             <span className="d-flex align-items-center">
                               <i className="isax isax-timer-start5 fs-16 text-primary me-2" />
-                              1hr 30min
+                              7hr 10min
                             </span>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-md-6 d-flex">
+
+                  <div className="col-xl-4 col-md-6 d-flex">
                     <div className="instructor-item instructor-item-six flex-fill">
                       <div className="instructors-img ">
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-64.jpeg"
+                            src="https://webkype.com/storage/profile_images/tDZn8ORTdYlqy8vPsTmj0JWiLmpCWLQ1XY9QDCN8.jpg"
+                            style={{
+                              width: "100%",
+                              height: "300px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                            }}
                             alt="img"
                           />
                         </Link>
                         {/* <div
                           className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
-                          key={5}
-                          onClick={() => handleItemClick(5)}
+                          key={4}
+                          onClick={() => handleItemClick(4)}
                         >
                           <Link
                             to="#"
                             className={`favourite ms-auto ${
-                              selectedItems[5] ? "selected" : ""
+                              selectedItems[4] ? "selected" : ""
                             }`}
                             tabIndex={0}
                           >
@@ -797,51 +989,58 @@ const InstructorGrid = () => {
                         <div>
                           {/* <p className="rating mb-2">
                             <i className="fas fa-star me-1" />
-                            4.3 (190 Reviews)
+                            4.5 (140 Reviews)
                           </p> */}
                           <h3 className="title mb-2">
                             <Link to={route.instructorDetails}>
-                              Jeanette Dulaney
+                              Kevin Leonard
                             </Link>
                           </h3>
-                          <span className="designation">Technical Traine</span>
+                          <span className="designation">Developer</span>
                         </div>
                         <div className="d-flex justify-content-between align-items-center instructor-bottom">
                           <div className="d-flex align-items-center">
                             <span className="d-flex align-items-center">
                               <i className="isax isax-book-saved5 fs-16 text-secondary me-2" />
-                              08+ Lesson
+                              11+ Lesson
                             </span>
                           </div>
                           <div className="d-flex align-items-center">
                             <span className="d-flex align-items-center">
                               <i className="isax isax-timer-start5 fs-16 text-primary me-2" />
-                              4hr 35min
+                              7hr 10min
                             </span>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-md-6 d-flex">
+
+                  <div className="col-xl-4 col-md-6 d-flex">
                     <div className="instructor-item instructor-item-six flex-fill">
                       <div className="instructors-img ">
                         <Link to={route.instructorDetails} tabIndex={0}>
                           <ImageWithBasePath
                             className="img-fluid"
-                            src="assets/img/user/user-64.jpeg"
+                            src="https://webkype.com/storage/profile_images/NAFAgWE72E9kb2LqOWlDGbS5KE9oLSDBQXkN8FSi.jpg"
+                            style={{
+                              width: "100%",
+                              height: "300px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                            }}
                             alt="img"
                           />
                         </Link>
                         {/* <div
                           className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
-                          key={5}
-                          onClick={() => handleItemClick(5)}
+                          key={4}
+                          onClick={() => handleItemClick(4)}
                         >
                           <Link
                             to="#"
                             className={`favourite ms-auto ${
-                              selectedItems[5] ? "selected" : ""
+                              selectedItems[4] ? "selected" : ""
                             }`}
                             tabIndex={0}
                           >
@@ -853,28 +1052,152 @@ const InstructorGrid = () => {
                         <div>
                           {/* <p className="rating mb-2">
                             <i className="fas fa-star me-1" />
-                            4.3 (190 Reviews)
+                            4.5 (140 Reviews)
                           </p> */}
                           <h3 className="title mb-2">
                             <Link to={route.instructorDetails}>
-                              Debran Andrew
+                              Kevin Leonard
                             </Link>
                           </h3>
-                          <span className="designation">
-                            Health and Wellness
-                          </span>
+                          <span className="designation">Developer</span>
                         </div>
                         <div className="d-flex justify-content-between align-items-center instructor-bottom">
                           <div className="d-flex align-items-center">
                             <span className="d-flex align-items-center">
                               <i className="isax isax-book-saved5 fs-16 text-secondary me-2" />
-                              08+ Lesson
+                              11+ Lesson
                             </span>
                           </div>
                           <div className="d-flex align-items-center">
                             <span className="d-flex align-items-center">
                               <i className="isax isax-timer-start5 fs-16 text-primary me-2" />
-                              4hr 35min
+                              7hr 10min
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-xl-4 col-md-6 d-flex">
+                    <div className="instructor-item instructor-item-six flex-fill">
+                      <div className="instructors-img ">
+                        <Link to={route.instructorDetails} tabIndex={0}>
+                          <ImageWithBasePath
+                            className="img-fluid"
+                            src="https://webkype.com/storage/profile_images/FkpyYGjxvfabXn5D96K4vElpfO9gIFbnk65UsjS4.jpg"
+                            style={{
+                              width: "100%",
+                              height: "300px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                            }}
+                            alt="img"
+                          />
+                        </Link>
+                        {/* <div
+                          className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
+                          key={4}
+                          onClick={() => handleItemClick(4)}
+                        >
+                          <Link
+                            to="#"
+                            className={`favourite ms-auto ${
+                              selectedItems[4] ? "selected" : ""
+                            }`}
+                            tabIndex={0}
+                          >
+                            <i className="isax isax-heart" />
+                          </Link>
+                        </div> */}
+                      </div>
+                      <div className="instructor-content">
+                        <div>
+                          {/* <p className="rating mb-2">
+                            <i className="fas fa-star me-1" />
+                            4.5 (140 Reviews)
+                          </p> */}
+                          <h3 className="title mb-2">
+                            <Link to={route.instructorDetails}>
+                              Kevin Leonard
+                            </Link>
+                          </h3>
+                          <span className="designation">Developer</span>
+                        </div>
+                        <div className="d-flex justify-content-between align-items-center instructor-bottom">
+                          <div className="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
+                              <i className="isax isax-book-saved5 fs-16 text-secondary me-2" />
+                              11+ Lesson
+                            </span>
+                          </div>
+                          <div className="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
+                              <i className="isax isax-timer-start5 fs-16 text-primary me-2" />
+                              7hr 10min
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-xl-4 col-md-6 d-flex">
+                    <div className="instructor-item instructor-item-six flex-fill">
+                      <div className="instructors-img ">
+                        <Link to={route.instructorDetails} tabIndex={0}>
+                          <ImageWithBasePath
+                            className="img-fluid"
+                            src="https://webkype.com/storage/profile_images/1g45jjDifArfi31qAR30dFH95i9Hdxv5PYQHrlHe.png"
+                            style={{
+                              width: "100%",
+                              height: "300px",
+                              objectFit: "cover",
+                              borderRadius: "8px",
+                            }}
+                            alt="img"
+                          />
+                        </Link>
+                        {/* <div
+                          className="position-absolute start-0 top-0 d-flex align-items-start w-100 z-index-2 p-2"
+                          key={4}
+                          onClick={() => handleItemClick(4)}
+                        >
+                          <Link
+                            to="#"
+                            className={`favourite ms-auto ${
+                              selectedItems[4] ? "selected" : ""
+                            }`}
+                            tabIndex={0}
+                          >
+                            <i className="isax isax-heart" />
+                          </Link>
+                        </div> */}
+                      </div>
+                      <div className="instructor-content">
+                        <div>
+                          {/* <p className="rating mb-2">
+                            <i className="fas fa-star me-1" />
+                            4.5 (140 Reviews)
+                          </p> */}
+                          <h3 className="title mb-2">
+                            <Link to={route.instructorDetails}>
+                              Kevin Leonard
+                            </Link>
+                          </h3>
+                          <span className="designation">Developer</span>
+                        </div>
+                        <div className="d-flex justify-content-between align-items-center instructor-bottom">
+                          <div className="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
+                              <i className="isax isax-book-saved5 fs-16 text-secondary me-2" />
+                              11+ Lesson
+                            </span>
+                          </div>
+                          <div className="d-flex align-items-center">
+                            <span className="d-flex align-items-center">
+                              <i className="isax isax-timer-start5 fs-16 text-primary me-2" />
+                              7hr 10min
                             </span>
                           </div>
                         </div>

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import ImageWithBasePath from "../imageWithBasePath";
-import { header } from "../data/json/header";
+import ImageWithBasePath from "../../../core/common/imageWithBasePath";
+import { header } from "../../../core/common/data/json/header";
 import { Link, useLocation } from "react-router-dom";
 import { all_routes } from "../../../feature-module/router/all_routes";
-import { setDataTheme } from "../../redux/themeSettingSlice";
+import { setDataTheme } from "../../../core/redux/themeSettingSlice";
 import { useDispatch, useSelector } from "react-redux";
-const Header = () => {
+const RegisterHeader = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMegaMenu, setIsMegaMenu] = useState(false);
   const [subOpen, setSubopen] = useState<any>("");
@@ -789,7 +789,7 @@ const Header = () => {
                     </span>
                   </Link>
                 </div>
-                <Link
+                {/* <Link
                   to={all_routes.login}
                   className="btn btn-primary d-inline-flex align-items-center me-2"
                 >
@@ -800,7 +800,7 @@ const Header = () => {
                   className="btn btn-secondary me-0"
                 >
                   Register
-                </Link>
+                </Link> */}
               </div>
             ) : location.pathname === "/index-3" ? (
               <div className="header-btn d-flex align-items-center">
@@ -987,7 +987,7 @@ const Header = () => {
                     </li> */}
                   </ul>
                 </div>
-                <Link
+                {/* <Link
                   to={all_routes.login}
                   className="btn btn-primary d-inline-flex align-items-center me-2"
                 >
@@ -1001,7 +1001,7 @@ const Header = () => {
                 >
                   <i className="fa-solid fa-user me-2" />
                   Register
-                </Link>
+                </Link> */}
               </div>
             ) : location.pathname === "/index-5" ? (
               <div className="header-btn d-flex align-items-center">
@@ -1090,7 +1090,7 @@ const Header = () => {
                     </span>
                   </Link>
                 </div>
-                <Link
+                {/* <Link
                   to={all_routes.login}
                   className="btn btn-primary d-inline-flex align-items-center me-2"
                 >
@@ -1103,7 +1103,7 @@ const Header = () => {
                 >
                   <i className="isax isax-user-edit me-2" />
                   Register
-                </Link>
+                </Link> */}
               </div>
             ) : location.pathname === "/index-6" ? (
               <div className="header-btn d-flex align-items-center">
@@ -1179,7 +1179,7 @@ const Header = () => {
                     </span>
                   </Link>
                 </div>
-                <div>
+                {/* <div>
                   <Link
                     to={all_routes.login}
                     className="btn btn-primary d-inline-flex align-items-center me-2 px-3"
@@ -1192,7 +1192,7 @@ const Header = () => {
                   className="btn btn-secondary me-0 px-3"
                 >
                   Register
-                </Link>
+                </Link> */}
               </div>
             ) : location.pathname.includes("instructor") ? (
               <div className="header-btn d-flex align-items-center">
@@ -1508,7 +1508,7 @@ const Header = () => {
                     </span>
                   </Link>
                 </div>
-                <Link
+                {/* <Link
                   to={all_routes.login}
                   className="btn btn-light d-inline-flex align-items-center me-2"
                 >
@@ -1521,7 +1521,7 @@ const Header = () => {
                 >
                   <i className="isax isax-user-edit me-2" />
                   Register
-                </Link>
+                </Link> */}
               </div>
             )}
           </div>
@@ -1532,4 +1532,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default RegisterHeader;

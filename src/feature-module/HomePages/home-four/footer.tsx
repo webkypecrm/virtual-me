@@ -19,10 +19,10 @@ const Footer = () => {
       </div>
       <div className="footer-top">
         <div className="container">
-          <div className="row row-gap-4">
-            <div className="col-lg-6">
+          <div className="row  d-flex justify-content-center align-items-center text-center">
+            <div className="col-lg-8">
               <div className="footer-about">
-                <div className="footer-logo">
+                <div className="footer-logo mb-3">
                   <ImageWithBasePath
                     src="assets/img/logo-virtual.png"
                     alt=""
@@ -30,105 +30,32 @@ const Footer = () => {
                     width={200}
                   />
                 </div>
-                <p>
+                <p className="mb-3">
                   Platform designed to help organizations, educators, and
                   learners manage, deliver, and track learning and training
                   activities.
                 </p>
-                <div className="d-flex align-items-center">
-                  {/* <Link to="#" className="me-2">
-                      <ImageWithBasePath
-                        src="assets/img/icon/appstore.svg"
-                        alt=""
-                      />
-                    </Link> */}
-                  {/* <Link to="#">
-                      <ImageWithBasePath
-                        src="assets/img/icon/googleplay.svg"
-                        alt=""
-                      />
-                    </Link> */}
-                </div>
               </div>
-              <div className="row ">
-                <div className="col-lg-4">
-                  <div className="footer-widget footer-menu">
-                    <div>
-                      <Link
-                        to={all_routes.instructorDashboard}
-                        className="btn btn-primary d-inline-flex align-items-center me-2 px-3"
-                      >
-                        For Instructor
-                      </Link>
-                    </div>
-                  </div>
+
+              <div className="row justify-content-center">
+                <div className="col-lg-3 col-md-6 mb-2">
+                  <Link
+                    to={all_routes.instructorDashboard}
+                    className="btn btn-primary d-inline-flex align-items-center px-3 w-100 justify-content-center"
+                  >
+                    For Instructor
+                  </Link>
                 </div>
-                <div className="col-lg-4">
-                  <div className="footer-widget footer-menu">
-                    <div>
-                      <Link
-                        to={all_routes.studentDashboard}
-                        className="btn btn-secondary d-inline-flex align-items-center me-2 px-3"
-                      >
-                        For Student
-                      </Link>
-                    </div>
-                  </div>
+                <div className="col-lg-3 col-md-6 mb-2">
+                  <Link
+                    to={all_routes.studentDashboard}
+                    className="btn btn-primary d-inline-flex align-items-center px-3 w-100 justify-content-center"
+                  >
+                    For Student
+                  </Link>
                 </div>
-                {/* <div className="col-lg-6">
-                    <div className="footer-widget footer-contact">
-                      <h5 className="footer-title">Newsletter</h5>
-                      <div className="subscribe-input">
-                        <form action="#">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Enter your Email Address"
-                          />
-                          <button
-                            type="submit"
-                            className="btn btn-primary btn-sm inline-flex align-items-center"
-                          >
-                            <i className="isax isax-send-2 me-1" />
-                            Subscribe
-                          </button>
-                        </form>
-                      </div>
-                      <div className="footer-contact-info">
-                        <div className="footer-address d-flex align-items-center">
-                          <ImageWithBasePath
-                            src="assets/img/icon/icon-20.svg"
-                            alt="Img"
-                            className="img-fluid me-2"
-                          />
-                          <p>
-                            {" "}
-                            3556 Beech Street, San Francisco,
-                            <br /> California, CA 94108{" "}
-                          </p>
-                        </div>
-                        <div className="footer-address d-flex align-items-center">
-                          <ImageWithBasePath
-                            src="assets/img/icon/icon-19.svg"
-                            alt="Img"
-                            className="img-fluid me-2"
-                          />
-                          <p>VirtualXai@example.com</p>
-                        </div>
-                        <div className="footer-address d-flex align-items-center">
-                          <ImageWithBasePath
-                            src="assets/img/icon/icon-21.svg"
-                            alt="Img"
-                            className="img-fluid me-2"
-                          />
-                          <p>+19 123-456-7890</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
               </div>
             </div>
-            <div className="col-lg-6"></div>
           </div>
         </div>
       </div>

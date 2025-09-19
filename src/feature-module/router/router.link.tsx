@@ -68,6 +68,7 @@ import TermsCondition from "../Pages/terms-condition/termsCondition";
 import PrivacyPolicy from "../Pages/privacy-policy/privacyPolicy";
 import Login from "../auth/login/login";
 import Register from "../auth/register/register";
+import RegisterLandingPage from "../Pages/RegisterLanding/registerLandingPage";
 import Registerstep2 from "../auth/register/registerstep2";
 import ForgortPassword from "../auth/forgot-password/forgortPassword";
 import SetPassword from "../auth/set-password/setPassword";
@@ -101,6 +102,8 @@ import StudentQuizQuestion from "../student/student-quiz-question/studentQuizQue
 import InstructorProfileSettings from "../Instructor/instructor-settings/instructor-profile-settings/instructorProfile";
 import BlogDetails from "../blog/blog-details/blogDetails";
 import Registerstep3 from "../auth/register/registerstep3";
+import RegisterstepTwoHalf from "../auth/register/registerstepTwoHalf";
+import RegisterstepTwoFourth from "../auth/register/registerstepTwoFourth";
 
 const routes = all_routes;
 
@@ -128,6 +131,11 @@ export const publicRoutes = [
   // },
   {
     path: routes.homefour,
+    element: <HomeFour />,
+    route: Route,
+  },
+  {
+    path: routes.homefourregister,
     element: <HomeFour />,
     route: Route,
   },
@@ -556,10 +564,16 @@ export const publicRoutes = [
 
 export const authRoutes = [
   {
+    path: routes.registerLandingPage,
+    element: <RegisterLandingPage />,
+    route: Route,
+  },
+  {
     path: routes.login,
     element: <Login />,
     route: Route,
   },
+
   {
     path: routes.register,
     element: <Register />,
@@ -568,6 +582,16 @@ export const authRoutes = [
   {
     path: routes.registerStepTwo,
     element: <Registerstep2 />,
+    route: Route,
+  },
+  {
+    path: routes.registerStepTwoHalf,
+    element: <RegisterstepTwoHalf />,
+    route: Route,
+  },
+  {
+    path: routes.registerStepTwoFourth,
+    element: <RegisterstepTwoFourth />,
     route: Route,
   },
   {

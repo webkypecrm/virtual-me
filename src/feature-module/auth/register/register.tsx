@@ -23,13 +23,14 @@ const Register: React.FC = () => {
   const [validationError, setValidationError] = useState<number>(0);
   const [strength, setStrength] = useState<string>("");
   const [eyeConfirmPassword, setEyeConfirmPassword] = useState<boolean>(true);
+  const [gender, setGender] = useState<string>("");
 
   const route = all_routes;
   const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    navigate(route.registerStepTwo);
+    navigate(route.registerStepTwoHalf);
   };
 
   const onEyeClick = () => setEye((prev) => !prev);
@@ -145,12 +146,7 @@ const Register: React.FC = () => {
       {/* Main Wrapper */}
       <div className="main-wrapper">
         {/* Make login-content full viewport height and center everything */}
-        <div
-          className="login-content d-flex align-items-center justify-content-center min-vh-100"
-          style={{
-            background: "linear-gradient(to right, #feeef0, #f6cbccff)",
-          }}
-        >
+        <div className="login-content d-flex register-bg-gredient align-items-center justify-content-center min-vh-100">
           {/* single centered column (no left banner) */}
           <div
             className="login-wrapper w-100 rounded-4"
@@ -166,14 +162,14 @@ const Register: React.FC = () => {
                     height={80}
                     width={80}
                   />
-                  <Link to={route.homefour} className="link-1">
+                  <Link to={route.registerLandingPage} className="link-1">
                     Back to Home
                   </Link>
                 </div>
 
-                <h1 className="fs-26 fw-semibold topic">Sign up</h1>
+                <h1 className="fs-22 text-center topic">Sign up</h1>
 
-                <form onSubmit={handleSubmit} className="mb-1 mt-3 pb-3">
+                <form onSubmit={handleSubmit} className="mb-1 mt-1 pb-0">
                   <div className="mb-1 position-relative">
                     <label className="form-label">
                       Name<span className="text-danger ms-1">*</span>
@@ -181,7 +177,7 @@ const Register: React.FC = () => {
                     <div className="position-relative">
                       <input
                         type="text"
-                        className="form-control form-control-lg"
+                        className="form-control form-control-sm"
                       />
                       <span>
                         <i className="isax isax-user input-icon text-gray-7 fs-14" />
@@ -195,7 +191,7 @@ const Register: React.FC = () => {
                     <div className="position-relative">
                       <input
                         type="text"
-                        className="form-control form-control-lg"
+                        className="form-control form-control-sm"
                       />
                       <span>
                         {/* <i className="isax isax-user input-icon text-gray-7 fs-14" /> */}
@@ -203,20 +199,49 @@ const Register: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* <div className="mb-3 position-relative">
-                    <label className="form-label">
-                      Email<span className="text-danger ms-1">*</span>
+                  <div className="mb-3 mt-3 d-flex align-items-center">
+                    <label
+                      className="form-label me-3 mb-0"
+                      style={{ minWidth: "70px" }}
+                    >
+                      Gender <span className="text-danger">*</span>
                     </label>
-                    <div className="position-relative">
-                      <input
-                        type="email"
-                        className="form-control form-control-lg"
-                      />
-                      <span>
-                        <i className="isax isax-sms input-icon text-gray-7 fs-14" />
-                      </span>
+                    <div className="d-flex gap-3">
+                      <label className="form-check-label d-flex align-items-center">
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="male"
+                          checked={gender === "male"}
+                          onChange={(e) => setGender(e.target.value)}
+                          className="form-check-input me-1"
+                        />
+                        Male
+                      </label>
+                      <label className="form-check-label d-flex align-items-center">
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="female"
+                          checked={gender === "female"}
+                          onChange={(e) => setGender(e.target.value)}
+                          className="form-check-input me-1"
+                        />
+                        Female
+                      </label>
+                      <label className="form-check-label d-flex align-items-center">
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="other"
+                          checked={gender === "other"}
+                          onChange={(e) => setGender(e.target.value)}
+                          className="form-check-input me-1"
+                        />
+                        Other
+                      </label>
                     </div>
-                  </div> */}
+                  </div>
 
                   <div className="mb-3 position-relative">
                     <label className="form-label">
@@ -274,7 +299,7 @@ const Register: React.FC = () => {
                     <div className="position-relative">
                       <input
                         type={eyeConfirmPassword ? "password" : "text"}
-                        className="pass-inputa form-control form-control-lg"
+                        className="pass-inputa form-control form-control-sm"
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                       />
@@ -322,7 +347,7 @@ const Register: React.FC = () => {
                   </div>
 
                   <div className="d-grid">
-                    <button className="btn btn-secondary btn-md" type="submit">
+                    <button className="btn btn-primary btn-md" type="submit">
                       Sign Up <i className="isax isax-arrow-right-3 ms-1" />
                     </button>
                   </div>

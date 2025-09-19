@@ -145,14 +145,14 @@ const Registerstep3: React.FC = () => {
             <div className="d-flex align-items-center justify-content-between login-header mb-3">
               <button
                 type="button"
-                className="btn btn-outline-secondary btn-md"
+                className="btn btn-outline-primary btn-md"
                 disabled
               >
                 What’s Your Unlock
               </button>
               <button
                 type="button"
-                className="btn btn-outline-secondary btn-md"
+                className="btn btn-outline-primary btn-md"
                 onClick={() => setShowModal(true)}
               >
                 View All Benefits
@@ -204,12 +204,7 @@ const Registerstep3: React.FC = () => {
         <RegisterLoading />
       ) : (
         <div className="main-wrapper">
-          <div
-            className="login-content d-flex align-items-center min-vh-100"
-            style={{
-              background: "linear-gradient(to right, #feeef0, #f6cbccff)",
-            }}
-          >
+          <div className="login-content register-bg-gredient d-flex align-items-center min-vh-100">
             <div className="container">
               <div className="row justify-content-center">
                 {/* Left Card (Plans) */}
@@ -221,18 +216,18 @@ const Registerstep3: React.FC = () => {
                     <div className="loginbox">
                       <div className="w-100">
                         {/* Header */}
-                        <div className="d-flex align-items-center justify-content-end login-header mb-3">
-                          {/* <ImageWithBasePath
+                        {/* <div className="d-flex align-items-center justify-content-end login-header mb-3">
+                          <ImageWithBasePath
                           src="assets/img/logo-virtual.png"
                           className="img-fluid"
                           alt="Logo"
                           height={80}
                           width={80}
-                        /> */}
+                        />
                           <Link to={route.registerStepTwo} className="link-1">
                             Back to Step 2
                           </Link>
-                        </div>
+                        </div> */}
 
                         <h1 className="fs-26 fw-semibold topic">
                           Grow your business faster
@@ -312,14 +307,14 @@ const Registerstep3: React.FC = () => {
                           <div className="d-grid gap-2 mt-4">
                             <button
                               type="submit"
-                              className="btn btn-secondary btn-md"
+                              className="btn btn-primary btn-md"
                               disabled={loading} // disable while loading
                             >
                               {loading ? "Loading..." : "Upgrade Now"}
                             </button>
                             <button
                               type="button"
-                              className="btn btn-outline-secondary btn-md"
+                              className="btn btn-outline-primary btn-md"
                               onClick={handleMaybeLater}
                               disabled={loading}
                             >

@@ -1,24 +1,34 @@
-.banner-section-four {
+.banner-section-four2 {
   position: relative;
-  width: 100%;
-  height: 80vh;
+  /* width: 100%; */
+  height: 82vh;
   overflow: hidden;
   display: flex;
+  justify-content: center;
   align-items: center;
-  /* justify-content: center; */
-}
-.video-wrapper {
-  position: relative !important;
-
-  overflow: hidden;
-  z-index: -2;
   /* border: 2px solid black; */
 }
 
+/* Smaller video, lower on screen */
+.video-wrapper {
+  position: absolute;
+  bottom: 10px;
+  /* top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%); */
+  /* width: 50%; */
+  height: 85%;
+  overflow: hidden;
+  z-index: -2;
+}
+
 .video-background {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   border-radius: 12px;
+  object-fit: cover;
 }
 
 /* Text Styling */

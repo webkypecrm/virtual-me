@@ -58,12 +58,7 @@ const Registerstep2: React.FC = () => {
     <>
       {/* Main Wrapper */}
       <div className="main-wrapper">
-        <div
-          className="login-content d-flex align-items-center justify-content-center min-vh-100"
-          style={{
-            background: "linear-gradient(to right, #feeef0, #f6cbccff)",
-          }}
-        >
+        <div className="login-content register-bg-gredient d-flex align-items-center justify-content-center min-vh-100">
           <div
             className="login-wrapper w-100 rounded-4"
             style={{ maxWidth: 540, padding: "1rem", background: "white" }}
@@ -79,9 +74,9 @@ const Registerstep2: React.FC = () => {
                     height={80}
                     width={80}
                   />
-                  <Link to={route.register} className="link-1">
+                  {/* <Link to={route.register} className="link-1">
                     Back to Step 1
-                  </Link>
+                  </Link> */}
                 </div>
 
                 <h1 className="fs-26 fw-semibold topic">Setup your business</h1>
@@ -150,7 +145,7 @@ const Registerstep2: React.FC = () => {
                         LinkedIn
                       </Button>
                       <Button
-                        variant="outline-secondary"
+                        variant="outline-primary"
                         onClick={() => setShowModal(true)}
                       >
                         <i className="isax isax-add me-1"></i> More
@@ -206,7 +201,7 @@ const Registerstep2: React.FC = () => {
 
                   {/* Submit */}
                   <div className="d-grid">
-                    <button className="btn btn-secondary btn-md" type="submit">
+                    <button className="btn btn-primary btn-md" type="submit">
                       Create My Business{" "}
                       <i className="isax isax-arrow-right-3 ms-1" />
                     </button>
@@ -244,7 +239,7 @@ const Registerstep2: React.FC = () => {
           </Form.Group>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
+          <Button variant="primary" onClick={() => setShowModal(false)}>
             Cancel
           </Button>
           <Button variant="primary" onClick={handleSaveCustomUrl}>

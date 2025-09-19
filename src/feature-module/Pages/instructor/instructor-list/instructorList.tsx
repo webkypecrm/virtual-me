@@ -30,7 +30,7 @@ const InstructorList = () => {
         <div className="instructor-list">
           <div className="container">
             <div className="row align-items-baseline">
-              {/* <div className="col-lg-3">
+              <div className="col-lg-3">
                 <div className="clear-filter mb-4 pb-lg-2 d-flex align-items-center justify-content-between">
                   <h5>
                     <i className="feather-filter me-2" />
@@ -47,16 +47,17 @@ const InstructorList = () => {
                         className="accordion-header"
                         id="headingcustomicon1One"
                       >
-                        <button
+                        <Link
+                          to="#"
                           className="accordion-button"
-                          type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapsecustomicon1One"
-                          aria-expanded="true"
+                          aria-expanded="false"
                           aria-controls="collapsecustomicon1One"
                         >
-                          Categories <i className="fa-solid fa-chevron-down" />
-                        </button>
+                          Professionals{" "}
+                          <i className="fa-solid fa-chevron-down" />
+                        </Link>
                       </h2>
                       <div
                         id="collapsecustomicon1One"
@@ -69,25 +70,29 @@ const InstructorList = () => {
                           <div>
                             <label className="custom_check">
                               <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Backend (3)
+                              <span className="checkmark" /> Teaching &
+                              Instruction
                             </label>
                           </div>
                           <div>
                             <label className="custom_check">
                               <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> CSS (2)
+                              <span className="checkmark" /> Research &
+                              Knowledge Creation
                             </label>
                           </div>
                           <div>
                             <label className="custom_check">
                               <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Frontend (2)
+                              <span className="checkmark" />
+                              Administration & Leadership
                             </label>
                           </div>
                           <div>
                             <label className="custom_check">
                               <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> General (2)
+                              <span className="checkmark" /> Corporate &
+                              Executive Education
                             </label>
                           </div>
                           <div>
@@ -97,29 +102,11 @@ const InstructorList = () => {
                                 name="select_specialist"
                                 defaultChecked
                               />
-                              <span className="checkmark" /> IT &amp; Software
-                              (2)
+                              <span className="checkmark" />
+                              EdTech & Modern Learning
                             </label>
                           </div>
-                          <div>
-                            <label className="custom_check">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Photography (2)
-                            </label>
-                          </div>
-                          <div>
-                            <label className="custom_check">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Programming
-                              Language (3)
-                            </label>
-                          </div>
-                          <div>
-                            <label className="custom_check mb-0">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Technology (2)
-                            </label>
-                          </div>
+
                           <Link to="#" className="see-more-btn">
                             See More
                           </Link>
@@ -131,17 +118,17 @@ const InstructorList = () => {
                         className="accordion-header"
                         id="headingcustomicon1Two"
                       >
-                        <button
+                        <Link
+                          to="#"
                           className="accordion-button"
-                          type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapsecustomicon1Two"
-                          aria-expanded="true"
+                          aria-expanded="false"
                           aria-controls="collapsecustomicon1Two"
                         >
-                          Instructors
+                          Profile
                           <i className="fa-solid fa-chevron-down" />
-                        </button>
+                        </Link>
                       </h2>
                       <div
                         id="collapsecustomicon1Two"
@@ -189,17 +176,17 @@ const InstructorList = () => {
                         className="accordion-header"
                         id="headingcustomicon1Three"
                       >
-                        <button
+                        <Link
+                          to="#"
                           className="accordion-button"
-                          type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapsecustomicon1Three"
-                          aria-expanded="true"
+                          aria-expanded="false"
                           aria-controls="collapsecustomicon1Three"
                         >
-                          Price
+                          Experience
                           <i className="fa-solid fa-chevron-down" />
-                        </button>
+                        </Link>
                       </h2>
                       <div
                         id="collapsecustomicon1Three"
@@ -208,45 +195,87 @@ const InstructorList = () => {
                         data-bs-parent="#accordioncustomicon1Example"
                       >
                         <div className="accordion-body">
-                          <div>
-                            <label className="custom_check custom_one">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> All (10)
-                            </label>
-                          </div>
-                          <div>
-                            <label className="custom_check custom_one">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Free (5)
-                            </label>
-                          </div>
-                          <div>
-                            <label className="custom_check custom_one mb-0">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Paid (3)
-                            </label>
-                          </div>
+                          {[
+                            "0-5 Years",
+                            "5-9 Years",
+                            "10-14 Years",
+                            "14-20 Years",
+                            "20-24 Years",
+                            "24-29 Years",
+                            "30+ Years",
+                          ].map((range, index) => (
+                            <div key={index}>
+                              <label className="custom_check custom_one mb-3">
+                                <input
+                                  type="checkbox"
+                                  name="experience_range"
+                                  value={range}
+                                />
+                                <span className="checkmark" /> {range}
+                              </label>
+                            </div>
+                          ))}
                         </div>
                       </div>
                     </div>
+
                     <div className="accordion-item">
                       <h2
                         className="accordion-header"
                         id="headingcustomicon1Four"
                       >
-                        <button
+                        <Link
+                          to="#"
                           className="accordion-button"
-                          type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapsecustomicon1Four"
-                          aria-expanded="true"
+                          aria-expanded="false"
                           aria-controls="collapsecustomicon1Four"
                         >
-                          Range
+                          Country
                           <i className="fa-solid fa-chevron-down" />
-                        </button>
+                        </Link>
                       </h2>
                       <div
+                        id="collapsecustomicon1Five"
+                        className="accordion-collapse collapse show"
+                        aria-labelledby="headingcustomicon1Five"
+                        data-bs-parent="#accordioncustomicon1Example"
+                      >
+                        <div className="accordion-body">
+                          <div>
+                            <label className="custom_check custom_one">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              India
+                            </label>
+                          </div>
+                          <div>
+                            <label className="custom_check custom_one">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              Canada
+                            </label>
+                          </div>
+
+                          <div>
+                            <label className="custom_check custom_one">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              USA
+                            </label>
+                          </div>
+
+                          <div>
+                            <label className="custom_check custom_one mb-0">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              Australia
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      {/* <div
                         id="collapsecustomicon1Four"
                         className="accordion-collapse collapse show"
                         aria-labelledby="headingcustomicon1Four"
@@ -263,24 +292,24 @@ const InstructorList = () => {
                             />
                           </div>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="accordion-item">
                       <h2
                         className="accordion-header"
                         id="headingcustomicon1Five"
                       >
-                        <button
+                        <Link
+                          to="#"
                           className="accordion-button"
-                          type="button"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapsecustomicon1Five"
-                          aria-expanded="true"
+                          aria-expanded="false"
                           aria-controls="collapsecustomicon1Five"
                         >
-                          Level
+                          Availabilty
                           <i className="fa-solid fa-chevron-down" />
-                        </button>
+                        </Link>
                       </h2>
                       <div
                         id="collapsecustomicon1Five"
@@ -293,27 +322,72 @@ const InstructorList = () => {
                             <label className="custom_check custom_one">
                               <input type="checkbox" name="select_specialist" />
                               <span className="checkmark" />
-                              Beginner (10)
-                            </label>
-                          </div>
-                          <div>
-                            <label className="custom_check custom_one">
-                              <input type="checkbox" name="select_specialist" />
-                              <span className="checkmark" /> Intermediate (5)
+                              Interact Avatar
                             </label>
                           </div>
                           <div>
                             <label className="custom_check custom_one">
                               <input type="checkbox" name="select_specialist" />
                               <span className="checkmark" />
-                              Advanced (21)
+                              Profile On
                             </label>
                           </div>
+
+                          <div>
+                            <label className="custom_check custom_one">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              Real Me
+                            </label>
+                          </div>
+
                           <div>
                             <label className="custom_check custom_one mb-0">
                               <input type="checkbox" name="select_specialist" />
                               <span className="checkmark" />
-                              Expert (3)
+                              Chat
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="accordion-item">
+                      <h2
+                        className="accordion-header"
+                        id="headingcustomicon1Five"
+                      >
+                        <Link
+                          to="#"
+                          className="accordion-button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapsecustomicon1Five"
+                          aria-expanded="false"
+                          aria-controls="collapsecustomicon1Five"
+                        >
+                          Gender
+                          <i className="fa-solid fa-chevron-down" />
+                        </Link>
+                      </h2>
+                      <div
+                        id="collapsecustomicon1Five"
+                        className="accordion-collapse collapse show"
+                        aria-labelledby="headingcustomicon1Five"
+                        data-bs-parent="#accordioncustomicon1Example"
+                      >
+                        <div className="accordion-body">
+                          <div>
+                            <label className="custom_check custom_one">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              Male
+                            </label>
+                          </div>
+
+                          <div>
+                            <label className="custom_check custom_one">
+                              <input type="checkbox" name="select_specialist" />
+                              <span className="checkmark" />
+                              Female
                             </label>
                           </div>
                         </div>
@@ -321,8 +395,8 @@ const InstructorList = () => {
                     </div>
                   </div>
                 </div>
-              </div> */}
-              <div className="col-lg-12">
+              </div>
+              <div className="col-lg-7">
                 {/* Filter */}
                 <div className="showing-list mb-4">
                   <div className="row align-items-center">
@@ -374,7 +448,13 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-64.jpeg"
+                        src="https://res.cloudinary.com/drj0uehgx/image/upload/v1757936392/0112_dutta_tnd_0_2_vbcsmn.jpg"
+                        // style={{
+                        //   width: "100%",
+                        //   height: "300px",
+                        //   objectFit: "cover",
+                        //   borderRadius: "8px",
+                        // }}
                         alt="img"
                         className="img-fluid"
                       />
@@ -458,7 +538,7 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-64.jpeg"
+                        src="https://webkype.com/storage/profile_images/WbkIAFAe9b82aOgrK0A2X4fytxuxRp4qEpjnBIl6.jpg"
                         alt="img"
                         className="img-fluid"
                       />
@@ -537,7 +617,7 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-64.jpeg"
+                        src="https://webkype.com/storage/1727701196.jpg"
                         alt="img"
                         className="img-fluid"
                       />
@@ -613,7 +693,7 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-64.jpeg"
+                        src="https://res.cloudinary.com/drj0uehgx/image/upload/v1758191704/5397-0520_1_bcfrsx.jpg"
                         alt="img"
                         className="img-fluid"
                       />
@@ -692,7 +772,7 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-64.jpeg"
+                        src="https://webkype.com/storage/1727701208.jpg"
                         alt="img"
                         className="img-fluid"
                       />
@@ -769,7 +849,7 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-64.jpeg"
+                        src="https://webkype.com/storage/1727701450.JPG"
                         alt="img"
                         className="img-fluid"
                       />
@@ -851,7 +931,7 @@ const InstructorList = () => {
                   <div className="instructor-img">
                     <Link to={route.instructorDetails}>
                       <ImageWithBasePath
-                        src="assets/img/user/user-64.jpeg"
+                        src="https://webkype.com/storage/profile_images/tDZn8ORTdYlqy8vPsTmj0JWiLmpCWLQ1XY9QDCN8.jpg"
                         alt="img"
                         className="img-fluid"
                       />
@@ -962,6 +1042,38 @@ const InstructorList = () => {
                   </div>
                 </div>
                 {/* /pagination */}
+              </div>
+              <div className="col-lg-2">
+                {/* Filter */}
+                <div className="showing-list mb-4">
+                  <div className="row align-items-center">
+                    <div className="col-lg-4">
+                      <div className="show-result text-center text-lg-start">
+                        {/* <h6 className="fw-medium">Showing 1-9 of 50 results</h6> */}
+                      </div>
+                    </div>
+                    <div className="col-lg-8"></div>
+                  </div>
+                </div>
+                {/* /Filter */}
+                <div className=" border-0  rounded-1 overflow-hidden">
+                  <div className=" p-0">
+                    <a
+                      href="https://your-ad-link.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="https://imgs.search.brave.com/atJlFLu9G1GiyodGfNkKsxD6O0ZCyqykd6zvfVSeKhQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/bWFya2V0aW5nLWJ1/c2luZXNzLWZseWVy/LXNxdWFyZV8yMy0y/MTQ4NzczNTEzLmpw/Zw"
+                        alt="Advertisement"
+                        className="img-fluid w-100 h-100"
+                      />
+                    </a>
+                  </div>
+                  <div className="card-footer text-center p-2 bg-light">
+                    <small className="text-muted">Sponsored</small>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
