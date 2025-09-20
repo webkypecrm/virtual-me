@@ -5,7 +5,7 @@ import { all_routes } from "../../router/all_routes";
 const RegisterstepTwoHalf: React.FC = () => {
   const [formData, setFormData] = useState({
     role: "professional",
-    selectedFeatures: [] as string[], // ✅ multiple selection
+    selectedFeatures: [] as string[],
   });
 
   const route = all_routes;
@@ -35,22 +35,27 @@ const RegisterstepTwoHalf: React.FC = () => {
       {
         title: "Teacher / Educator",
         desc: "For school or college teachers, professors, and subject matter educators.",
+        icon: "fas fa-chalkboard-teacher",
       },
       {
         title: "Trainer / Instructor",
         desc: "For those providing technical, vocational, or skill-based training.",
+        icon: "fas fa-dumbbell",
       },
       {
         title: "Tutor (1-on-1 or Group)",
         desc: "For private tutors offering personalized learning support.",
+        icon: "fas fa-user-graduate",
       },
       {
         title: "Coach / Mentor",
         desc: "For personal development, career coaching, or leadership mentoring.",
+        icon: "fas fa-user-tie",
       },
       {
         title: "Corporate Trainer",
         desc: "For professionals conducting workshops or employee training in organizations.",
+        icon: "fas fa-briefcase",
       },
     ],
   };
@@ -60,9 +65,9 @@ const RegisterstepTwoHalf: React.FC = () => {
       <div className="login-content register-bg-gredient d-flex align-items-center min-vh-100">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-md-8 col-lg-6">
+            <div className="col-md-8 col-lg-4">
               <div
-                className="login-wrapper w-100 rounded-4 p-4"
+                className="login-wrapper w-100 rounded-4 p-2"
                 style={{ background: "#fff" }}
               >
                 <div className="text-center mb-1">
@@ -73,7 +78,7 @@ const RegisterstepTwoHalf: React.FC = () => {
                   />
                 </div>
 
-                <h3 className="text-center mb-1">Choose Your Profession(s)</h3>
+                <h5 className="text-center mb-1">Choose Your Profession(s)</h5>
 
                 <form onSubmit={handleSubmit}>
                   <div className="mt-2">
@@ -85,7 +90,7 @@ const RegisterstepTwoHalf: React.FC = () => {
                       return (
                         <div
                           key={index}
-                          className={`faq-card rounded-4 mb-3 p-3 ${
+                          className={`faq-card rounded-4 mb-2 p-1 d-flex align-items-center gap-3 ${
                             isSelected ? "border border-primary" : "border"
                           }`}
                           style={{
@@ -94,9 +99,21 @@ const RegisterstepTwoHalf: React.FC = () => {
                           }}
                           onClick={() => handleFeatureToggle(item.title)}
                         >
-                          <strong>{item.title}</strong>
-                          {/* Optional description */}
-                          {/* <p className="mb-0 text-muted" style={{ fontSize: "14px" }}>{item.desc}</p> */}
+                          {/* Icon on the left */}
+                          <div
+                            style={{
+                              fontSize: "24px",
+                              color: isSelected ? "#0d6efd" : "#6c757d",
+                            }}
+                          >
+                            <i className={item.icon}></i>
+                          </div>
+
+                          {/* Title and optionally description */}
+                          <div>
+                            <strong>{item.title}</strong>
+                            {/* <p className="mb-0 text-muted" style={{ fontSize: "14px" }}>{item.desc}</p> */}
+                          </div>
                         </div>
                       );
                     })}
