@@ -21,7 +21,7 @@ const Banner = () => {
   return (
     <section className="banner-section-four2   position-relative">
       {/* Video on right side, smaller & lower */}
-      <div className="video-wrapper">
+      <div className="video-wrapper h-100">
         <video
           ref={videoRef}
           className="video-background"

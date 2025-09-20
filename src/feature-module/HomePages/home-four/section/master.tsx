@@ -12,7 +12,9 @@ const Master = () => {
                 <span className="fw-medium text-secondary fs-18 fw-bold mb-2 d-inline-block">
                   What’s New
                 </span>
-                <h2>Master the skills to drive your career</h2>
+                <h2>
+                  VirtualxAI — The Simplest Way to Build, Teach & Earn Online
+                </h2>
                 <p>
                   Get certified, master modern tech skills, and level up your
                   career — whether you’re starting out or a seasoned pro. 95% of
@@ -31,33 +33,33 @@ const Master = () => {
                     className="col-xl-5 col-lg-6 col-md-12 order-lg-0 order-md-0 order-0"
                     data-aos="fade-up"
                   >
-                    <h3>Award Winning Course Management</h3>
+                    <h4>1 Minute to Build a Professional Learning Community</h4>
                     <p>
-                      An award-winning course management system (CMS) or program
-                      is typically recognized for its exceptional quality,
-                      innovation, and effectiveness in helping both instructors
-                      and students succeed.
+                      Launch your own AI-powered classroom, coaching hub, or
+                      knowledge network in just minutes. Our avatars and
+                      engagement tools spark meaningful interactions, create
+                      personalised learning journeys, and build the kind of
+                      community that{" "}
+                      <strong>keeps learners coming back for more.</strong>
                     </p>
                     <ul className="list-unstyled heading-color mb-4">
                       <li className="d-flex mb-3">
                         <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        Interactive Tools for Engagement
+                        AI avatars that deliver lessons, feedback & support 24/7
                       </li>
                       <li className="d-flex mb-3">
                         <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        Customizable Course Creation
+                        Discussion boards, live chat & peer-to-peer
+                        collaboration
                       </li>
                       <li className="d-flex mb-3 aos-init aos-animate">
                         <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        Robust Analytics and Reporting
+                        Multilingual support for global audiences
                       </li>
                       <li className="d-flex mb-3 aos-init aos-animate">
                         <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        Collaborative and Peer to Peer Learning
-                      </li>
-                      <li className="d-flex mb-3 aos-init aos-animate">
-                        <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        The Most World Class Instructors
+                        Gamified learning & engagement features to boost
+                        retention
                       </li>
                     </ul>
                   </div>
@@ -115,33 +117,34 @@ const Master = () => {
                     className="col-xl-5 col-lg-5 col-md-12 order-lg-3 order-md-2 order-2"
                     data-aos="fade-up"
                   >
-                    <h3>Learn anything from anywhere anytime</h3>
+                    <h4>1 Minute to Monetise Your Knowledge</h4>
                     <p>
-                      In today’s fast-paced, digital world, the ability to learn
-                      anything, from anywhere, and at any time is more
-                      accessible than ever. Whether you are looking to expand
-                      your knowledge, gain new skills.
+                      Turn your expertise into income with ease. Sell courses,
+                      run memberships, or offer coaching — while our{" "}
+                      <strong>
+                        AI-powered marketing, enrolment, and global payments
+                        system
+                      </strong>{" "}
+                      brings learners to your doorstep.{" "}
+                      <strong>You teach, we handle the rest.</strong>
                     </p>
                     <ul className="list-unstyled heading-color mb-4">
                       <li className="d-flex mb-3">
                         <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        Access to a World of Knowledge
+                        Sell courses, memberships, and exclusive coaching
+                        programs
                       </li>
                       <li className="d-flex mb-3">
                         <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        Diverse Learning Formats
+                        Global payment integration with instant payouts
                       </li>
                       <li className="d-flex mb-3 aos-init">
                         <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        Learn at Your Own Pace
+                        AI-powered ad creation & automated email marketing
                       </li>
                       <li className="d-flex mb-3 aos-init">
                         <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        Affordable and Flexible Pricing
-                      </li>
-                      <li className="d-flex mb-3 aos-init">
-                        <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        The Most World Class Instructors
+                        Analytics-driven pricing & revenue optimisation tools
                       </li>
                     </ul>
                   </div>
@@ -157,33 +160,30 @@ const Master = () => {
                     className="col-xl-5 col-lg-7 col-md-12 order-lg-4 order-md-4 order-4"
                     data-aos="fade-up"
                   >
-                    <h3>Certification for solid development of your Career</h3>
+                    <h4>1 Minute to Get Support Anytime</h4>
                     <p>
-                      Certifications are a powerful way to enhance your skills,
-                      build credibility, and boost your career growth. In
-                      today’s competitive job market, a professional
-                      certification
+                      With AI + human support, you’re never building alone. From
+                      onboarding to course setup and community growth, we’ve got
+                      you covered. Get answers instantly through chat or calls —
+                      whenever and wherever you need us
                     </p>
                     <ul className="list-unstyled heading-color mb-4">
                       <li className="d-flex mb-3">
                         <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        Demonstrates Expertise
+                        24/7 AI chatbot support for instant resolutions
                       </li>
                       <li className="d-flex mb-3">
                         <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        Boosts Your Credibility
+                        Dedicated account managers for personalised guidance
                       </li>
                       <li className="d-flex mb-3 aos-init">
                         <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        Improves Job Security
+                        Step-by-step onboarding & course setup assistance
                       </li>
                       <li className="d-flex mb-3 aos-init">
                         <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        Facilitates Career Advancement
-                      </li>
-                      <li className="d-flex mb-3 aos-init">
-                        <i className="isax isax-tick-circle5 text-success fs-24 me-2" />
-                        Fosters Personal Growth
+                        Community of fellow creators & educators for
+                        collaboration
                       </li>
                     </ul>
                   </div>

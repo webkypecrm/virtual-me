@@ -77,21 +77,29 @@ const Leadingcompanies = () => {
                       <div className="review-content">
                         <h3>Helps us to improve our productivity</h3>
                         <p>
-                          High-definition video is video of higher resolution
-                          and quality than standard-definition. While there is
-                          no standardized meaning for high-definition, generally
-                          any video.High-definition video is video of higher
-                          resolution and quality than standard-definition. While
-                          there is no standardized meaning for high-definition,
-                          generally any video.High-definition video is video of
-                          higher resolution and quality than
-                          standard-definition.
+                          Education has always been the foundation of growth,
+                          yet there remains a significant gap between{" "}
+                          <strong>
+                            what is taught and how it is experienced.
+                          </strong>{" "}
+                          Learners often struggle to access personalized,
+                          engaging, and affordable education. With VirtualXai,
+                          we are bridging this gap by creating a marketplace of
+                          knowledge — where experts, educators, and
+                          professionals can easily share their wisdom, and
+                          learners can access it anytime, anywhere. Our vision
+                          is{" "}
+                          <strong>
+                            to transform education into an interactive,
+                            accessible, and sustainable ecosystem
+                          </strong>{" "}
+                          for the future.
                         </p>
                       </div>
                       <div className="review-top">
                         <div className="review-info">
-                          <h5 data-aos="fade-up">William George</h5>
-                          <h6 data-aos="fade-up">CEO &amp; Chairman</h6>
+                          <h5 data-aos="fade-up">Soumitra Dutta</h5>
+                          <h6 data-aos="fade-up"> Founder </h6>
                         </div>
                       </div>
                     </div>
@@ -101,19 +109,23 @@ const Leadingcompanies = () => {
                       <div className="review-content">
                         <h3>Helps us to improve our productivity</h3>
                         <p>
-                          High-definition video is video of higher resolution
-                          and quality than standard-definition. While there is
-                          no standardized meaning for high-definition, generally
-                          any video.High-definition video is video of higher
-                          resolution and quality than standard-definition. While
-                          there is no standardized meaning for high-definition,
-                          generally any video.
+                          The future of learning lies in AI-driven education.
+                          Traditional systems cannot scale to meet the diverse
+                          needs of learners across the world. That’s where
+                          VirtualXai steps in — combining the power of AI with
+                          the human touch of hyper-realistic avatars. We empower
+                          educators to build courses effortlessly, create
+                          engaging content, and connect with learners globally.
+                          VirtualXai fills the critical gap by making knowledge
+                          delivery smarter, interactive, and monetizable, while
+                          ensuring learners receive a truly personalized
+                          experience.
                         </p>
                       </div>
                       <div className="review-top">
                         <div className="review-info">
-                          <h5 data-aos="fade-up">Julian Adrose</h5>
-                          <h6 data-aos="fade-up">Manager</h6>
+                          <h5 data-aos="fade-up">Aditya Malik</h5>
+                          <h6 data-aos="fade-up">Co-Founder</h6>
                         </div>
                       </div>
                     </div>

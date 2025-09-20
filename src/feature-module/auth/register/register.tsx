@@ -30,6 +30,7 @@ const Register: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+    console.log("Selected Gender:", gender);
     navigate(route.registerStepTwoHalf);
   };
 
@@ -143,11 +144,8 @@ const Register: React.FC = () => {
 
   return (
     <>
-      {/* Main Wrapper */}
       <div className="main-wrapper">
-        {/* Make login-content full viewport height and center everything */}
         <div className="login-content d-flex register-bg-gredient align-items-center justify-content-center min-vh-100">
-          {/* single centered column (no left banner) */}
           <div
             className="login-wrapper w-100 rounded-4"
             style={{ maxWidth: 540, padding: "1rem", background: "white" }}
@@ -170,6 +168,7 @@ const Register: React.FC = () => {
                 <h1 className="fs-22 text-center topic">Sign up</h1>
 
                 <form onSubmit={handleSubmit} className="mb-1 mt-1 pb-0">
+                  {/* Name */}
                   <div className="mb-1 position-relative">
                     <label className="form-label">
                       Name<span className="text-danger ms-1">*</span>
@@ -184,6 +183,8 @@ const Register: React.FC = () => {
                       </span>
                     </div>
                   </div>
+
+                  {/* Mobile */}
                   <div className="mb-1 position-relative">
                     <label className="form-label">
                       Mobile<span className="text-danger ms-1">*</span>
@@ -193,56 +194,60 @@ const Register: React.FC = () => {
                         type="text"
                         className="form-control form-control-sm"
                       />
-                      <span>
-                        {/* <i className="isax isax-user input-icon text-gray-7 fs-14" /> */}
-                      </span>
                     </div>
                   </div>
 
-                  <div className="mb-3 mt-3 d-flex align-items-center">
-                    <label
-                      className="form-label me-3 mb-0"
-                      style={{ minWidth: "70px" }}
-                    >
+                  {/* Gender */}
+                  <div className="mb-3 mt-3">
+                    {/* <label className="form-label me-3 mb-1">
                       Gender <span className="text-danger">*</span>
-                    </label>
-                    <div className="d-flex gap-3">
-                      <label className="form-check-label d-flex align-items-center">
-                        <input
-                          type="radio"
-                          name="gender"
-                          value="male"
-                          checked={gender === "male"}
-                          onChange={(e) => setGender(e.target.value)}
-                          className="form-check-input me-1"
-                        />
-                        Male
-                      </label>
-                      <label className="form-check-label d-flex align-items-center">
-                        <input
-                          type="radio"
-                          name="gender"
-                          value="female"
-                          checked={gender === "female"}
-                          onChange={(e) => setGender(e.target.value)}
-                          className="form-check-input me-1"
-                        />
-                        Female
-                      </label>
-                      <label className="form-check-label d-flex align-items-center">
-                        <input
-                          type="radio"
-                          name="gender"
-                          value="other"
-                          checked={gender === "other"}
-                          onChange={(e) => setGender(e.target.value)}
-                          className="form-check-input me-1"
-                        />
-                        Other
-                      </label>
+                    </label> */}
+                    <div className="d-flex gap-2">
+                      {[
+                        {
+                          title: "Male",
+                          icon: "fas fa-mars",
+                          color: "#0d6efd",
+                        },
+                        {
+                          title: "Female",
+                          icon: "fas fa-venus",
+                          color: "#e83e8c",
+                        },
+                        {
+                          title: "Other",
+                          icon: "fas fa-genderless",
+                          color: "#6c757d",
+                        },
+                      ].map((item) => {
+                        const isSelected = gender === item.title;
+                        return (
+                          <div
+                            key={item.title}
+                            onClick={() => setGender(item.title)}
+                            className={`rounded-4 d-flex align-items-center gap-1 px-2 py-1 border ${
+                              isSelected ? "border-primary" : "border-secondary"
+                            }`}
+                            style={{
+                              cursor: "pointer",
+                              fontSize: "14px",
+                              background: isSelected ? "#e7f1ff" : "#fff",
+                            }}
+                          >
+                            <i
+                              className={item.icon}
+                              style={{
+                                color: isSelected ? item.color : "#342777",
+                              }}
+                            ></i>
+                            <span>{item.title}</span>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
 
+                  {/* Password */}
                   <div className="mb-3 position-relative">
                     <label className="form-label">
                       New Password <span className="text-danger"> *</span>
@@ -253,7 +258,6 @@ const Register: React.FC = () => {
                         type={eye ? "password" : "text"}
                         onChange={handlePasswordChange}
                       />
-                      {/* fixed stray-quote and toggling classes */}
                       <span
                         onClick={onEyeClick}
                         className={`toggle-passwords text-gray-7 fs-14 isax ${
@@ -292,6 +296,7 @@ const Register: React.FC = () => {
                     <div id="passwordInfo">{messages()}</div>
                   </div>
 
+                  {/* Confirm Password */}
                   <div className="mb-1 position-relative">
                     <label className="form-label">
                       Confirm Password <span className="text-danger"> *</span>
@@ -319,6 +324,7 @@ const Register: React.FC = () => {
                     </div>
                   </div>
 
+                  {/* Terms */}
                   <div className="d-flex align-items-center justify-content-between mb-4">
                     <div className="remember-me d-flex align-items-center">
                       <input
@@ -353,6 +359,7 @@ const Register: React.FC = () => {
                   </div>
                 </form>
 
+                {/* Social Login */}
                 <div className="d-flex align-items-center justify-content-center or fs-14 mb-3">
                   Or
                 </div>
@@ -388,7 +395,6 @@ const Register: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* /Main Wrapper */}
     </>
   );
 };

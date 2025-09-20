@@ -4,14 +4,17 @@ import ImageWithBasePath from "../../../core/common/imageWithBasePath";
 
 const ProfileCard = () => {
   return (
-    <div className="instructor-profile">
-      <div className="instructor-profile-bg">
+    <div
+      className="instructor-profile register-bg-gredient"
+      // style={{ border: "2px solid black" }}
+    >
+      {/* <div className="instructor-profile-bg">
         <ImageWithBasePath
           src="assets/img/bg/card-bg-01.png"
           className="instructor-profile-bg-1"
           alt=""
         />
-      </div>
+      </div> */}
       <div className="row align-items-center row-gap-3">
         <div className="col-md-6">
           <div className="d-flex align-items-center">
@@ -22,16 +25,16 @@ const ProfileCard = () => {
               </span>
             </span>
             <div>
-              <h5 className="mb-1 text-white d-inline-flex align-items-center">
+              <h5 className="mb-1 text-black d-inline-flex align-items-center">
                 Soumitra Dutta
                 <Link
                   to={all_routes.instructorProfile}
-                  className="link-light fs-16 ms-2"
+                  className="link-black fs-16 ms-2"
                 >
                   <i className="isax isax-edit-2" />
                 </Link>
               </h5>
-              <p className="text-light">Professor</p>
+              <p className="text-black">Professor</p>
             </div>
           </div>
         </div>
@@ -45,9 +48,15 @@ const ProfileCard = () => {
             </Link>
             <Link
               to={all_routes.instructorAvatar}
-              className="btn btn-secondary rounded-pill"
+              className="btn btn-primary rounded-pill"
             >
               Create My Avatar +
+            </Link>
+            <Link
+              to={all_routes.instructorAvatar}
+              className="btn btn-primary rounded-pill"
+            >
+              Create My Business +
             </Link>
           </div>
         </div>

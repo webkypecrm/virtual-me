@@ -30,12 +30,13 @@ const Knowledge = () => {
                         </span>
                         <div className="joing-content">
                           <h5 className="title">
-                            Project Management Professional
+                            Create Your Professional Profile
                           </h5>
                           <p>
-                            A globally recognized certification for project
-                            managers, PMP validates your ability to lead
-                            projects efficiently from start to finish.{" "}
+                            Tell us who you are, and our AI will craft a
+                            polished professional profile that attracts,
+                            impresses, and engages learners, followers, and
+                            users.{" "}
                           </p>
                         </div>
                       </div>
@@ -50,11 +51,14 @@ const Knowledge = () => {
                           />
                         </span>
                         <div className="joing-content">
-                          <h5 className="title">Fosters Personal Growth</h5>
+                          <h5 className="title">
+                            Build Courses with a Simple Prompt
+                          </h5>
                           <p>
-                            Pursuing certifications pushes you to learn new
-                            things and grow professionally, increasing your
-                            confidence and job satisfaction.
+                            Share your skills in a single line — VirtualXai’s AI
+                            generates complete, detailed courses for you. Sell
+                            at your own price and let your hyper-realistic AI
+                            avatar deliver them.
                           </p>
                         </div>
                       </div>
@@ -69,13 +73,12 @@ const Knowledge = () => {
                           />
                         </span>
                         <div className="joing-content aos">
-                          <h5 className="title">
-                            Build skills your way, from labs to courses
-                          </h5>
+                          <h5 className="title">Your Content, Your Earnings</h5>
                           <p>
-                            Courses come in various formats, including video
-                            tutorials, interactive assignments, quizzes, reading
-                            materials, and hands-on projects
+                            Easily turn your knowledge into income. AI
+                            auto-creates videos, highlights, and lectures to
+                            engage your audience, and you earn on every
+                            subscription and view.
                           </p>
                         </div>
                       </div>
@@ -90,13 +93,12 @@ const Knowledge = () => {
                           />
                         </span>
                         <div className="joing-content aos">
-                          <h5 className="title">
-                            Get certified with 100+ certification courses
-                          </h5>
+                          <h5 className="title">Interactive AI Avatar Q&A</h5>
                           <p>
-                            Employers often value certifications when it comes
-                            to promotions and internal career advancement
-                            opportunities.
+                            Let people interact directly with your lifelike
+                            avatar. Host unlimited, multilingual Q&A sessions
+                            that are professional, fact-based, and always
+                            available.
                           </p>
                         </div>
                       </div>

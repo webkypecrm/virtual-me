@@ -18,17 +18,17 @@ const Aboutsection = () => {
                 <span className="fw-medium text-secondary fs-18 fw-bold mb-2 d-inline-block">
                   Learn with DreamLMS
                 </span>
-                <h2 className="mb-0">
-                  Get Trained By Experts &amp; Professionals around the World
-                </h2>
+                <h3 className="mb-0">
+                  Turn Your Knowledge into Power with AI Avatars - Fast. Simple.
+                  Profitable.
+                </h3>
               </div>
               <div className="about-content">
                 <p>
-                  Mentor is essential for personal and professional growth. This
-                  blog discusses the key benefits of professional mentoring,
-                  including skill development, networking, and career
-                  advancement, while also offering strategies for finding the
-                  right mentor.
+                  VirtualxAI is the world’s first AI Avatar Marketplace designed
+                  to transform learning into earning. Whether you’re an
+                  educator, trainer, or enterprise, we help you teach smarter,
+                  scale faster, and profit bigger.
                 </p>
                 <div className="about-img">
                   <div className="row row-gap-4">
@@ -70,27 +70,6 @@ const Aboutsection = () => {
                     className="col-lg-6 col-md-6 col-sm-12 col-12"
                     data-aos="fade-down"
                   >
-                    <div className="about-image border count-one d-flex align-items-center justify-content-center flex-fill project-details">
-                      <div className="about-count">
-                        <div className="course-img">
-                          <ImageWithBasePath
-                            src="assets/img/icons/count-one.svg"
-                            alt="Img"
-                          />
-                        </div>
-                        <div className="count-content-three course-count ms-0">
-                          <h4>
-                            <span className="counterUp">10</span>K
-                          </h4>
-                          <p className="mb-0">Online Courses</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="col-lg-6 col-md-6 col-sm-12 col-12"
-                    data-aos="fade-down"
-                  >
                     <div className="about-image border count-two d-flex align-items-center justify-content-center flex-fill project-details">
                       <div className="about-count">
                         <div className="course-img">
@@ -103,11 +82,12 @@ const Aboutsection = () => {
                           <h4>
                             <span className="counterUp">215</span>+
                           </h4>
-                          <p className="mb-0">Expert Tutors</p>
+                          <p className="mb-0">Professionals</p>
                         </div>
                       </div>
                     </div>
                   </div>
+
                   <div
                     className="col-lg-6 col-md-6 col-sm-12 col-12"
                     data-aos="fade-bottm"
@@ -123,9 +103,9 @@ const Aboutsection = () => {
                         </div>
                         <div className="count-content-three course-count ms-0">
                           <h4>
-                            <span className="counterUp">10</span>K
+                            <span className="counterUp">25</span>K
                           </h4>
-                          <p className="mb-0">Ceritified Courses</p>
+                          <p className="mb-0">Online Active Users</p>
                         </div>
                       </div>
                     </div>
@@ -148,6 +128,28 @@ const Aboutsection = () => {
                             <span className="counterUp">10</span>K
                           </h4>
                           <p className="mb-0">Online Students</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    className="col-lg-6 col-md-6 col-sm-12 col-12"
+                    data-aos="fade-down"
+                  >
+                    <div className="about-image border count-one d-flex align-items-center justify-content-center flex-fill project-details">
+                      <div className="about-count">
+                        <div className="course-img">
+                          <ImageWithBasePath
+                            src="assets/img/icons/count-one.svg"
+                            alt="Img"
+                          />
+                        </div>
+                        <div className="count-content-three course-count ms-0">
+                          <h4>
+                            <span className="counterUp">50</span>+
+                          </h4>
+                          <p className="mb-0">Interactive Avatars</p>
                         </div>
                       </div>
                     </div>
