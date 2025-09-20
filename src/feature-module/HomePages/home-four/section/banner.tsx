@@ -25,13 +25,13 @@ const Banner = () => {
       {/* Text Content */}
       <div className="container ">
         <div className="row ">
-          <div className="col-lg-6">
+          <div className="col-lg-5">
             <div className="text-content">
-              <h1 className="banner-title">
+              <h3 className="banner-title" style={{ fontSize: "24px" }}>
                 An Interactive AI Avatars’ Marketplace for education sector is
                 designed to transform education and professional development
                 into revenue-generating ecosystems
-              </h1>
+              </h3>
               <p className="banner-description">
                 Fast, simple, and incredibly powerful.
                 <br />
@@ -62,7 +62,7 @@ const Banner = () => {
           </form> */}
             </div>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-7 h-100">
             <div className="video-wrapper">
               <video
                 ref={videoRef}
