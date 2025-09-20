@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { all_routes } from "../../router/all_routes";
 
 const RegisterstepTwoFourth: React.FC = () => {
   const [formData, setFormData] = useState({
     role: "professional",
-    selectedFeatures: [] as string[], // ✅ Changed from single string to array
+    selectedFeatures: [] as string[],
   });
 
   const route = all_routes;
@@ -81,7 +81,7 @@ const RegisterstepTwoFourth: React.FC = () => {
                 <h5 className="text-center mb-1">Choose Your Profile(s)</h5>
 
                 <form onSubmit={handleSubmit}>
-                  <div className="mt-2">
+                  <div className="mt-2 p-4">
                     {featuresMap.professional.map((item, index) => {
                       const isSelected = formData.selectedFeatures.includes(
                         item.title
@@ -90,7 +90,7 @@ const RegisterstepTwoFourth: React.FC = () => {
                       return (
                         <div
                           key={index}
-                          className={`faq-card rounded-4 mb-2 p-1 d-flex align-items-center gap-3 ${
+                          className={`faq-card rounded-4 mb-2 p-2 d-flex align-items-center gap-3 ${
                             isSelected ? "border border-primary" : "border"
                           }`}
                           style={{
@@ -103,15 +103,22 @@ const RegisterstepTwoFourth: React.FC = () => {
                           <div
                             style={{
                               fontSize: "22px",
+                              marginLeft: "13px",
                               color: isSelected ? "#0d6efd" : "#6c757d",
                             }}
                           >
                             <i className={item.icon}></i>
                           </div>
 
-                          {/* Title and optional description */}
+                          {/* Title and optionally description */}
                           <div>
-                            <strong>{item.title}</strong>
+                            <Link
+                              to={`#`}
+                              className="fw-16"
+                              style={{ fontWeight: "500", marginLeft: "10px" }}
+                            >
+                              {item.title}
+                            </Link>
                             {/* <p className="mb-0 text-muted" style={{ fontSize: "14px" }}>{item.desc}</p> */}
                           </div>
                         </div>
@@ -119,7 +126,7 @@ const RegisterstepTwoFourth: React.FC = () => {
                     })}
                   </div>
 
-                  <div className="d-grid mt-4">
+                  <div className="d-grid m-4">
                     <button type="submit" className="btn btn-primary btn-md">
                       Save & Continue
                     </button>

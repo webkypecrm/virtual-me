@@ -98,6 +98,27 @@ const InstructorDashboard = () => {
       },
     },
   });
+  const [monthlyEarningsOptions] = useState<any>({
+    chart: {
+      type: "pie",
+      height: 290,
+    },
+    labels: ["Course Revenue", "Subscription", "Bonus"],
+    legend: {
+      position: "bottom",
+    },
+    tooltip: {
+      y: {
+        formatter: (val: number) => `$${val}`,
+      },
+    },
+    fill: {
+      colors: ["#6A5ACD", "#00BFFF", "#FF8C00"],
+    },
+  });
+
+  const [monthlyEarningsSeries] = useState<number[]>([3500, 1200, 800]);
+
   return (
     <>
       {/* <Breadcrumb title="Dashboard" /> */}
@@ -240,6 +261,28 @@ const InstructorDashboard = () => {
                   />
                 </div>
               </div>
+              <div className="card">
+                <div className="card-body">
+                  <div className="d-flex align-items-center flex-wrap gap-3 justify-content-between border-bottom mb-2 pb-3">
+                    <h5 className="fw-bold">
+                      Earnings Breakdown for Selected Month
+                    </h5>
+                    <div className="input-icon position-relative input-range-picker">
+                      <span className="input-icon-addon">
+                        <i className="isax isax-calendar" />
+                      </span>
+                      <PredefinedDateRanges />
+                    </div>
+                  </div>
+                  <ReactApexChart
+                    options={monthlyEarningsOptions}
+                    series={monthlyEarningsSeries}
+                    type="pie"
+                    height={290}
+                  />
+                </div>
+              </div>
+
               <h5 className="mb-3 fw-bold">Recently Created Courses</h5>
               <div className="table-responsive custom-table">
                 <table className="table">

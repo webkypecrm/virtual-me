@@ -342,7 +342,7 @@ const Registerstep3: React.FC = () => {
         size="lg"
         centered
       >
-        <Modal.Header closeButton>
+        <Modal.Header className="register-bg-gredient" closeButton>
           <Modal.Title>Compare Plans & Benefits</Modal.Title>
         </Modal.Header>
         <Modal.Body>
