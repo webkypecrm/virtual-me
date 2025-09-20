@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 // import { useNavigate } from "react-router-dom";
 // import { all_routes } from "../../../router/all_routes";
 import "./Banner.css";
-import bannerVideo from "../../../../../public/assets/video/banner/VirtualXai_ Your Digital Legacy.mp4";
+// import bannerVideo from "../../../../../public/assets/video/banner/VirtualXai_ Your Digital Legacy.mp4";
 
 const Banner = () => {
   // const route = all_routes;
