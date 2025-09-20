@@ -1,0 +1,64 @@
+.banner-section-four {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+.video-wrapper {
+  position: relative !important;
+
+  overflow: hidden;
+  z-index: -2;
+  /* border: 2px solid black; */
+}
+
+.video-background {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* Text Styling */
+.text-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.banner-title {
+  color: #392c7d;
+  font-weight: 400;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.banner-description {
+  color: #392c7d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.banner-input {
+  color: #2c3e50;
+}
+
+.banner-input::placeholder {
+  color: #2c3e50;
+  opacity: 0.7;
+}
+
+/* Mute Button */
+.mute-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 3;
+}
