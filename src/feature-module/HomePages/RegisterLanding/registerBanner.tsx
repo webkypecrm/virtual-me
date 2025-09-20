@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 // import { useNavigate } from "react-router-dom";
 // import { all_routes } from "../../../router/all_routes";
 import "./RegisterBanner.css";
-import bannerVideo from "../../../../public/assets/video/banner/VirtualXai_ Your Digital Legacy.mp4";
 
 const RegisterBanner = () => {
   // const route = all_routes;
@@ -32,7 +31,7 @@ const RegisterBanner = () => {
           preload="auto"
         >
           <source
-            src={bannerVideo}
+            // src={bannerVideo}
             // src="https://dynamic.heygen.ai/www/Home%20-%20Page/Scene-1%20(3)%20(1).webm/ik-video.mp4?updatedAt=1742260077867#t=0.01"
             type="video/mp4"
           />

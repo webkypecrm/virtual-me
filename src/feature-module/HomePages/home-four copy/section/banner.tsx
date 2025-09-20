@@ -32,8 +32,8 @@ const Banner = () => {
           preload="auto"
         >
           <source
-            src={bannerVideo}
-            // src="https://dynamic.heygen.ai/www/Home%20-%20Page/Scene-1%20(3)%20(1).webm/ik-video.mp4?updatedAt=1742260077867#t=0.01"
+            // src={bannerVideo}
+            src="https://res.cloudinary.com/drj0uehgx/video/upload/v1758343058/VirtualXai__Your_Digital_Legacy_bpvs50.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
