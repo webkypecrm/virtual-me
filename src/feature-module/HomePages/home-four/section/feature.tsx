@@ -72,7 +72,9 @@ const Feature = () => {
                     </div>
                     <h3 className="title">
                       <Link to={route.courseDetails}>
-                        The Complete Web Developer PHP framework Course 2.0
+                        Understanding Global Indexing: Master the Core
+                        Principles, Applications, and Future of Global Financial
+                        Benchmarks
                       </Link>
                     </h3>
                     <div className="user-info">
@@ -143,7 +145,9 @@ const Feature = () => {
                     </div>
                     <h3 className="title">
                       <Link to={route.courseDetails}>
-                        Building Your Personal Brand: Tips for Career Success
+                        How to Build a Coaching Business: Create, Scale, and
+                        Monetise Your Expertise into a Thriving Coaching
+                        Practice
                       </Link>
                     </h3>
                     <div className="user-info">
@@ -203,7 +207,8 @@ const Feature = () => {
                     </div>
                     <h3 className="title">
                       <Link to={route.courseDetails}>
-                        Strength Training 101: Building a Solid Foundation
+                        Basics of Generative AI: Unlock the Power of AI Tools,
+                        Create Real-World Projects, and Start Your New Career
                       </Link>
                     </h3>
                     <div className="user-info">

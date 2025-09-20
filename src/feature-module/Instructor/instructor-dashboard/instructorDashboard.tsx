@@ -113,7 +113,7 @@ const InstructorDashboard = () => {
       },
     },
     fill: {
-      colors: ["#6A5ACD", "#00BFFF", "#FF8C00"],
+      colors: ["#6A5ACD", "#00BFFF", "#2ed81bff"],
     },
   });
 
@@ -132,7 +132,7 @@ const InstructorDashboard = () => {
             <div className="col-lg-9">
               <div className="row">
                 <div className="col-md-6 col-xl-4">
-                  <div className="card">
+                  <div className="card register-bg-gredient">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <span className="icon-box bg-primary-transparent me-2 me-xxl-3 flex-shrink-0">
@@ -150,7 +150,7 @@ const InstructorDashboard = () => {
                   </div>
                 </div>
                 <div className="col-md-6 col-xl-4">
-                  <div className="card">
+                  <div className="card register-bg-gredient">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <span className="icon-box bg-secondary-transparent me-2 me-xxl-3 flex-shrink-0">
@@ -160,7 +160,9 @@ const InstructorDashboard = () => {
                           />
                         </span>
                         <div>
-                          <span className="d-block">Active Courses</span>
+                          <span className="d-block text-black">
+                            Active Courses
+                          </span>
                           <h4 className="fs-24 mt-1">08</h4>
                         </div>
                       </div>
@@ -168,7 +170,7 @@ const InstructorDashboard = () => {
                   </div>
                 </div>
                 <div className="col-md-6 col-xl-4">
-                  <div className="card">
+                  <div className="card register-bg-gredient">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <span className="icon-box bg-success-transparent me-2 me-xxl-3 flex-shrink-0">
@@ -178,7 +180,9 @@ const InstructorDashboard = () => {
                           />
                         </span>
                         <div>
-                          <span className="d-block">Completed Courses</span>
+                          <span className="d-block text-black">
+                            Completed Courses
+                          </span>
                           <h4 className="fs-24 mt-1">06</h4>
                         </div>
                       </div>
@@ -186,7 +190,7 @@ const InstructorDashboard = () => {
                   </div>
                 </div>
                 <div className="col-md-6 col-xl-4">
-                  <div className="card">
+                  <div className="card register-bg-gredient">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <span className="icon-box bg-info-transparent me-2 me-xxl-3 flex-shrink-0">
@@ -196,7 +200,9 @@ const InstructorDashboard = () => {
                           />
                         </span>
                         <div>
-                          <span className="d-block">Total Students</span>
+                          <span className="d-block text-black">
+                            Total Students
+                          </span>
                           <h4 className="fs-24 mt-1">17</h4>
                         </div>
                       </div>
@@ -204,7 +210,7 @@ const InstructorDashboard = () => {
                   </div>
                 </div>
                 <div className="col-md-6 col-xl-4">
-                  <div className="card">
+                  <div className="card register-bg-gredient">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <span className="icon-box bg-blue-transparent me-2 me-xxl-3 flex-shrink-0">
@@ -214,7 +220,9 @@ const InstructorDashboard = () => {
                           />
                         </span>
                         <div>
-                          <span className="d-block">Total Courses</span>
+                          <span className="d-block text-black">
+                            Total Courses
+                          </span>
                           <h4 className="fs-24 mt-1">11</h4>
                         </div>
                       </div>
@@ -222,7 +230,7 @@ const InstructorDashboard = () => {
                   </div>
                 </div>
                 <div className="col-md-6 col-xl-4">
-                  <div className="card">
+                  <div className="card register-bg-gredient">
                     <div className="card-body">
                       <div className="d-flex align-items-center">
                         <span className="icon-box bg-purple-transparent me-2 me-xxl-3 flex-shrink-0">
@@ -232,7 +240,9 @@ const InstructorDashboard = () => {
                           />
                         </span>
                         <div>
-                          <span className="d-block">Total Earnings</span>
+                          <span className="d-block text-black">
+                            Total Earnings
+                          </span>
                           <h4 className="fs-24 mt-1">$486</h4>
                         </div>
                       </div>
