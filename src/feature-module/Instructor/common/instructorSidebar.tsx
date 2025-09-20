@@ -115,7 +115,7 @@ const InstructorSidebarAccordion = () => {
         className="accordion accordion-customicon1 accordions-items-seperate p-0"
         id="instructorSidebarAccordion"
       >
-        {menuGroups.map((group, index) => (
+        {menuGroups.map((group) => (
           <div className="accordion-item" key={group.id}>
             <h2 className="accordion-header" id={`heading${group.id}`}>
               <button

@@ -1,4 +1,4 @@
-import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
+// import ImageWithBasePath from "../../../../core/common/imageWithBasePath";
 
 const Vision = () => {
   return (
