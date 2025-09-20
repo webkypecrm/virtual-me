@@ -36,7 +36,7 @@ const Banner = () => {
             src="https://res.cloudinary.com/drj0uehgx/video/upload/v1758343058/VirtualXai__Your_Digital_Legacy_bpvs50.mp4"
             type="video/mp4"
           />
-          Your browser does not support the vid
+          Your browser does not support th
         </video>
 
         {/* Mute / Unmute Button */}
